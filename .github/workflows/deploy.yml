@@ -1,0 +1,48 @@
+name: Deploy · Vercel (produção)
+
+# Deploy automático a cada push na main.
+# Requer o secret VERCEL_TOKEN no repositório (Settings → Secrets and variables → Actions).
+# Os IDs abaixo são identificadores do projeto/time (não são segredos).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+concurrency:
+  group: vercel-prod
+  cancel-in-progress: true
+
+env:
+  VERCEL_ORG_ID: team_yHsI3cbwPaccBTYFAbjrFpEj
+  VERCEL_PROJECT_ID: prj_hr4ecQKD742rwopDlk0yIkOeBtvb
+
+jobs:
+  deploy:
+    name: Build & Deploy (produção)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull env de produção
+        run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build (produção)
+        run: vercel build --prod --token="$VERCEL_TOKEN"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy (prebuilt → produção)
+        run: vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
