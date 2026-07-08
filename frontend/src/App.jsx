@@ -2,34 +2,35 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoute from './routes/ProtectedRoute.jsx';
 
+// Só o Login fica no bundle de entrada (primeira tela pública). Todo o resto —
+// páginas autenticadas + telas pesadas (Leaflet/Recharts) — carrega sob demanda,
+// mantendo o carregamento inicial leve.
 import Login from './pages/Login.jsx';
-import ForgotPassword from './pages/ForgotPassword.jsx';
-import ResetPassword from './pages/ResetPassword.jsx';
-import Dashboard from './pages/Dashboard.jsx';
-import Supporters from './pages/Supporters.jsx';
-import Volunteers from './pages/Volunteers.jsx';
-import Suspects from './pages/Suspects.jsx';
-import Blacklist from './pages/Blacklist.jsx';
-import Notices from './pages/Notices.jsx';
-import MediaKit from './pages/MediaKit.jsx';
-import Engagement from './pages/Engagement.jsx';
-import StreetActions from './pages/StreetActions.jsx';
-import Agenda from './pages/Agenda.jsx';
-import MaterialRequests from './pages/MaterialRequests.jsx';
-import Banners from './pages/Banners.jsx';
-import Conversations from './pages/Conversations.jsx';
-import Demands from './pages/Demands.jsx';
-import Broadcasts from './pages/Broadcasts.jsx';
-import Automations from './pages/Automations.jsx';
-import Users from './pages/Users.jsx';
-import Settings from './pages/Settings.jsx';
 
-// Páginas pesadas saem do bundle principal (Leaflet/Google Maps, Recharts,
-// landing com CSS próprio) e carregam sob demanda na primeira visita.
+const ForgotPassword = lazy(() => import('./pages/ForgotPassword.jsx'));
+const ResetPassword = lazy(() => import('./pages/ResetPassword.jsx'));
 const Landing = lazy(() => import('./pages/Landing.jsx'));
+const TVPanel = lazy(() => import('./pages/TVPanel.jsx'));
+const Dashboard = lazy(() => import('./pages/Dashboard.jsx'));
 const MapView = lazy(() => import('./pages/MapView.jsx'));
 const Reports = lazy(() => import('./pages/Reports.jsx'));
-const TVPanel = lazy(() => import('./pages/TVPanel.jsx'));
+const Supporters = lazy(() => import('./pages/Supporters.jsx'));
+const Volunteers = lazy(() => import('./pages/Volunteers.jsx'));
+const Suspects = lazy(() => import('./pages/Suspects.jsx'));
+const Blacklist = lazy(() => import('./pages/Blacklist.jsx'));
+const Notices = lazy(() => import('./pages/Notices.jsx'));
+const MediaKit = lazy(() => import('./pages/MediaKit.jsx'));
+const Engagement = lazy(() => import('./pages/Engagement.jsx'));
+const StreetActions = lazy(() => import('./pages/StreetActions.jsx'));
+const Agenda = lazy(() => import('./pages/Agenda.jsx'));
+const MaterialRequests = lazy(() => import('./pages/MaterialRequests.jsx'));
+const Banners = lazy(() => import('./pages/Banners.jsx'));
+const Conversations = lazy(() => import('./pages/Conversations.jsx'));
+const Demands = lazy(() => import('./pages/Demands.jsx'));
+const Broadcasts = lazy(() => import('./pages/Broadcasts.jsx'));
+const Automations = lazy(() => import('./pages/Automations.jsx'));
+const Users = lazy(() => import('./pages/Users.jsx'));
+const Settings = lazy(() => import('./pages/Settings.jsx'));
 
 const P = (roles, element) => <ProtectedRoute roles={roles}>{element}</ProtectedRoute>;
 
