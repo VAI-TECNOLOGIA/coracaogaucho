@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN SYSTEM · CORAÇÃO GAÚCHO
+   Fonte oficial: manual da marca (pasta Identidade Visual).
+   Nenhuma cor/fonte fora deste arquivo deve ser usada no produto.
+   ============================================================ */
+
+:root {
+  /* Cores primárias (bandeira do RS) */
+  --cg-blue: #004ca9;
+  --cg-green: #0e6c38;
+  --cg-red: #bc2224;
+  --cg-yellow: #fab224;
+
+  /* Tons escuros / apoio */
+  --cg-blue-900: #172d57;
+  --cg-green-900: #0a4924;
+  --cg-red-900: #642224;
+  --cg-amber-700: #d88a00;
+
+  /* Neutros da marca */
+  --cg-cream: #f4efe3; /* fundo institucional claro */
+  --cg-cream-soft: #faf7f0;
+  --cg-ink: #14110c; /* texto sobre creme */
+  --cg-ink-soft: #4a4438;
+
+  /* Papéis semânticos */
+  --background: var(--cg-cream);
+  --foreground: var(--cg-ink);
+  --surface: #ffffff;
+  --border: rgba(20, 17, 12, 0.1);
+}
+
+@theme inline {
+  --color-blue: var(--cg-blue);
+  --color-green: var(--cg-green);
+  --color-red: var(--cg-red);
+  --color-yellow: var(--cg-yellow);
+  --color-blue-900: var(--cg-blue-900);
+  --color-green-900: var(--cg-green-900);
+  --color-red-900: var(--cg-red-900);
+  --color-amber-700: var(--cg-amber-700);
+  --color-cream: var(--cg-cream);
+  --color-cream-soft: var(--cg-cream-soft);
+  --color-ink: var(--cg-ink);
+  --color-ink-soft: var(--cg-ink-soft);
+  --color-surface: var(--surface);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-display: var(--font-display);
+  --font-script: var(--font-script);
+  --font-body: var(--font-body);
+  --font-label: var(--font-label);
+
+  --radius-brand: 14px;
+}
+
+/* ---------- Base ---------- */
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--cg-yellow);
+  color: var(--cg-ink);
+}
+
+/* ---------- Tipografia utilitária ---------- */
+.font-display {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.01em;
+}
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+/* GT Proelium — rótulos/eyebrows/botões (caixa-alta é característica da marca) */
+.font-label {
+  font-family: var(--font-label), var(--font-display), sans-serif;
+  letter-spacing: 0.04em;
+}
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ---------- Elemento gráfico: faixa diagonal tricolor RS ---------- */
+.rs-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--cg-green) 0,
+    var(--cg-green) 14px,
+    var(--cg-red) 14px,
+    var(--cg-red) 28px,
+    var(--cg-yellow) 28px,
+    var(--cg-yellow) 42px
+  );
+}
+.rs-bar {
+  background: linear-gradient(
+    90deg,
+    var(--cg-green) 0 33.33%,
+    var(--cg-red) 33.33% 66.66%,
+    var(--cg-yellow) 66.66% 100%
+  );
+}
+.rs-text-gradient {
+  background: linear-gradient(100deg, var(--cg-green), var(--cg-red) 55%, var(--cg-yellow));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Movimento ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes cg-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes cg-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* ---------- Scrollbar de marca ---------- */
+@media (pointer: fine) {
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-thumb {
+    background: var(--cg-blue);
+    border-radius: 999px;
+    border: 2px solid var(--cg-cream);
+  }
+}
+
+/* ---------- Prosa de páginas legais ---------- */
+.legal-prose {
+  color: var(--cg-ink-soft);
+  font-size: 0.975rem;
+  line-height: 1.75;
+}
+.legal-prose h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--cg-ink);
+  margin: 2.5rem 0 0.75rem;
+}
+.legal-prose h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--cg-ink);
+  margin: 1.75rem 0 0.5rem;
+}
+.legal-prose p { margin: 0.75rem 0; }
+.legal-prose ul, .legal-prose ol { margin: 0.75rem 0; padding-left: 1.5rem; }
+.legal-prose ul { list-style: disc; }
+.legal-prose ol { list-style: decimal; }
+.legal-prose li { margin: 0.35rem 0; }
+.legal-prose a { color: var(--cg-blue); text-decoration: underline; text-underline-offset: 3px; }
+.legal-prose strong { color: var(--cg-ink); }
+.legal-prose table {
+  width: 100%;
+  margin: 1.25rem 0;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.legal-prose th {
+  text-align: left;
+  font-family: var(--font-display);
+  color: var(--cg-ink);
+  background: rgba(20, 17, 12, 0.04);
+}
+.legal-prose th, .legal-prose td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}

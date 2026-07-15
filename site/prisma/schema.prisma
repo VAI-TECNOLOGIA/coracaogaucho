@@ -1,0 +1,62 @@
+// Schema do CRM Coração Gaúcho.
+// Dev: SQLite (zero setup). Produção: trocar provider para "postgresql" — os models
+// são compatíveis. SQLite não tem enums nativos; papéis/status usam String validada no app.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  nome      String
+  email     String   @unique
+  senhaHash String
+  papel     String   @default("ADMIN") // ADMIN | COORDENADOR | VOLUNTARIO
+  ativo     Boolean  @default(true)
+  criadoEm  DateTime @default(now())
+}
+
+model Lead {
+  id           String   @id @default(cuid())
+  nome         String
+  email        String
+  telefone     String
+  cidade       String
+  tipo         String   @default("apoiador") // voluntario | apoiador | lideranca | doador
+  segmento     String? // slug da LP de origem, quando houver
+  origem       String   @default("site-institucional")
+  status       String   @default("NOVO") // NOVO | CONTATADO | ENGAJADO | CONVERTIDO | DESCARTADO
+  observacao   String?
+  criadoEm     DateTime @default(now())
+  atualizadoEm DateTime @updatedAt
+
+  @@index([segmento])
+  @@index([status])
+  @@index([origem])
+  @@index([criadoEm])
+}
+
+// Solicitações LGPD (exclusão de conta ou de dados específicos).
+// Registra o pedido do titular e a resolução — comprovação de atendimento (art. 18 LGPD).
+model SolicitacaoPrivacidade {
+  id            String    @id @default(cuid())
+  tipo          String // EXCLUSAO_CONTA | EXCLUSAO_DADOS
+  nome          String?
+  email         String
+  telefone      String?
+  detalhes      String? // para EXCLUSAO_DADOS: o que o titular pediu para remover
+  origem        String    @default("web") // web | app | email
+  status        String    @default("PENDENTE") // PENDENTE | CONCLUIDA | RECUSADA
+  resolucao     String? // nota de atendimento (ex.: "2 cadastros excluídos")
+  criadoEm      DateTime  @default(now())
+  processadoEm  DateTime?
+  processadoPor String? // e-mail de quem processou
+
+  @@index([status])
+  @@index([criadoEm])
+}
