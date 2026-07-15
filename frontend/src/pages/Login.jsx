@@ -63,18 +63,18 @@ export default function Login() {
         <div className="auth-slash" />
         <div className="auth-content">
           <div className="auth-top">
-            <div className="auth-name">PLATAFORMA DE CAMPANHA</div>
+            <div className="auth-name">CORAÇÃO GAÚCHO · JULIANA E EDEGAR</div>
             <span className="auth-demo-badge">DEMO</span>
           </div>
           <div>
             <h1 className="auth-headline">
               A central de <em>comando</em>
               <br />
-              da sua campanha
+              do movimento
             </h1>
             <p className="auth-tagline">
-              A central de comando da campanha. Mobilização, dados, atendimento e território — numa só
-              plataforma.
+              Mobilização, dados, atendimento e território numa só plataforma. Porque o povo fala mais
+              alto.
             </p>
           </div>
         </div>

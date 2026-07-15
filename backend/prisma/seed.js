@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 const rand = (min, max) => Math.random() * (max - min) + min;
 const jitter = (base, range = 0.05) => base + rand(-range, range);
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
-const phone = () => '5548' + String(Math.floor(90000000 + Math.random() * 9999999));
+const phone = () => '5551' + String(Math.floor(90000000 + Math.random() * 9999999));
 const NOW = Date.now();
 const DAY = 86400000;
 
@@ -21,41 +21,41 @@ function recentTs() {
   return new Date(NOW - daysAgo * DAY);
 }
 
-// Cidades de Santa Catarina com coordenadas (batem com o mapa do painel) + peso.
-const SC_CITIES = [
-  { name: 'Florianópolis', lat: -27.5954, lng: -48.5480, w: 26 },
-  { name: 'Joinville', lat: -26.3045, lng: -48.8487, w: 14 },
-  { name: 'Blumenau', lat: -26.9194, lng: -49.0661, w: 11 },
-  { name: 'São José', lat: -27.5969, lng: -48.6394, w: 9 },
-  { name: 'Itajaí', lat: -26.9078, lng: -48.6619, w: 7 },
-  { name: 'Criciúma', lat: -28.6775, lng: -49.3695, w: 6 },
-  { name: 'Chapecó', lat: -27.1004, lng: -52.6152, w: 6 },
-  { name: 'Balneário Camboriú', lat: -26.9926, lng: -48.6349, w: 5 },
-  { name: 'Jaraguá do Sul', lat: -26.4851, lng: -49.0667, w: 5 },
-  { name: 'Palhoça', lat: -27.6386, lng: -48.6703, w: 5 },
-  { name: 'Lages', lat: -27.8161, lng: -50.3259, w: 4 },
-  { name: 'Brusque', lat: -27.0980, lng: -48.9177, w: 4 },
-  { name: 'Itapema', lat: -27.0902, lng: -48.6114, w: 3 },
-  { name: 'Tubarão', lat: -28.4666, lng: -49.0069, w: 3 },
-  { name: 'Camboriú', lat: -27.0246, lng: -48.6586, w: 3 },
-  { name: 'Navegantes', lat: -26.8990, lng: -48.6544, w: 3 },
-  { name: 'Concórdia', lat: -27.2338, lng: -52.0278, w: 2 },
-  { name: 'Rio do Sul', lat: -27.2148, lng: -49.6431, w: 2 },
-  { name: 'Araranguá', lat: -28.9350, lng: -49.4916, w: 2 },
-  { name: 'Gaspar', lat: -26.9317, lng: -48.9585, w: 2 },
-  { name: 'Indaial', lat: -26.8978, lng: -49.2318, w: 2 },
-  { name: 'Biguaçu', lat: -27.4939, lng: -48.6558, w: 2 },
-  { name: 'São Bento do Sul', lat: -26.2503, lng: -49.3783, w: 2 },
-  { name: 'Caçador', lat: -26.7753, lng: -51.0148, w: 2 },
+// Cidades do Rio Grande do Sul com coordenadas (batem com o mapa do painel) + peso.
+const RS_CITIES = [
+  { name: 'Porto Alegre', lat: -30.0346, lng: -51.2177, w: 26 },
+  { name: 'Caxias do Sul', lat: -29.1685, lng: -51.1796, w: 14 },
+  { name: 'Pelotas', lat: -31.7654, lng: -52.3376, w: 11 },
+  { name: 'Canoas', lat: -29.9177, lng: -51.1839, w: 9 },
+  { name: 'Santa Maria', lat: -29.6842, lng: -53.8069, w: 7 },
+  { name: 'Gravataí', lat: -29.9444, lng: -50.9922, w: 6 },
+  { name: 'Novo Hamburgo', lat: -29.6783, lng: -51.1309, w: 6 },
+  { name: 'Viamão', lat: -30.0811, lng: -51.0233, w: 5 },
+  { name: 'São Leopoldo', lat: -29.7603, lng: -51.1472, w: 5 },
+  { name: 'Rio Grande', lat: -32.0350, lng: -52.0986, w: 5 },
+  { name: 'Alvorada', lat: -29.9897, lng: -51.0809, w: 4 },
+  { name: 'Passo Fundo', lat: -28.2576, lng: -52.4091, w: 4 },
+  { name: 'Sapucaia do Sul', lat: -29.8380, lng: -51.1450, w: 3 },
+  { name: 'Uruguaiana', lat: -29.7547, lng: -57.0883, w: 3 },
+  { name: 'Santa Cruz do Sul', lat: -29.7175, lng: -52.4258, w: 3 },
+  { name: 'Cachoeirinha', lat: -29.9511, lng: -51.0944, w: 3 },
+  { name: 'Bagé', lat: -31.3314, lng: -54.1069, w: 2 },
+  { name: 'Bento Gonçalves', lat: -29.1662, lng: -51.5165, w: 2 },
+  { name: 'Erechim', lat: -27.6339, lng: -52.2745, w: 2 },
+  { name: 'Guaíba', lat: -30.1086, lng: -51.3250, w: 2 },
+  { name: 'Cachoeira do Sul', lat: -30.0392, lng: -52.8939, w: 2 },
+  { name: 'Santana do Livramento', lat: -30.8909, lng: -55.5330, w: 2 },
+  { name: 'Ijuí', lat: -28.3878, lng: -53.9147, w: 2 },
+  { name: 'Lajeado', lat: -29.4590, lng: -51.9644, w: 2 },
 ];
-const CITY_BAG = SC_CITIES.flatMap((c) => Array(c.w).fill(c));
+const CITY_BAG = RS_CITIES.flatMap((c) => Array(c.w).fill(c));
 const pickCity = () => pick(CITY_BAG);
 
 const NEIGHBORHOODS = [
-  'Centro', 'Trindade', 'Ingleses', 'Canasvieiras', 'Campeche', 'Lagoa da Conceição', 'Estreito',
-  'Coqueiros', 'Capoeiras', 'Kobrasol', 'Campinas', 'Barreiros', 'Santa Mônica', 'Córrego Grande',
-  'Itacorubi', 'Agronômica', 'Saco Grande', 'Rio Vermelho', 'Jurerê', 'Vila Nova', 'Garcia', 'Velha',
-  'América', 'Bucarein', 'Costa e Silva', 'Glória', 'Iririú', 'Ponta Aguda', 'Victor Konder', 'Nova Brasília',
+  'Centro Histórico', 'Cidade Baixa', 'Menino Deus', 'Moinhos de Vento', 'Bom Fim', 'Petrópolis', 'Partenon',
+  'Restinga', 'Sarandi', 'Rubem Berta', 'Lomba do Pinheiro', 'Cavalhada', 'Ipanema', 'Tristeza', 'Belém Novo',
+  'Passo da Areia', 'São João', 'Navegantes', 'Humaitá', 'Azenha', 'Santana', 'Higienópolis', 'Floresta',
+  'Jardim Botânico', 'Cristo Redentor', 'Glória', 'Teresópolis', 'Nonoai', 'Cristal', 'São Geraldo',
 ];
 const FIRST = ['Ana', 'Carlos', 'Mariana', 'João', 'Patrícia', 'Rafael', 'Juliana', 'Bruno', 'Fernanda', 'Lucas', 'Camila', 'Diego', 'Aline', 'Marcelo', 'Bianca', 'Rodrigo', 'Letícia', 'Felipe', 'Gabriela', 'Thiago', 'Sabrina', 'Vinícius', 'Débora', 'Anderson', 'Priscila', 'Everton'];
 const LAST = ['Silva', 'Souza', 'Oliveira', 'Santos', 'Pereira', 'Lima', 'Costa', 'Martins', 'Rocha', 'Almeida', 'Nunes', 'Gomes', 'Ribeiro', 'Carvalho', 'Fernandes', 'Cardoso', 'Schmitt', 'Koerich', 'Búrigo', 'Effting'];
@@ -91,32 +91,32 @@ async function main() {
 
   console.log('🗺️  Regiões e cidades...');
   const regionsSpec = [
-    { name: 'Grande Florianópolis', color: '#F2663C' },
-    { name: 'Norte', color: '#1A1D21' },
-    { name: 'Vale do Itajaí', color: '#E0521F' },
-    { name: 'Sul', color: '#3A3F47' },
-    { name: 'Oeste', color: '#BC4019' },
+    { name: 'Metropolitana', color: '#004CA9' },
+    { name: 'Serra', color: '#0E6C38' },
+    { name: 'Sul', color: '#BC2224' },
+    { name: 'Norte', color: '#D88A00' },
+    { name: 'Fronteira Oeste', color: '#642224' },
   ];
   const regions = {};
   for (const r of regionsSpec) {
-    regions[r.name] = await prisma.region.create({ data: { name: r.name, uf: 'SC', color: r.color } });
+    regions[r.name] = await prisma.region.create({ data: { name: r.name, uf: 'RS', color: r.color } });
   }
 
-  const capital = await prisma.city.create({ data: { name: 'Florianópolis', uf: 'SC', regionId: regions['Grande Florianópolis'].id } });
+  const capital = await prisma.city.create({ data: { name: 'Porto Alegre', uf: 'RS', regionId: regions['Metropolitana'].id } });
   await prisma.city.createMany({
     data: [
-      { name: 'Joinville', uf: 'SC', regionId: regions['Norte'].id },
-      { name: 'Blumenau', uf: 'SC', regionId: regions['Vale do Itajaí'].id },
-      { name: 'São José', uf: 'SC', regionId: regions['Grande Florianópolis'].id },
-      { name: 'Criciúma', uf: 'SC', regionId: regions['Sul'].id },
-      { name: 'Chapecó', uf: 'SC', regionId: regions['Oeste'].id },
+      { name: 'Caxias do Sul', uf: 'RS', regionId: regions['Serra'].id },
+      { name: 'Pelotas', uf: 'RS', regionId: regions['Sul'].id },
+      { name: 'Canoas', uf: 'RS', regionId: regions['Metropolitana'].id },
+      { name: 'Santa Maria', uf: 'RS', regionId: regions['Fronteira Oeste'].id },
+      { name: 'Passo Fundo', uf: 'RS', regionId: regions['Norte'].id },
     ],
   });
 
   console.log('🔐 Usuários...');
   const hash = (p) => bcrypt.hashSync(p, 10);
   const admin = await prisma.user.create({
-    data: { name: 'Líder de Campanha', email: 'admin@demo.com', password: hash('Admin@123'), role: 'LIDER', phone: '5548999999999' },
+    data: { name: 'Líder de Campanha', email: 'admin@demo.com', password: hash('Admin@123'), role: 'LIDER', phone: '5551999999999' },
   });
   const coordNorte = await prisma.user.create({
     data: { name: 'Coordenador — Norte', email: 'norte@demo.com', password: hash('Admin@123'), role: 'MEMBRO', regionId: regions['Norte'].id, managerId: admin.id },
@@ -176,10 +176,10 @@ async function main() {
         whatsapp: phone(),
         email: Math.random() > 0.4 ? `apoiador${i}@email.com` : null,
         birthDate: new Date(1970 + Math.floor(rand(0, 35)), Math.floor(rand(0, 12)), Math.floor(rand(1, 28))),
-        cep: '880' + Math.floor(rand(10, 99)) + '-000',
+        cep: '900' + Math.floor(rand(10, 99)) + '-000',
         neighborhood: pick(NEIGHBORHOODS),
         cityName: city.name,
-        cityId: city.name === 'Florianópolis' ? capital.id : null,
+        cityId: city.name === 'Porto Alegre' ? capital.id : null,
         regionId: region.id,
         lat: jitter(city.lat),
         lng: jitter(city.lng),
@@ -220,14 +220,14 @@ async function main() {
 
   // SUSPEITO (telefone duplicado) e BLACKLIST
   const dupPhone = phone();
-  await prisma.supporter.create({ data: { name: 'José Duplicado', phone: dupPhone, status: 'SUSPEITO', flaggedReason: 'Telefone usado em mais de um cadastro.', regionId: regions['Grande Florianópolis'].id, cityName: 'Florianópolis', neighborhood: 'Centro', lat: jitter(-27.5954), lng: jitter(-48.5480), supportType: 'VOLUNTARIO' } });
-  await prisma.supporter.create({ data: { name: 'José Duplicado (2)', phone: dupPhone, status: 'SUSPEITO', flaggedReason: 'Telefone duplicado — já cadastrado.', regionId: regions['Grande Florianópolis'].id, cityName: 'São José', neighborhood: 'Kobrasol', supportType: 'VOLUNTARIO' } });
+  await prisma.supporter.create({ data: { name: 'José Duplicado', phone: dupPhone, status: 'SUSPEITO', flaggedReason: 'Telefone usado em mais de um cadastro.', regionId: regions['Metropolitana'].id, cityName: 'Porto Alegre', neighborhood: 'Centro Histórico', lat: jitter(-30.0346), lng: jitter(-51.2177), supportType: 'VOLUNTARIO' } });
+  await prisma.supporter.create({ data: { name: 'José Duplicado (2)', phone: dupPhone, status: 'SUSPEITO', flaggedReason: 'Telefone duplicado — já cadastrado.', regionId: regions['Metropolitana'].id, cityName: 'Canoas', neighborhood: 'Mathias Velho', supportType: 'VOLUNTARIO' } });
   await prisma.blacklist.create({ data: { phone: phone(), name: 'Contato Bloqueado', reason: 'Comportamento abusivo em grupos.', createdById: admin.id } });
 
   console.log('📢 Mural de avisos...');
   await prisma.notice.createMany({
     data: [
-      { title: 'Caminhada neste sábado', description: 'Concentração às 9h na Beira-Mar Norte. Levem a camiseta da campanha!', type: 'CONVOCACAO', priority: 'ALTA', authorId: coordNorte.id },
+      { title: 'Caminhada neste sábado', description: 'Concentração às 9h na Orla do Guaíba (Usina do Gasômetro). Levem a camiseta da campanha!', type: 'CONVOCACAO', priority: 'ALTA', authorId: coordNorte.id },
       { title: 'Agenda da semana', description: 'Reuniões de equipe, visitas e bandeiraço. Confira o calendário.', type: 'AGENDA', priority: 'MEDIA', authorId: admin.id },
       { title: 'Novo card para WhatsApp', description: 'Já está disponível no Mídia Kit. Compartilhem!', type: 'AVISO', priority: 'MEDIA', authorId: admin.id, regionId: regions['Sul'].id },
     ],
@@ -236,9 +236,9 @@ async function main() {
   console.log('🎬 Mídia Kit...');
   await prisma.mediaKit.createMany({
     data: [
-      { title: 'Card — Saúde nos bairros', description: 'Arte para feed.', type: 'ARTE', network: 'INSTAGRAM', priority: 'ALTA', captionText: 'Saúde de qualidade perto de você! 💚 #CandidatoDEMO #SantaCatarina #PartidoTeste', hashtags: '#CandidatoDEMO #SantaCatarina #Saúde #PartidoTeste', guidance: 'Postar entre 18h e 20h.', authorId: admin.id },
-      { title: 'Reels — Infraestrutura', description: 'Vídeo curto de 30s.', type: 'REELS', network: 'INSTAGRAM', priority: 'MEDIA', captionText: 'Obras que transformam bairros. 🚧', hashtags: '#Infraestrutura #SC', authorId: admin.id },
-      { title: 'Jingle oficial', description: 'Áudio para grupos de WhatsApp.', type: 'JINGLE', network: 'WHATSAPP', priority: 'ALTA', captionText: 'É Candidato Teste — Partido Teste!', authorId: admin.id },
+      { title: 'Card — Saúde nos bairros', description: 'Arte para feed.', type: 'ARTE', network: 'INSTAGRAM', priority: 'ALTA', captionText: 'Saúde de qualidade perto de você! 💚 #CoraçãoGaúcho #RioGrandeDoSul #OPovoFalaMaisAlto', hashtags: '#CoraçãoGaúcho #RioGrandeDoSul #Saúde #OPovoFalaMaisAlto', guidance: 'Postar entre 18h e 20h.', authorId: admin.id },
+      { title: 'Reels — Reconstrução do RS', description: 'Vídeo curto de 30s.', type: 'REELS', network: 'INSTAGRAM', priority: 'MEDIA', captionText: 'Reconstruir e fortalecer cada canto do estado. 🚧', hashtags: '#Reconstrução #RS #CoraçãoGaúcho', authorId: admin.id },
+      { title: 'Jingle oficial', description: 'Áudio para grupos de WhatsApp.', type: 'JINGLE', network: 'WHATSAPP', priority: 'ALTA', captionText: 'É Coração Gaúcho — o povo fala mais alto!', authorId: admin.id },
     ],
   });
 
@@ -284,10 +284,10 @@ async function main() {
   console.log('📅 Agenda (próximos dias)...');
   await prisma.event.createMany({
     data: [
-      { title: 'Caminhada na Beira-Mar', location: 'Av. Beira-Mar Norte', cityName: 'Florianópolis', neighborhood: 'Centro', date: new Date(NOW + 1 * DAY), time: '09:00', status: 'CONFIRMADO', responsibleId: coordNorte.id },
-      { title: 'Reunião com lideranças', location: 'Comitê Central', cityName: 'Florianópolis', neighborhood: 'Trindade', date: new Date(NOW + 2 * DAY), time: '19:30', status: 'CONFIRMADO', responsibleId: admin.id },
-      { title: 'Bandeiraço em São José', location: 'Terminal do Kobrasol', cityName: 'São José', neighborhood: 'Kobrasol', date: new Date(NOW + 4 * DAY), time: '17:00', status: 'AGENDADO', responsibleId: coordSul.id },
-      { title: 'Visita à feira', location: 'Feira do Centro', cityName: 'Itajaí', neighborhood: 'Centro', date: new Date(NOW + 6 * DAY), time: '08:00', status: 'AGENDADO', responsibleId: coordNorte.id },
+      { title: 'Caminhada na Orla do Guaíba', location: 'Orla do Guaíba — Usina do Gasômetro', cityName: 'Porto Alegre', neighborhood: 'Centro Histórico', date: new Date(NOW + 1 * DAY), time: '09:00', status: 'CONFIRMADO', responsibleId: coordNorte.id },
+      { title: 'Reunião com lideranças', location: 'Comitê Central', cityName: 'Porto Alegre', neighborhood: 'Cidade Baixa', date: new Date(NOW + 2 * DAY), time: '19:30', status: 'CONFIRMADO', responsibleId: admin.id },
+      { title: 'Bandeiraço em Canoas', location: 'Terminal Central de Canoas', cityName: 'Canoas', neighborhood: 'Mathias Velho', date: new Date(NOW + 4 * DAY), time: '17:00', status: 'AGENDADO', responsibleId: coordSul.id },
+      { title: 'Visita à feira', location: 'Mercado Público', cityName: 'Pelotas', neighborhood: 'Centro', date: new Date(NOW + 6 * DAY), time: '08:00', status: 'AGENDADO', responsibleId: coordNorte.id },
     ],
   });
 
@@ -314,10 +314,10 @@ async function main() {
 
   console.log('💬 Conversas (atendimento ao vivo)...');
   const convoSpec = [
-    { status: 'EM_ATENDIMENTO', name: 'Maria Aparecida', tags: ['voluntária', 'Florianópolis'], msgs: [['INBOUND', 'Olá! Quero ajudar na campanha 😊'], ['OUTBOUND', 'Que ótimo, Maria! Como você prefere ajudar?'], ['INBOUND', 'Posso colocar faixa em casa e panfletar 🙌']] },
-    { status: 'EM_ATENDIMENTO', name: 'Roberto Schmitt', tags: ['apoiador', 'Joinville'], msgs: [['INBOUND', 'Vocês têm adesivo pra carro?'], ['OUTBOUND', 'Temos sim! Passa seu endereço que enviamos.']] },
-    { status: 'AGUARDANDO', name: 'Fernanda Koerich', tags: ['dúvida'], msgs: [['INBOUND', 'Qual o número do candidato mesmo?']] },
-    { status: 'ABERTA', name: 'Anderson Búrigo', tags: ['evento', 'Criciúma'], msgs: [['INBOUND', 'Vai ter caminhada aqui no Sul?']] },
+    { status: 'EM_ATENDIMENTO', name: 'Maria Aparecida', tags: ['voluntária', 'Porto Alegre'], msgs: [['INBOUND', 'Olá! Quero ajudar na campanha 😊'], ['OUTBOUND', 'Que ótimo, Maria! Como você prefere ajudar?'], ['INBOUND', 'Posso colocar faixa em casa e panfletar 🙌']] },
+    { status: 'EM_ATENDIMENTO', name: 'Roberto Machado', tags: ['apoiador', 'Caxias do Sul'], msgs: [['INBOUND', 'Vocês têm adesivo pra carro?'], ['OUTBOUND', 'Temos sim! Passa seu endereço que enviamos.']] },
+    { status: 'AGUARDANDO', name: 'Fernanda Brizola', tags: ['dúvida'], msgs: [['INBOUND', 'Qual o número da chapa mesmo?']] },
+    { status: 'ABERTA', name: 'Anderson Vargas', tags: ['evento', 'Pelotas'], msgs: [['INBOUND', 'Vai ter caminhada aqui na Zona Sul?']] },
     { status: 'RESOLVIDA', name: 'Patrícia Effting', tags: ['material'], msgs: [['INBOUND', 'Recebi o material, obrigada!'], ['OUTBOUND', 'Nós que agradecemos, Patrícia! 💪']] },
   ];
   for (const c of convoSpec) {
@@ -340,7 +340,7 @@ async function main() {
   console.log('🤖 Automações...');
   await prisma.automation.createMany({
     data: [
-      { name: 'Feliz Aniversário', type: 'ANIVERSARIO', message: 'Olá {{nome}}, a campanha do Candidato Teste deseja um feliz aniversário! 🎂', status: 'ATIVA' },
+      { name: 'Feliz Aniversário', type: 'ANIVERSARIO', message: 'Olá {{nome}}, o movimento Coração Gaúcho deseja um feliz aniversário! 🎂', status: 'ATIVA' },
       { name: 'Boas-vindas Voluntário', type: 'AGRADECIMENTO_VOLUNTARIO', message: 'Obrigado por se juntar a nós, {{nome}}! Juntos somos mais fortes. 💪', status: 'ATIVA' },
       { name: 'Feliz Natal', type: 'NATAL', message: 'Feliz Natal, {{nome}}! 🎄', triggerDate: new Date(new Date().getFullYear(), 11, 25), status: 'RASCUNHO' },
     ],
@@ -349,7 +349,7 @@ async function main() {
   console.log('📣 Disparos...');
   // Campanha ENVIANDO agora (sensação de tempo real)
   const enviando = await prisma.broadcastCampaign.create({
-    data: { name: 'Convite Caminhada Beira-Mar', message: 'Olá {{nome}}! Vamos juntos à caminhada em {{cidade}} neste sábado? 🚶', channel: 'WHATSAPP', ownerId: coordNorte.id, status: 'ENVIANDO' },
+    data: { name: 'Convite Caminhada na Orla do Guaíba', message: 'Olá {{nome}}! Vamos juntos à caminhada em {{cidade}} neste sábado? 🚶', channel: 'WHATSAPP', ownerId: coordNorte.id, status: 'ENVIANDO' },
   });
   await prisma.broadcastContact.createMany({
     data: Array.from({ length: 60 }).map((_, i) => {
@@ -370,15 +370,16 @@ async function main() {
 
   console.log('⚙️  Configurações...');
   const settings = [
-    { key: 'campaign', value: { name: 'Campanha DEMO', candidate: 'Candidato Teste', office: 'Vereador', party: 'Partido Teste', number: '00', city: 'Florianópolis', uf: 'SC', slogan: 'Juntos por você, pela sua cidade' } },
-    { key: 'theme', value: { brand: '#F2663C', green: '#1B7A43', accent: '#F4794F' } },
+    // TODO: preencher office (cargo), party (partido) e number (número) com os dados oficiais
+    { key: 'campaign', value: { name: 'Coração Gaúcho', candidate: 'Juliana Brizola e Edegar Pretto', office: '', party: '', number: '', city: 'Porto Alegre', uf: 'RS', slogan: 'O povo fala mais alto' } },
+    { key: 'theme', value: { brand: '#004CA9', green: '#0E6C38', accent: '#FAB224' } },
     { key: 'goals', value: { volunteers: 150, supporters: 800, banners: 120, actions: 60 } },
   ];
   for (const s of settings) await prisma.setting.create({ data: s });
 
   console.log('\n✅ Seed concluído!');
   console.log('   Login admin: admin@demo.com / Admin@123');
-  console.log(`   ${volunteers.length} voluntários, ${TOTAL} apoiadores em ${SC_CITIES.length} cidades de SC, atendimentos e disparos criados.\n`);
+  console.log(`   ${volunteers.length} voluntários, ${TOTAL} apoiadores em ${RS_CITIES.length} cidades do RS, atendimentos e disparos criados.\n`);
 }
 
 main()

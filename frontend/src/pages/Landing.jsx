@@ -21,17 +21,17 @@ const NOMES = [
   'Graziela','Taís','Rosane','Marlene','Salete','Ivone','Neusa','Terezinha','Verônica','Joana','Marta',
 ];
 const CIDADES = [
-  'Florianópolis','Joinville','Blumenau','São José','Chapecó','Itajaí','Criciúma','Jaraguá do Sul','Lages',
-  'Palhoça','Balneário Camboriú','Brusque','Tubarão','Caçador','Concórdia','Camboriú','Navegantes','Rio do Sul',
-  'Araranguá','Biguaçu','Gaspar','Indaial','Itapema','Tijucas','São Bento do Sul','Mafra','Canoinhas','Videira',
-  'Xanxerê','Imbituba','Içara','Sombrio','Braço do Norte','Orleans','Urussanga','Laguna','Garopaba','Imaruí',
-  'Santo Amaro da Imperatriz','Governador Celso Ramos','Porto Belo','Bombinhas','Penha','Barra Velha',
-  'São Francisco do Sul','Araquari','Guaramirim','Massaranduba','Corupá','Schroeder','Pomerode','Timbó','Rodeio',
-  'Ibirama','Presidente Getúlio','Taió','Ituporanga','Otacílio Costa','Correia Pinto','São Joaquim','Urubici',
-  'Bom Retiro','Curitibanos','Fraiburgo','Campos Novos','Joaçaba','Herval d’Oeste','Capinzal','Seara','Xaxim',
-  'São Miguel do Oeste','Maravilha','Pinhalzinho','São Lourenço do Oeste','Palmitos','Mondaí','Dionísio Cerqueira',
-  'Abelardo Luz','Água Doce','Ponte Serrada','Balneário Piçarras','Ilhota','Gravatal','Sangão','Morro da Fumaça',
-  'Nova Veneza','Siderópolis','Forquilhinha','Meleiro','Turvo','Praia Grande','Jaguaruna','Treze Tílias',
+  'Porto Alegre','Caxias do Sul','Pelotas','Canoas','Santa Maria','Gravataí','Novo Hamburgo','São Leopoldo',
+  'Rio Grande','Alvorada','Passo Fundo','Sapucaia do Sul','Uruguaiana','Santa Cruz do Sul','Cachoeirinha','Bagé',
+  'Bento Gonçalves','Erechim','Guaíba','Cachoeira do Sul','Santana do Livramento','Esteio','Ijuí','Sapiranga',
+  'Alegrete','Farroupilha','Venâncio Aires','Camaquã','Viamão','São Borja','Vacaria','Carazinho','Montenegro',
+  'Lajeado','Taquara','Santo Ângelo','Cruz Alta','Rosário do Sul','Charqueadas','Canguçu','São Gabriel',
+  'Gramado','Canela','Torres','Capão da Canoa','Tramandaí','Osório','Igrejinha','Parobé','Campo Bom',
+  'Dois Irmãos','Nova Prata','Garibaldi','Flores da Cunha','Veranópolis','Frederico Westphalen','Palmeira das Missões',
+  'Três Passos','Santo Cristo','Horizontina','Panambi','Não-Me-Toque','Soledade','Sarandi','Getúlio Vargas',
+  'Marau','Tapejara','Encantado','Estrela','Teutônia','Arroio do Meio','São Sebastião do Caí','Feliz',
+  'Nova Petrópolis','Bom Princípio','Portão','Nova Santa Rita','Eldorado do Sul','Butiá','São Jerônimo',
+  'Triunfo','General Câmara','Arroio dos Ratos','Barra do Ribeiro','Tapes','Cristal','Encruzilhada do Sul',
 ];
 const VERBOS = ['virou apoiador!','entrou na campanha!','agora apoia a campanha!','se juntou ao movimento!','virou voluntário!'];
 const TEMPOS = ['agora mesmo','há poucos segundos','há instantes'];
@@ -127,7 +127,7 @@ export default function Landing() {
         name: lead.name,
         phone: lead.phone,
         email: lead.email || undefined,
-        cityName: 'Florianópolis',
+        cityName: 'Porto Alegre',
         supportType: 'MATERIAL_DIGITAL',
       });
       setLeadSent(true);
@@ -143,7 +143,7 @@ export default function Landing() {
     e.preventDefault();
     setSending(true);
     try {
-      await api.post('/public/join', { ...form, cityName: form.cityName || 'Florianópolis' });
+      await api.post('/public/join', { ...form, cityName: form.cityName || 'Porto Alegre' });
       setSent(true);
       toast.success('Cadastro recebido! 💪');
     } catch (err) {
@@ -160,9 +160,9 @@ export default function Landing() {
       {/* HEADER */}
       <header className={'mlp-header' + (scrolled ? ' scrolled' : '')}>
         <div className="mlp-wrap mlp-bar">
-          <a href="#topo" className="mlp-brand">
-            <img className="mlp-mark" src="/partido-mark.svg" alt="Partido Teste" width="42" height="42" />
-            <span className="wm"><b>Candidato Teste</b><small>Vereador · Partido Teste</small></span>
+          <a href="#topo" className="mlp-brand" aria-label="Coração Gaúcho">
+            <img className="mlp-logo mlp-logo--light" src="/brand/coracao-gaucho-branco.png" alt="Coração Gaúcho" />
+            <img className="mlp-logo mlp-logo--dark" src="/brand/coracao-gaucho-verde.png" alt="Coração Gaúcho" />
           </a>
           <nav className="mlp-menu">
             <a className="mlp-navlink" href="#bandeiras">Bandeiras</a>
@@ -175,38 +175,24 @@ export default function Landing() {
         </div>
       </header>
 
-      {/* HERO */}
+      {/* HERO — mosaico do povo (a grandeza da campanha) */}
       <section className="mlp-hero" id="topo">
-        <div className="mlp-wrap mlp-hero-grid">
-          <div>
-            <span className="mlp-eyebrow"><Flag size={13} /> Vereador · Partido Teste · Santa Catarina</span>
-            <h1>Juntos por você,<br /><span className="accent">pela sua&nbsp;cidade.</span></h1>
-            <p className="mlp-lead">
-              Trabalho e idealismo por uma cidade mais justa. Política de proximidade,
-              com ética e coerência — feita com a comunidade, para a comunidade.
-            </p>
-            <div className="mlp-cta">
-              <a href="#apoie" className="mlp-btn mlp-btn--primary">Quero apoiar a campanha <ArrowRight size={18} /></a>
-              <a href="#bandeiras" className="mlp-btn mlp-btn--ghost">Conhecer as bandeiras</a>
-            </div>
-            <div className="mlp-trust">
-              <span className="mlp-pill"><b>+000</b> apoiadores</span>
-              <span className="mlp-pill"><b>00</b> bairros</span>
-              <span className="mlp-pill">Campanha de demonstração</span>
-            </div>
+        <div className="mlp-hero-media" role="img" aria-label="O povo do Rio Grande — Coração Gaúcho, o povo fala mais alto" />
+        <div className="mlp-hero-veil" />
+        <div className="rs-bar-top" aria-hidden />
+        <div className="mlp-wrap mlp-hero-inner">
+          <span className="mlp-eyebrow"><Flag size={13} /> Juliana Brizola e Edegar Pretto · Rio Grande do Sul</span>
+          <p className="mlp-hero-lead">
+            Um movimento pelo Rio Grande do Sul — feito de perto, com o povo, em cada canto do estado.
+          </p>
+          <div className="mlp-cta">
+            <a href="#apoie" className="mlp-btn mlp-btn--primary">Quero apoiar a campanha <ArrowRight size={18} /></a>
+            <a href="#bandeiras" className="mlp-btn mlp-btn--ghost">Conhecer as bandeiras</a>
           </div>
-
-          <div className="mlp-portrait">
-            <div className="ring" />
-            <img src="/candidato.jpg" alt="Candidato Teste" />
-            <div className="mlp-chip c1">
-              <div className="ic"><MapPin size={20} /></div>
-              <div><small>Atuação</small><b>Florianópolis</b></div>
-            </div>
-            <div className="mlp-chip c2">
-              <div className="ic"><Check size={20} /></div>
-              <div><small>Cargo</small><b>Vereador</b></div>
-            </div>
+          <div className="mlp-trust">
+            <span className="mlp-pill"><b>497</b> municípios</span>
+            <span className="mlp-pill"><b>7</b> regiões</span>
+            <span className="mlp-pill">Feito com o povo</span>
           </div>
         </div>
         <div className="mlp-scroll"><div className="mlp-mouse" />role para conhecer</div>
@@ -215,8 +201,8 @@ export default function Landing() {
       {/* MARQUEE */}
       <div className="mlp-marquee">
         <div className="mlp-track">
-          <span>Saúde <i>•</i> Educação <i>•</i> Guaíba Despoluído <i>•</i> Moradia Popular <i>•</i> Cooperativismo <i>•</i> Esporte <i>•</i> Cidadania <i>•</i></span>
-          <span>Saúde <i>•</i> Educação <i>•</i> Guaíba Despoluído <i>•</i> Moradia Popular <i>•</i> Cooperativismo <i>•</i> Esporte <i>•</i> Cidadania <i>•</i></span>
+          <span>Saúde <i>•</i> Educação <i>•</i> Segurança <i>•</i> Emprego e renda <i>•</i> Campo forte <i>•</i> Reconstrução do RS <i>•</i> Cultura gaúcha <i>•</i></span>
+          <span>Saúde <i>•</i> Educação <i>•</i> Segurança <i>•</i> Emprego e renda <i>•</i> Campo forte <i>•</i> Reconstrução do RS <i>•</i> Cultura gaúcha <i>•</i></span>
         </div>
       </div>
 
@@ -237,16 +223,16 @@ export default function Landing() {
         <div className="mlp-wrap">
           <div className="mlp-head mlp-reveal">
             <span className="mlp-eyebrow">O que defendemos</span>
-            <h2>Bandeiras que mudam o seu dia a dia</h2>
-            <p>Causas trabalhadas de forma contínua — com metas claras e prestação de contas para cada bairro da cidade.</p>
+            <h2>Bandeiras que mudam o Rio Grande</h2>
+            <p>Compromissos trabalhados com metas claras e prestação de contas — para cada região do estado, do interior à capital.</p>
           </div>
           <div className="mlp-pillars">
-            <Pillar ico="🏥" t="Saúde integrativa" d="Mais acesso, agilidade no atendimento e apoio às práticas integrativas e à doação de órgãos e sangue." />
-            <Pillar ico="🏠" t="Moradia digna" d="Apoio à moradia popular e à regularização fundiária, dando segurança e dignidade às famílias." />
-            <Pillar ico="🌊" t="Guaíba despoluído" d="Despoluição das águas do Guaíba e cuidado ambiental para uma cidade mais limpa e saudável." />
-            <Pillar ico="🤝" t="Cooperativismo" d="Incentivo ao cooperativismo e ao pequeno empreendedor como motor de emprego e renda." />
-            <Pillar ico="📚" t="Educação de futuro" d="Educação de qualidade, segurança escolar e inclusão digital para preparar as novas gerações." />
-            <Pillar ico="🏅" t="Esporte e cidadania" d="Esporte, lazer e cultura como ferramentas de inclusão e transformação social nos bairros." />
+            <Pillar ico="🏥" t="Saúde perto de casa" d="Mais leitos, consultas e exames sem espera de meses. Cuidar da vida é a prioridade número um, em cada município." />
+            <Pillar ico="📚" t="Educação que liberta" d="Escola em tempo integral, valorização do professor e ensino conectado ao futuro do trabalho." />
+            <Pillar ico="🌾" t="Campo que sustenta o RS" d="Apoio ao pequeno produtor, crédito rural justo e política séria contra a estiagem." />
+            <Pillar ico="💼" t="Emprego e renda" d="Atrair investimento, fortalecer o comércio local e capacitar a juventude para as vagas de amanhã." />
+            <Pillar ico="🛡️" t="Segurança com inteligência" d="Prevenção, integração das forças e tecnologia para proteger cada família gaúcha." />
+            <Pillar ico="🚧" t="Reconstrução e infraestrutura" d="Estradas recuperadas, transporte digno e reconstrução das cidades atingidas pelas enchentes." />
           </div>
         </div>
       </section>
@@ -255,17 +241,17 @@ export default function Landing() {
       <section className="mlp-block" id="frentes">
         <div className="mlp-wrap">
           <div className="mlp-head mlp-reveal">
-            <span className="mlp-eyebrow">Liderança comprovada</span>
-            <h2>Frentes parlamentares que presido</h2>
-            <p>À frente de causas estruturantes para a sua cidade, articulando soluções com a sociedade civil.</p>
+            <span className="mlp-eyebrow">Compromisso de gestão</span>
+            <h2>Nossas frentes de trabalho</h2>
+            <p>Causas estruturantes para o Rio Grande, articuladas com a sociedade e com quem vive cada realidade.</p>
           </div>
           <div className="mlp-frentes">
-            <Frente n="01" t="Despoluição das Águas do Guaíba" d="Pela recuperação e saúde do nosso cartão-postal." />
-            <Frente n="02" t="Apoio à Moradia Popular e Regularização Fundiária" d="Segurança jurídica e dignidade para as famílias." />
-            <Frente n="03" t="Apoio ao Cooperativismo — FRENCOOP" d="Fortalecimento da economia cooperativa local." />
-            <Frente n="04" t="Práticas Integrativas em Saúde" d="Ampliação do cuidado e do bem-estar no SUS municipal." />
-            <Frente n="05" t="Incentivo à Doação de Órgãos e Sangue" d="Salvando vidas com conscientização e políticas públicas." />
-            <Frente n="06" t="Mercado Imobiliário" d="Desenvolvimento urbano responsável e geração de emprego." />
+            <Frente n="01" t="Reconstrução do Rio Grande" d="Reerguer as cidades atingidas e prevenir novas tragédias climáticas." />
+            <Frente n="02" t="Saúde sem filas" d="Mutirões permanentes de exames e cirurgias, com urgência em toda região." />
+            <Frente n="03" t="Educação em tempo integral" d="Mais aprendizado, esporte e cultura na escola pública." />
+            <Frente n="04" t="Campo forte" d="Crédito, irrigação e seguro para a agricultura familiar." />
+            <Frente n="05" t="Segurança integrada" d="Inteligência, tecnologia e presença em toda parte do estado." />
+            <Frente n="06" t="Emprego e desenvolvimento" d="Investimento e qualificação profissional para gerar renda." />
           </div>
         </div>
       </section>
@@ -316,8 +302,8 @@ export default function Landing() {
         <div className="mlp-wrap">
           <blockquote>Política se faz <span className="hl">com</span> as pessoas, não <span className="hl">pelas</span> pessoas. Trabalho e idealismo, com ética e coerência — é caminhando junto que a sua cidade muda.</blockquote>
           <div className="mlp-by">
-            <img src="/candidato.jpg" alt="Candidato Teste" />
-            <div style={{ textAlign: 'left' }}><b>Candidato Teste</b><span>Vereador · Sua Cidade</span></div>
+            <img src="/candidato.jpg" alt="Juliana Brizola e Edegar Pretto" />
+            <div style={{ textAlign: 'left' }}><b>Juliana Brizola e Edegar Pretto</b><span>Coração Gaúcho · Rio Grande do Sul</span></div>
           </div>
         </div>
       </section>
@@ -326,15 +312,15 @@ export default function Landing() {
       <section className="mlp-block mlp-soft" id="trajetoria">
         <div className="mlp-wrap">
           <div className="mlp-head mlp-reveal">
-            <span className="mlp-eyebrow">Quem é o candidato</span>
-            <h2>Uma trajetória de resultados</h2>
-            <p>Espaço para a biografia do candidato — formação, atuação e compromissos. Conteúdo ilustrativo de demonstração.</p>
+            <span className="mlp-eyebrow">Quem somos</span>
+            <h2>Duas trajetórias, um só coração gaúcho</h2>
+            <p>Juliana Brizola e Edegar Pretto — histórias ligadas ao trabalho, ao campo e à luta pelo Rio Grande. (Biografias a completar com o material oficial da campanha.)</p>
           </div>
           <div className="mlp-timeline">
-            <Tl yr="Ano 1" t="Primeiro cargo público" d="Descrição da primeira grande atuação — conteúdo de demonstração." />
-            <Tl yr="Ano 2" t="Segunda função relevante" d="Resumo da atuação nesta etapa — conteúdo de demonstração." />
-            <Tl yr="Ano 3" t="Marco importante" d="Principal conquista deste período — conteúdo de demonstração." />
-            <Tl yr="Hoje" t="Mandato atual" d="Projetos apresentados e frentes de atuação — conteúdo de demonstração." />
+            <Tl yr="Raiz" t="Gente do Rio Grande" d="Trajetórias perto da realidade do povo — do interior à capital." />
+            <Tl yr="Luta" t="Ao lado das causas" d="Presença histórica na defesa dos direitos e do desenvolvimento gaúcho." />
+            <Tl yr="Escuta" t="Governar de perto" d="Plenárias abertas em todas as regiões, decidindo com quem vive o problema." />
+            <Tl yr="Agora" t="Coração Gaúcho" d="Um movimento para reconstruir e fortalecer o Rio Grande — com o povo." />
           </div>
         </div>
       </section>
@@ -348,27 +334,27 @@ export default function Landing() {
             <p>Bastidores, conquistas e a agenda da campanha em primeira mão. Siga, comente e compartilhe — sua voz fortalece o movimento.</p>
           </div>
           <div className="mlp-soc-grid">
-            <a href="https://instagram.com/candidatodemo" target="_blank" rel="noopener noreferrer" className="mlp-soc ig mlp-reveal">
+            <a href="https://instagram.com/coracaogaucho" target="_blank" rel="noopener noreferrer" className="mlp-soc ig mlp-reveal">
               <div className="top">
                 <div className="ic"><IgIcon /></div>
                 <span className="live"><span className="dot" /> Ao vivo</span>
               </div>
               <div>
                 <h3>Instagram</h3>
-                <div className="handle">@candidatodemo</div>
+                <div className="handle">@coracaogaucho</div>
                 <span className="go">Seguir <ArrowRight size={16} /></span>
               </div>
               <span className="bgnum">IG</span>
             </a>
 
-            <a href="https://facebook.com/candidatodemo" target="_blank" rel="noopener noreferrer" className="mlp-soc fb mlp-reveal">
+            <a href="https://facebook.com/coracaogaucho" target="_blank" rel="noopener noreferrer" className="mlp-soc fb mlp-reveal">
               <div className="top">
                 <div className="ic"><FbIcon /></div>
                 <span className="live"><span className="dot" /> Online</span>
               </div>
               <div>
                 <h3>Facebook</h3>
-                <div className="handle">/candidatodemo</div>
+                <div className="handle">/coracaogaucho</div>
                 <span className="go">Curtir página <ArrowRight size={16} /></span>
               </div>
               <span className="bgnum">f</span>
@@ -381,7 +367,7 @@ export default function Landing() {
               </div>
               <div>
                 <h3>YouTube</h3>
-                <div className="handle">Canal Candidato Teste</div>
+                <div className="handle">Canal Coração Gaúcho</div>
                 <span className="go">Inscrever-se <ArrowRight size={16} /></span>
               </div>
               <span className="bgnum">▶</span>
@@ -451,11 +437,11 @@ export default function Landing() {
         <div className="mlp-wrap">
           <div className="mlp-foot-grid">
             <div>
-              <div className="mlp-foot-brand"><img className="mlp-mark" src="/partido-mark.svg" alt="Partido Teste" width="34" height="34" /><b>Candidato Teste</b></div>
-              <p style={{ maxWidth: 320 }}>Juntos por você, pela sua cidade. Trabalho e idealismo — uma campanha construída com a comunidade.</p>
+              <div className="mlp-foot-brand"><img className="mlp-foot-logo" src="/brand/coracao-gaucho-branco.png" alt="Coração Gaúcho" /></div>
+              <p style={{ maxWidth: 340 }}>Um movimento pelo Rio Grande do Sul. Juliana Brizola e Edegar Pretto — porque o povo fala mais alto.</p>
               <div className="mlp-socials">
-                <a href="https://instagram.com/candidatodemo" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><IgIcon /></a>
-                <a href="https://facebook.com/candidatodemo" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FbIcon /></a>
+                <a href="https://instagram.com/coracaogaucho" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><IgIcon /></a>
+                <a href="https://facebook.com/coracaogaucho" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FbIcon /></a>
                 <a href="https://youtube.com/channel/UCrLCED_PdfgOHyvvlDseC1w" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><YtIcon /></a>
               </div>
             </div>
@@ -468,14 +454,14 @@ export default function Landing() {
             </div>
             <div>
               <h4>Contato</h4>
-              <a href="mailto:contato@candidatodemo.com.br">contato@candidatodemo.com.br</a>
+              <a href="mailto:contato@coracaogaucho.com.br">contato@coracaogaucho.com.br</a>
               <a href="https://wa.me/5551993069837" target="_blank" rel="noopener noreferrer">WhatsApp (51) 99306-9837</a>
-              <a href="https://candidatodemo.com.br" target="_blank" rel="noopener noreferrer">candidatodemo.com.br</a>
-              <p>Santa Catarina</p>
+              <a href="https://coracaogaucho.com.br" target="_blank" rel="noopener noreferrer">coracaogaucho.com.br</a>
+              <p>Rio Grande do Sul</p>
             </div>
           </div>
           <div className="mlp-foot-bottom">
-            © {new Date().getFullYear()} Candidato Teste · Vereador · Partido Teste · Santa Catarina — Dados públicos; conteúdo de campanha ilustrativo.
+            © {new Date().getFullYear()} Coração Gaúcho · Juliana Brizola e Edegar Pretto · Rio Grande do Sul — Conteúdo de campanha ilustrativo.
           </div>
         </div>
       </footer>
