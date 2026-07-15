@@ -1,13 +1,13 @@
 // Schema do CRM Coração Gaúcho.
-// Dev: SQLite (zero setup). Produção: trocar provider para "postgresql" — os models
-// são compatíveis. SQLite não tem enums nativos; papéis/status usam String validada no app.
+// Banco: PostgreSQL (Railway em produção; local use Postgres via Docker ou o próprio
+// banco do Railway). Papéis/status usam String validada no app (herança da fase SQLite).
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
