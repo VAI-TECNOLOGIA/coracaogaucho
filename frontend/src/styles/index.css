@@ -1,8 +1,40 @@
 /* ============================================================
-   Candidato Teste Digital — Design System
-   Identidade: Trabalhismo Gaúcho (tricolor da bandeira do RS)
-   vermelho trabalhista + verde gaúcho + amarelo-ouro · fundo creme
+   Coração Gaúcho — Design System
+   Juliana Brizola e Edegar Pretto · "O povo fala mais alto"
+   Tricolor da bandeira do RS: azul + verde + vermelho + amarelo
    ============================================================ */
+
+/* Fontes oficiais da marca (arquivos em public/fonts) */
+@font-face {
+  font-family: 'Tusker Grotesk';
+  src: url('/fonts/TuskerGrotesk-Medium.otf') format('opentype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Tusker Grotesk';
+  src: url('/fonts/TuskerGrotesk-Semibold.otf') format('opentype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Tusker Grotesk';
+  src: url('/fonts/TuskerGrotesk-Bold.otf') format('opentype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'GT Proelium';
+  src: url('/fonts/GTProelium.otf') format('opentype');
+  font-weight: 400 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'GT Proelium';
+  src: url('/fonts/GTProeliumItalic.otf') format('opentype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Feeling Passionate';
+  src: url('/fonts/FeelingPassionate.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
 
 /* ----------------------------------------------------------------
    TEMA CLARO NEUTRO (padrão) — superfícies calmas, acento pontual.
@@ -13,19 +45,19 @@
 :root {
   color-scheme: light;
 
-  /* Marca / acento — DESIGN SYSTEM VAI (laranja + ink) */
-  --brand: #003E9D;
-  --brand-600: #003585;
-  --brand-700: #0A326B;
-  --brand-900: #072044;
-  --brand-soft: #E4ECF7;
-  --accent: #FEC330;
-  --accent-700: #D69E12;
+  /* Marca / acento — CORAÇÃO GAÚCHO (azul RS + amarelo-ouro) */
+  --brand: #004CA9;
+  --brand-600: #003F8E;
+  --brand-700: #172D57;
+  --brand-900: #0E1C38;
+  --brand-soft: #E3ECF8;
+  --accent: #FAB224;
+  --accent-700: #D88A00;
 
-  /* Tom secundário (antes verde gaúcho) — neutralizado p/ ink VAI */
-  --green-rs: #2BB153;
-  --green-rs-700: #1F8B41;
-  --green-rs-900: #145C2B;
+  /* Tom secundário — verde gaúcho da marca */
+  --green-rs: #0E6C38;
+  --green-rs-700: #0A4924;
+  --green-rs-900: #073318;
 
   /* Texto — ink VAI */
   --ink: #1A1D21;
@@ -51,21 +83,21 @@
   --sidebar-active-fg: var(--brand);
   --sidebar-border: var(--border);
 
-  /* Status (tons suaves) — mantidos p/ semântica de UX */
-  --green: #2BB153;
-  --green-soft: #E4F6EB;
-  --amber: #D69E12;
-  --amber-soft: #FEF3D6;
-  --red: #F3083E;
-  --red-soft: #FDE3E8;
-  --blue: #003E9D;
-  --blue-soft: #E4ECF7;
+  /* Status (tons suaves) — semântica de UX na paleta da marca */
+  --green: #0E6C38;
+  --green-soft: #E3F2E9;
+  --amber: #D88A00;
+  --amber-soft: #FDF0D6;
+  --red: #BC2224;
+  --red-soft: #F7E3E4;
+  --blue: #004CA9;
+  --blue-soft: #E3ECF8;
   --violet: #7c3aed;
   --violet-soft: #efe9fd;
   --gray-soft: #ECEEF1;
 
   /* Chat */
-  --bubble-out: #E4ECF7;
+  --bubble-out: #E3ECF8;
 
   --radius: 14px;
   --radius-sm: 9px;
@@ -74,9 +106,12 @@
   --shadow-lg: 0 16px 48px rgba(20, 28, 40, 0.18);
   --sidebar-w: 246px;
 
-  /* Tipografia — Inter em todo o sistema (fonte padrão de apps/sites) */
-  --font-display: 'Magistral', 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Tipografia — Tusker (display da marca) + Inter (corpo legível) */
+  --font-display: 'Tusker Grotesk', 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-strong: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-script: 'Feeling Passionate', 'Brush Script MT', cursive;
+  --font-label: 'GT Proelium', 'Tusker Grotesk', 'Inter', sans-serif;
+  /* TODO: substituir por fotos oficiais da Juliana e do Edegar */
   --candidate-photo: url('/candidato.jpg'), url('/candidato.svg');
 }
 
@@ -104,15 +139,15 @@
   --sidebar-fg-strong: #e6e9ef;
   --sidebar-section: #6b7686;
   --sidebar-hover: rgba(255, 255, 255, 0.06);
-  --sidebar-active-bg: rgba(0, 62, 157, 0.22);
+  --sidebar-active-bg: rgba(0, 76, 169, 0.24);
   --sidebar-active-fg: #fff;
   --sidebar-border: #1f2630;
 
-  --brand-soft: rgba(0, 62, 157, 0.18);
-  --green-soft: rgba(58, 63, 71, 0.20);
-  --amber-soft: rgba(184, 115, 10, 0.20);
-  --red-soft: rgba(220, 38, 38, 0.18);
-  --blue-soft: rgba(37, 99, 235, 0.22);
+  --brand-soft: rgba(0, 76, 169, 0.20);
+  --green-soft: rgba(14, 108, 56, 0.20);
+  --amber-soft: rgba(216, 138, 0, 0.20);
+  --red-soft: rgba(188, 34, 36, 0.20);
+  --blue-soft: rgba(0, 76, 169, 0.24);
   --violet-soft: rgba(124, 58, 237, 0.22);
   --gray-soft: #272e3a;
 
@@ -160,16 +195,22 @@ input, select, textarea { font-family: inherit; }
   transition: transform 0.25s ease, background 0.2s ease;
 }
 .sidebar-brand {
+  position: relative;
   display: flex; align-items: center; gap: 12px;
   padding: 20px 20px 18px;
   border-bottom: 1px solid var(--sidebar-border);
+}
+/* Faixa tricolor RS no topo da marca (identidade Coração Gaúcho) */
+.sidebar-brand::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--green-rs) 0 33.33%, var(--red) 33.33% 66.66%, var(--accent) 66.66% 100%);
 }
 .brand-mark {
   width: 42px; height: 42px; border-radius: 11px;
   background: linear-gradient(135deg, var(--brand), var(--brand-700));
   color: #fff; display: grid; place-items: center;
   font-weight: 800; font-size: 18px; flex-shrink: 0; overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 62, 157, 0.45);
+  box-shadow: 0 6px 16px rgba(0, 76, 169, 0.42);
 }
 .brand-mark img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .brand-text strong { color: var(--sidebar-fg-strong); display: block; font-size: 15px; line-height: 1.1; font-family: var(--font-strong); font-weight: 900; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -361,18 +402,18 @@ table.table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 .toast-error { background: #991b1b; }
 .toast-info { background: var(--ink); }
 
-/* ---------------- Login (trabalhismo gaúcho) ---------------- */
-.auth { min-height: 100vh; display: grid; grid-template-columns: 1.15fr 0.85fr; background: var(--green-rs-900); }
-.auth-visual { position: relative; overflow: hidden; background: var(--green-rs-900); }
-.auth-photo { position: absolute; inset: 0; background-image: var(--candidate-photo); background-size: cover; background-position: center top; filter: grayscale(100%) contrast(1.05); }
-.auth-duo { position: absolute; inset: 0; background: linear-gradient(160deg, var(--brand) 0%, var(--brand-900) 100%); mix-blend-mode: multiply; opacity: 0.88; }
-.auth-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,61,34,0.12) 0%, rgba(15,61,34,0.35) 45%, rgba(15,29,20,0.95) 100%); }
-.auth-grain { position: absolute; inset: 0; background: repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 8px); }
+/* ---------------- Login (capa Coração Gaúcho — mosaico do povo) ---------------- */
+.auth { min-height: 100vh; display: grid; grid-template-columns: 1.15fr 0.85fr; background: var(--brand-900); }
+.auth-visual { position: relative; overflow: hidden; background: var(--brand-900); }
+.auth-photo { position: absolute; inset: 0; background-image: url('/brand/mosaico-faces.jpg'); background-size: cover; background-position: center; filter: saturate(1.05); transform: scale(1.04); }
+.auth-duo { position: absolute; inset: 0; background: linear-gradient(160deg, var(--brand) 0%, var(--brand-900) 100%); mix-blend-mode: multiply; opacity: 0.55; }
+.auth-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,45,87,0.20) 0%, rgba(14,28,56,0.45) 42%, rgba(10,20,40,0.96) 100%); }
+.auth-grain { position: absolute; inset: 0; background: repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 8px); }
 .auth-flag { position: absolute; top: 34px; right: -70px; width: 320px; height: 50px; transform: rotate(38deg); display: flex; box-shadow: 0 14px 40px rgba(0,0,0,0.4); }
 .auth-flag i { flex: 1; }
 .auth-flag .g { background: var(--green-rs); }
-.auth-flag .y { background: var(--accent); }
-.auth-flag .r { background: var(--brand); }
+.auth-flag .y { background: var(--red); }
+.auth-flag .r { background: var(--accent); }
 .auth-content { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 48px 52px; color: #fff; }
 .auth-top { display: flex; align-items: center; gap: 12px; }
 .auth-number { margin-left: auto; font-family: var(--font-display); font-weight: 800; font-size: 24px; background: var(--accent); color: #3a2600; padding: 9px 16px; border-radius: 13px; box-shadow: 0 12px 30px rgba(0,0,0,0.4); letter-spacing: 1px; }

@@ -37,10 +37,10 @@ export default function Sidebar({ open, onClose }) {
   return (
     <aside className={`sidebar ${open ? 'open' : ''}`}>
       <div className="sidebar-brand">
-        <div className="brand-mark"><img src="/candidato.jpg" alt="Candidato Teste" /></div>
+        <div className="brand-mark"><img src="/brand/mosaico-faces.jpg" alt="O povo do Rio Grande" /></div>
         <div className="brand-text">
-          <strong>Candidato Teste</strong>
-          <span>Digital</span>
+          <strong>Coração Gaúcho</strong>
+          <span>Juliana e Edegar</span>
         </div>
       </div>
 

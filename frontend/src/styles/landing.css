@@ -1,12 +1,13 @@
 /* ============================================================
-   Landing executiva — Candidato Teste
+   Landing executiva — Coração Gaúcho (Juliana Brizola e Edegar Pretto)
    Estilos 100% escopados sob `.mlp` (prefixo .mlp-*) para NÃO
    conflitar com o design system trabalhista do painel (index.css).
    ============================================================ */
 
 .mlp{
-  --navy:#0A326B; --navy-2:#003E9D; --blue:#2E6FD6; --blue-soft:#E4ECF7;
-  --red:#F3083E; --gold:#FEC330; --ink:#16181D; --muted:#5A616B;
+  /* Paleta Coração Gaúcho */
+  --navy:#172D57; --navy-2:#004CA9; --blue:#004CA9; --blue-soft:#E3ECF8;
+  --red:#BC2224; --gold:#FAB224; --green:#0E6C38; --ink:#16181D; --muted:#5A616B;
   --line:#e6ebf2; --paper:#fff; --paper-soft:#F6F7F9; --rad:18px;
   --sh-sm:0 4px 14px rgba(14,23,38,.06);
   --sh:0 18px 50px rgba(10,37,64,.12);
@@ -16,7 +17,8 @@
   -webkit-font-smoothing:antialiased;
 }
 .mlp *{margin:0;padding:0;box-sizing:border-box}
-.mlp h1,.mlp h2,.mlp h3{font-family:'Inter',Georgia,serif;line-height:1.08;letter-spacing:-.01em}
+.mlp h1,.mlp h2,.mlp h3{font-family:'Tusker Grotesk','Inter',system-ui,sans-serif;line-height:1.0;letter-spacing:0}
+.mlp h1{letter-spacing:.5px}
 .mlp a{text-decoration:none;color:inherit}
 .mlp-wrap{max-width:1180px;margin:0 auto;padding:0 28px}
 .mlp-eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase}
@@ -35,6 +37,12 @@
 .mlp-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s}
 .mlp-bar{display:flex;align-items:center;justify-content:space-between;height:84px;transition:.3s}
 .mlp-brand{display:flex;align-items:center;gap:13px}
+/* Logo oficial: claro sobre o hero, escuro quando o header vira branco */
+.mlp-logo{height:42px;width:auto;display:block}
+.mlp-header .mlp-logo--dark{display:none}
+.mlp-header.scrolled .mlp-logo--light{display:none}
+.mlp-header.scrolled .mlp-logo--dark{display:block}
+.mlp-foot-logo{height:48px;width:auto;display:block;margin-bottom:6px}
 .mlp-brand .num{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-family:'Inter';font-weight:700;font-size:22px;background:linear-gradient(135deg,var(--gold),#D69E12);color:var(--navy);box-shadow:0 8px 20px rgba(246,196,83,.4)}
 .mlp-brand .wm b{font-family:'Inter';font-weight:600;font-size:19px;display:block;line-height:1.05;color:#fff;transition:.3s}
 .mlp-brand .wm small{font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);transition:.3s}
@@ -52,18 +60,21 @@
 .mlp-header.scrolled .mlp-menu .mlp-enter{color:var(--ink);border-color:var(--line)}
 .mlp-menu .mlp-enter:hover{background:rgba(255,255,255,.12)}
 
-/* Hero */
-.mlp-hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;background:radial-gradient(120% 130% at 80% 10%,#13447c 0%,var(--navy) 55%,#06182b 100%)}
-.mlp-hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(50% 60% at 18% 80%,rgba(31,111,235,.35),transparent 60%),
-  radial-gradient(40% 50% at 90% 20%,rgba(246,196,83,.14),transparent 60%);pointer-events:none}
-.mlp-hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:120px 0 80px}
-.mlp-hero .mlp-eyebrow{color:var(--gold)}
-.mlp-hero h1{font-size:clamp(40px,5.4vw,72px);font-weight:600;margin:22px 0 20px}
-.mlp-hero h1 .accent{color:var(--gold)}
-.mlp-lead{font-size:clamp(17px,1.5vw,20px);color:rgba(255,255,255,.82);max-width:520px;margin-bottom:36px}
+/* Hero — mosaico imersivo do povo */
+.mlp-hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;overflow:hidden;background:var(--navy)}
+.mlp-hero-media{position:absolute;inset:0;background:url('/brand/hero-mosaico.jpg') center 30%/cover no-repeat;transform:scale(1.04);animation:mlp-kenburns 26s ease-in-out infinite alternate}
+@keyframes mlp-kenburns{from{transform:scale(1.04)}to{transform:scale(1.13)}}
+.mlp-hero-veil{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(180deg,rgba(9,22,46,.60) 0%,rgba(9,22,46,.06) 18%,rgba(9,22,46,0) 30%,rgba(9,22,46,.45) 52%,rgba(9,22,46,.90) 70%,rgba(7,18,38,.99) 100%)}
+/* faixa tricolor RS no topo do hero */
+.rs-bar-top{position:absolute;top:0;left:0;right:0;height:6px;z-index:3;background:linear-gradient(90deg,var(--green) 0 33.33%,var(--red) 33.33% 66.66%,var(--gold) 66.66% 100%)}
+.mlp-hero-inner{position:relative;z-index:2;width:100%;max-width:1180px;margin:0 auto;padding:0 28px 92px;animation:mlp-riseIn 1s cubic-bezier(.22,1,.36,1) both}
+@keyframes mlp-riseIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.mlp-hero .mlp-eyebrow{color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);padding:9px 18px;border-radius:50px;backdrop-filter:blur(8px);font-size:12px}
+.mlp-hero .mlp-eyebrow::before{display:none}
+.mlp-hero-lead{font-family:'Inter';font-size:clamp(18px,1.85vw,24px);line-height:1.5;color:rgba(255,255,255,.92);max-width:660px;margin:22px 0 32px;font-weight:500;text-shadow:0 2px 24px rgba(0,0,0,.45)}
 .mlp-cta{display:flex;gap:16px;flex-wrap:wrap}
-.mlp-trust{display:flex;align-items:center;gap:14px;margin-top:40px;flex-wrap:wrap}
+.mlp-trust{display:flex;align-items:center;gap:14px;margin-top:34px;flex-wrap:wrap}
 .mlp-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:8px 15px;border-radius:50px;font-weight:600;color:rgba(255,255,255,.85);font-size:14px}
 .mlp-pill b{color:var(--gold);font-family:'Inter'}
 
