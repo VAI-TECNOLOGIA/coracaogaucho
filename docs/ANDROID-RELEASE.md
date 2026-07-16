@@ -61,10 +61,22 @@ Conferir SHA1 do AAB (deve bater com a tabela acima):
 keytool -printcert -jarfile app/android/app/build/outputs/bundle/release/app-release.aab | grep SHA1
 ```
 
+## Play Console
+
+| Item | Valor |
+|---|---|
+| Conta de desenvolvedor | Vai Tecnologia ltda (ID `5685508146301608360`) |
+| App ID (Play) | `4976105868328578243` |
+| Package | `com.vaitecnologia.coracaogaucho` |
+| Assinatura | Play App Signing ativo — o keystore acima é a **upload key** |
+| Categoria | Notícias e revistas |
+| Track | Produção (rascunho de versão salvo com o AAB) |
+| Público-alvo | 16-17 e 18+ (nunca infantil) |
+
 ## Histórico
 
 | Data | versionCode / name | AAB | Track | Observação |
 |---|---|---|---|---|
-| 2026-07-16 | 1 / 1.0.0 | 5.9 MB, SHA1 `D0:59:…:18:D4` | (rascunho) | Primeiro build assinado; ficha em preparação |
+| 2026-07-16 | 1 / 1.0.0 | 5.9 MB, SHA1 `D0:59:…:18:D4` | Produção (rascunho) | Primeiro build assinado; AAB enviado; ficha e 9/11 declarações concluídas |
 </content>
 </invoke>
