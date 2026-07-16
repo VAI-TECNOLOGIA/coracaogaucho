@@ -3,3 +3,12 @@ node_modules/
 # Config do Firebase por ambiente — repo é público, manter fora
 android/app/google-services.json
 ios/App/App/GoogleService-Info.plist
+
+# Assinatura de release — NUNCA commitar (repo público)
+android/key.properties
+*.keystore
+*.jks
+android/local.properties
+android/.gradle/
+android/app/build/
+android/build/
