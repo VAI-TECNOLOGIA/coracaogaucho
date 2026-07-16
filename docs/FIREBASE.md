@@ -16,7 +16,7 @@ Registro das informações do projeto Firebase (push notifications do app).
 
 | Item | Valor |
 |---|---|
-| Package | `com.vaitecnologia.coracaogaucho` |
+| Package | `com.vaitecnologia.coracaogaucho` (nome do app nas lojas: **Confia+**) |
 | Config | `app/android/app/google-services.json` — **NÃO commitado** (repo é público); baixe de novo no console em Configurações do projeto → Geral → Seus apps se precisar |
 
 ## iOS (pendente)

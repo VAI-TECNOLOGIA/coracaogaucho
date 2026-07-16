@@ -1,6 +1,7 @@
-# Android — Release / Assinatura — Coração Gaúcho
+# Android — Release / Assinatura — Confia+ (movimento Coração Gaúcho)
 
 Registro da assinatura de release e do processo de publicação na Google Play.
+**Nome do app nas lojas: Confia+** (renomeado em 2026-07-16; pacote continua `com.vaitecnologia.coracaogaucho`). Versão em revisão: versionCode 3 (1.0.0).
 **Nenhuma senha fica neste repositório (público).** Senhas ficam em
 `~/.config/coracaogaucho/release.keystore.PASSWORD.txt` (chmod 600, fora do repo).
 
