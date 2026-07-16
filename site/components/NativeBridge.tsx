@@ -20,6 +20,9 @@ type CapacitorGlobal = {
       register: () => Promise<void>;
       addListener: (evento: string, cb: (dados: never) => void) => void;
     };
+    Preferences?: {
+      get: (opcoes: { key: string }) => Promise<{ value: string | null }>;
+    };
   };
 };
 
@@ -40,18 +43,36 @@ export function NativeBridge() {
     if (!push) return;
 
     const plataforma = cap.getPlatform?.() === "ios" ? "ios" : "android";
+    const prefs = cap.Plugins?.Preferences;
+
+    // No iOS o plugin nativo entrega o token cru do APNs (64 hex), que o backend
+    // FCM HTTP v1 rejeita. O AppDelegate salva o token FCM em Preferences
+    // (chave "fcmToken"); lemos esse valor aqui. No Android o token já é FCM.
+    const resolverToken = async (bruto: string): Promise<string> => {
+      if (plataforma !== "ios" || !prefs) return bruto;
+      for (let tentativa = 0; tentativa < 10; tentativa++) {
+        try {
+          const { value } = await prefs.get({ key: "fcmToken" });
+          if (value && value.length > 80) return value;
+        } catch {}
+        await new Promise((r) => setTimeout(r, 500));
+      }
+      return bruto; // fallback: registra o que veio (melhor que nada)
+    };
 
     push.addListener("registration", (dados: { value: string }) => {
-      // Evita re-registro repetido do mesmo token a cada navegação
       const chave = "cg-push-token";
-      if (localStorage.getItem(chave) === dados.value) return;
-      fetch("/api/mobile/push/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token: dados.value, plataforma }),
-      })
-        .then((r) => {
-          if (r.ok) localStorage.setItem(chave, dados.value);
+      resolverToken(dados.value)
+        .then((token) => {
+          // Evita re-registro repetido do mesmo token a cada navegação
+          if (localStorage.getItem(chave) === token) return;
+          return fetch("/api/mobile/push/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token, plataforma }),
+          }).then((r) => {
+            if (r.ok) localStorage.setItem(chave, token);
+          });
         })
         .catch(() => {});
     });

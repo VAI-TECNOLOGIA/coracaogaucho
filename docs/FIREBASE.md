@@ -19,11 +19,14 @@ Registro das informações do projeto Firebase (push notifications do app).
 | Package | `com.vaitecnologia.coracaogaucho` (nome do app nas lojas: **Confia+**) |
 | Config | `app/android/app/google-services.json` — **NÃO commitado** (repo é público); baixe de novo no console em Configurações do projeto → Geral → Seus apps se precisar |
 
-## iOS (pendente)
+## iOS (em andamento — 2026-07-16)
 
-Registrar app Apple no mesmo projeto quando formos publicar na App Store
-(precisa do Bundle ID `com.vaitecnologia.coracaogaucho` + APNs key da conta Apple Developer).
-Baixar `GoogleService-Info.plist` para `app/ios/App/App/`.
+Native já preparado (AppDelegate com FirebaseMessaging, entitlements, Package.swift; ver `docs/IOS-RELEASE.md`).
+Pendências no Firebase Console:
+1. Registrar app Apple no projeto com Bundle ID `com.vaitecnologia.coracaogaucho`.
+2. Baixar `GoogleService-Info.plist` → `app/ios/App/App/` (**NÃO commitado**; já no `.gitignore`).
+3. Cloud Messaging → Apple app configuration → subir a APNs Auth Key (.p8) + Key ID + Team ID
+   (a .p8 é criada no Apple Developer Portal). Sem isso, push retorna `success:1` mas não chega.
 
 ## Chaves e onde estão
 
