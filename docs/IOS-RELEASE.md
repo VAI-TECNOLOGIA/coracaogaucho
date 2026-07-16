@@ -66,3 +66,7 @@ Segue o playbook `~/Documents/Claudinho/MOBILE_README.md` seção 15. **Sem segr
 ## Próximo build number a usar
 
 **2** (o build 1 ainda não foi enviado; use 1 no primeiro upload e incremente a partir daí).
+
+
+## APNs — resolvido (2026-07-16)
+Chave APNs **ZVYQGLBY5L** (Team B7VL5G2998, team-scoped) instalada no Firebase Cloud Messaging do projeto coracaogaucho-2f005, slots de produção E desenvolvimento. Push iOS habilitado ponta a ponta. Arquivo .p8 permanece em ~/Documents/keystores/ (fora do repo).

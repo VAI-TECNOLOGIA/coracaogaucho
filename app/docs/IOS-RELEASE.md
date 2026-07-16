@@ -114,3 +114,7 @@ Incrementar `CURRENT_PROJECT_VERSION` (build number) a cada upload:
 ```bash
 cd app/ios/App && xcrun agvtool new-version -all 2
 ```
+
+
+## APNs — resolvido (2026-07-16)
+Chave APNs **ZVYQGLBY5L** (Team B7VL5G2998, team-scoped) instalada no Firebase Cloud Messaging do projeto coracaogaucho-2f005, slots de produção E desenvolvimento. Push iOS habilitado ponta a ponta. Arquivo .p8 permanece em ~/Documents/keystores/ (fora do repo).
