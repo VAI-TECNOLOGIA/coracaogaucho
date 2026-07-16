@@ -11,6 +11,9 @@ const LINKS = [
   { href: "#regioes", label: "Pelo RS" },
 ];
 
+// Login do Sistema da campanha (back-office da equipe)
+const SISTEMA_URL = process.env.NEXT_PUBLIC_SISTEMA_URL ?? "https://coracaogaucho.vai-sistema.com";
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -50,6 +53,15 @@ export function Header() {
               {l.label}
             </a>
           ))}
+          <a
+            href={SISTEMA_URL}
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-red",
+              scrolled ? "text-ink-soft" : "text-cream-soft/90",
+            )}
+          >
+            Entrar
+          </a>
           <a
             href="#some-se"
             className="font-label rounded-full bg-red px-5 py-2.5 text-sm uppercase tracking-wide text-cream-soft shadow-lg shadow-red/25 transition-transform hover:scale-[1.04] active:scale-95"
@@ -94,6 +106,13 @@ export function Header() {
                 {l.label}
               </a>
             ))}
+            <a
+              href={SISTEMA_URL}
+              onClick={() => setOpen(false)}
+              className="rounded-lg px-2 py-3 text-base font-medium text-ink-soft hover:bg-blue/5 hover:text-blue"
+            >
+              Entrar no sistema
+            </a>
             <a
               href="#some-se"
               onClick={() => setOpen(false)}

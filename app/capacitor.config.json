@@ -4,7 +4,12 @@
   "webDir": "www",
   "server": {
     "url": "https://coracaogaucho.vercel.app",
-    "allowNavigation": ["coracaogaucho.vercel.app", "coracaogaucho.com.br", "*.coracaogaucho.com.br"]
+    "allowNavigation": [
+      "coracaogaucho.vercel.app",
+      "coracaogaucho.com.br",
+      "*.coracaogaucho.com.br",
+      "coracaogaucho.vai-sistema.com"
+    ]
   },
   "android": { "allowMixedContent": false },
   "plugins": {

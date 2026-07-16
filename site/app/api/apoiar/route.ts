@@ -1,5 +1,6 @@
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { prisma } from "@/lib/db";
+import { enviarLeadAoSistema } from "@/lib/sistema";
 
 export const runtime = "nodejs";
 
@@ -45,17 +46,20 @@ export async function POST(req: Request) {
   }
 
   try {
+    const tipoFinal = TIPOS.has(tipo) ? tipo : "apoiador";
     await prisma.lead.create({
       data: {
         nome,
         email,
         telefone,
         cidade,
-        tipo: TIPOS.has(tipo) ? tipo : "apoiador",
+        tipo: tipoFinal,
         segmento: body.segmento?.trim() || null,
         origem: body.origem?.trim() || "site-institucional",
       },
     });
+    // Espelha no Sistema da campanha (vai-sistema) após responder — best-effort
+    after(() => enviarLeadAoSistema({ nome, telefone, email, cidade, tipo: tipoFinal }));
   } catch {
     return NextResponse.json(
       { ok: false, error: "Não foi possível registrar agora. Tente novamente." },

@@ -65,6 +65,7 @@ export function Footer() {
               { nome: "Termos de Uso", href: "/termos-de-uso" },
               { nome: "Excluir conta", href: "/excluir-conta" },
               { nome: "Excluir dados", href: "/excluir-dados" },
+              { nome: "Sistema da campanha", href: "https://coracaogaucho.vai-sistema.com" },
             ],
           },
         ].map((col) => (
