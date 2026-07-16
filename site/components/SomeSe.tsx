@@ -154,7 +154,7 @@ export function SomeSe() {
               </button>
               <p className="text-center text-xs text-ink-soft/70">
                 Ao enviar, você concorda com o tratamento dos seus dados conforme a{" "}
-                <a href="#" className="underline hover:text-blue">Política de Privacidade (LGPD)</a>.
+                <a href="/politica-de-privacidade" className="underline hover:text-blue">Política de Privacidade (LGPD)</a>.
               </p>
             </form>
           )}
