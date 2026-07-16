@@ -41,6 +41,18 @@ model Lead {
   @@index([criadoEm])
 }
 
+// Tokens de push (FCM/APNs via Capacitor) registrados pelos dispositivos do app.
+model DeviceToken {
+  id           String   @id @default(cuid())
+  token        String   @unique
+  plataforma   String   @default("android") // android | ios
+  ativo        Boolean  @default(true)
+  criadoEm     DateTime @default(now())
+  atualizadoEm DateTime @updatedAt
+
+  @@index([ativo])
+}
+
 // Solicitações LGPD (exclusão de conta ou de dados específicos).
 // Registra o pedido do titular e a resolução — comprovação de atendimento (art. 18 LGPD).
 model SolicitacaoPrivacidade {

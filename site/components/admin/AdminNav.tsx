@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, Users, Filter, Sparkles, Shield, UserX } from "lucide-react";
+import { LayoutDashboard, Users, Filter, Sparkles, Shield, UserX, BellRing } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ITENS = [
@@ -10,6 +10,7 @@ const ITENS = [
   { href: "/admin/leads", label: "Leads", icon: Users },
   { href: "/admin/funil", label: "Funil", icon: Filter },
   { href: "/admin/insights", label: "Insights IA", icon: Sparkles },
+  { href: "/admin/notificacoes", label: "Notificações", icon: BellRing },
   { href: "/admin/equipe", label: "Equipe", icon: Shield },
   { href: "/admin/privacidade", label: "Privacidade", icon: UserX },
 ];

@@ -1,0 +1,13 @@
+{
+  "appId": "com.vaitecnologia.coracaogaucho",
+  "appName": "Coração Gaúcho",
+  "webDir": "www",
+  "server": {
+    "url": "https://coracaogaucho.vercel.app",
+    "allowNavigation": ["coracaogaucho.vercel.app", "coracaogaucho.com.br", "*.coracaogaucho.com.br"]
+  },
+  "android": { "allowMixedContent": false },
+  "plugins": {
+    "PushNotifications": { "presentationOptions": ["badge", "sound", "alert"] }
+  }
+}

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { tusker, passionate, proelium, inter } from "./fonts";
 import { Analytics } from "@/components/Analytics";
+import { NativeBridge } from "@/components/NativeBridge";
 import "./globals.css";
 
 const SITE_URL = "https://coracaogaucho.com.br";
@@ -44,6 +45,7 @@ export const viewport: Viewport = {
   themeColor: "#004ca9",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -56,6 +58,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-cream text-ink">
         <Analytics />
+        <NativeBridge />
         {children}
       </body>
     </html>
