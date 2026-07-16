@@ -7,7 +7,7 @@ com Capacitor 8 carregando o site remoto `https://coracaogaucho.vercel.app`.
 
 | Item | Valor |
 |---|---|
-| Nome na App Store | Confia+ Coração Gaúcho |
+| Nome na App Store | Confia+ RS |
 | Subtítulo | O movimento Coração Gaúcho |
 | Bundle ID | `com.vaitecnologia.coracaogaucho` |
 | SKU | `coracaogaucho` |
