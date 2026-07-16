@@ -189,7 +189,13 @@ body {
 .legal-prose ul { list-style: disc; }
 .legal-prose ol { list-style: decimal; }
 .legal-prose li { margin: 0.35rem 0; }
-.legal-prose a { color: var(--cg-blue); text-decoration: underline; text-underline-offset: 3px; }
+.legal-prose a {
+  color: var(--cg-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  /* URLs longas quebram linha em telas estreitas */
+  overflow-wrap: anywhere;
+}
 .legal-prose strong { color: var(--cg-ink); }
 .legal-prose table {
   /* display:block permite rolagem horizontal em telas estreitas sem estourar a página */
