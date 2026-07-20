@@ -56,7 +56,7 @@ export function Header() {
           <a
             href={SISTEMA_URL}
             className={cn(
-              "cg-sistema-link text-sm font-medium transition-colors hover:text-red",
+              "text-sm font-medium transition-colors hover:text-red",
               scrolled ? "text-ink-soft" : "text-cream-soft/90",
             )}
           >
@@ -109,7 +109,7 @@ export function Header() {
             <a
               href={SISTEMA_URL}
               onClick={() => setOpen(false)}
-              className="cg-sistema-link rounded-lg px-2 py-3 text-base font-medium text-ink-soft hover:bg-blue/5 hover:text-blue"
+              className="rounded-lg px-2 py-3 text-base font-medium text-ink-soft hover:bg-blue/5 hover:text-blue"
             >
               Entrar no sistema
             </a>
