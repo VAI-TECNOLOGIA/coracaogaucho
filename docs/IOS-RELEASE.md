@@ -70,3 +70,11 @@ Segue o playbook `~/Documents/Claudinho/MOBILE_README.md` seção 15. **Sem segr
 
 ## APNs — resolvido (2026-07-16)
 Chave APNs **ZVYQGLBY5L** (Team B7VL5G2998, team-scoped) instalada no Firebase Cloud Messaging do projeto coracaogaucho-2f005, slots de produção E desenvolvimento. Push iOS habilitado ponta a ponta. Arquivo .p8 permanece em ~/Documents/keystores/ (fora do repo).
+
+
+## Revisão Apple — resposta a rejeição (2026-07-20)
+Primeira submissão rejeitada por **Guideline 2.1(a) — Information Needed**: revisor não conseguiu acessar o back-office (botão "Entrar" leva ao sistema da equipe sem credencial).
+Resolvido SEM novo build (server mode):
+- App Review Information → "Sign-In required" marcado, conta demo **app@review.com / teste123** (login no vai-sistema, papel LIDER).
+- Review Notes atualizadas explicando que o login é da equipe e o app é público.
+- Resposta enviada no Resolution Center + "Reenviar para Revisão". App voltou para a fila (Waiting for Review).
