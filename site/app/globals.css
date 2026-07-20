@@ -227,3 +227,9 @@ html.native-app header {
 html.native-app footer {
   padding-bottom: env(safe-area-inset-bottom);
 }
+
+/* Dentro do app nativo, o acesso ao back-office da equipe fica oculto —
+   o app das lojas é 100% público (exigência de revisão Apple/Google). */
+html.native-app .cg-sistema-link {
+  display: none;
+}

@@ -75,7 +75,7 @@ export function Footer() {
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm">
               {col.l.map((item) => (
-                <li key={item.nome}>
+                <li key={item.nome} className={item.href.includes("vai-sistema") ? "cg-sistema-link" : undefined}>
                   <a
                     href={item.href}
                     className="text-cream-soft/60 transition-colors hover:text-cream-soft"
