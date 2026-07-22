@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { ArrowLeft, KeyRound } from 'lucide-react';
 import api, { apiError } from '../api/client.js';
 import { useToast } from '../context/ToastContext.jsx';
+import PasswordInput from '../components/ui/PasswordInput.jsx';
 
 export default function ResetPassword() {
   const toast = useToast();
@@ -58,9 +59,7 @@ export default function ResetPassword() {
 
         <div className="field">
           <label>Nova senha</label>
-          <input
-            className="input"
-            type="password"
+          <PasswordInput
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             minLength={6}
@@ -70,9 +69,7 @@ export default function ResetPassword() {
         </div>
         <div className="field">
           <label>Confirmar nova senha</label>
-          <input
-            className="input"
-            type="password"
+          <PasswordInput
             value={confirm}
             onChange={(e) => setConfirm(e.target.value)}
             minLength={6}

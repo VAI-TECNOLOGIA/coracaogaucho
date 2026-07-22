@@ -37,6 +37,11 @@ export const NAV = [
   { to: '/disparos', label: 'Disparos', icon: 'Send', roles: INTERNO },
   { to: '/automacoes', label: 'Automações', icon: 'Bot', roles: LIDER },
 
+  { section: 'Minha conta' },
+  // Visível para todos os perfis: é por aqui que o usuário troca a senha e
+  // exclui a própria conta (exigência da App Store, Guideline 5.1.1(v)).
+  { to: '/minha-conta', label: 'Minha conta', icon: 'CircleUser', roles: '*' },
+
   { section: 'Administração' },
   { to: '/usuarios', label: 'Usuários', icon: 'UserCog', roles: LIDER },
   { to: '/configuracoes', label: 'Configurações', icon: 'Settings', roles: LIDER },

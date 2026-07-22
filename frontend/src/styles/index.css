@@ -359,6 +359,18 @@ input, select, textarea { font-family: inherit; }
 .textarea { resize: vertical; min-height: 84px; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
 .form-grid .full { grid-column: 1 / -1; }
+/* Campo de senha com botão de olho */
+.password-input { position: relative; display: flex; }
+.password-input .input { padding-right: 40px; }
+.password-toggle {
+  position: absolute; right: 1px; top: 1px; bottom: 1px; width: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border: 0; background: none; color: var(--muted); cursor: pointer;
+  border-radius: 0 10px 10px 0; transition: color 0.15s;
+}
+.password-toggle:hover { color: var(--text); }
+.password-toggle:focus-visible { outline: 2px solid var(--brand); outline-offset: -2px; }
+
 .field-hint { font-size: 11.5px; color: var(--muted); }
 .field-error { font-size: 11.5px; color: var(--red); }
 /* Bug 10: campo inválido */

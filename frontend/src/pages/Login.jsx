@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useToast } from '../context/ToastContext.jsx';
 import { apiError } from '../api/client.js';
+import PasswordInput from '../components/ui/PasswordInput.jsx';
 
 // Acessos de demonstração — clicar entra direto no sistema com o papel escolhido.
 const DEMO_ACCOUNTS = [
@@ -92,7 +93,7 @@ export default function Login() {
           </div>
           <div className="field">
             <label>Senha</label>
-            <input className="input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <PasswordInput value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
 
           <button className="btn btn-primary btn-block btn-xl" disabled={submitting} type="submit">

@@ -15,6 +15,7 @@ r.post('/forgot-password', resetLimit, auth.forgotPassword);
 r.post('/reset-password', resetLimit, auth.resetPassword);
 
 r.get('/me', authenticate, auth.me);
+r.delete('/me', authenticate, resetLimit, auth.deleteAccount);
 r.post('/change-password', authenticate, auth.changePassword);
 r.post('/register', authenticate, authorize('LIDER'), auth.register);
 

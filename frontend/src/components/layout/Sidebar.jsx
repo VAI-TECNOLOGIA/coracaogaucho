@@ -78,13 +78,13 @@ export default function Sidebar({ open, onClose }) {
       </nav>
 
       <div className="sidebar-footer">
-        <div className="user-chip">
+        <NavLink to="/minha-conta" className="user-chip" onClick={onClose} title="Minha conta">
           <Avatar name={user?.name} src={user?.avatarUrl} size="avatar-sm" />
           <div className="user-chip-info">
             <strong>{user?.name}</strong>
             <span>{label('UserRole', user?.role)}</span>
           </div>
-        </div>
+        </NavLink>
       </div>
     </aside>
   );

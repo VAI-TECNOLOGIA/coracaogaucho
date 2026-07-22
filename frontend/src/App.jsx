@@ -31,6 +31,7 @@ const Broadcasts = lazy(() => import('./pages/Broadcasts.jsx'));
 const Automations = lazy(() => import('./pages/Automations.jsx'));
 const Users = lazy(() => import('./pages/Users.jsx'));
 const Settings = lazy(() => import('./pages/Settings.jsx'));
+const Account = lazy(() => import('./pages/Account.jsx'));
 
 const P = (roles, element) => <ProtectedRoute roles={roles}>{element}</ProtectedRoute>;
 
@@ -73,6 +74,7 @@ export default function App() {
       <Route path="/disparos" element={P(['LIDER', 'MEMBRO'], <Broadcasts />)} />
       <Route path="/automacoes" element={P(['LIDER'], <Automations />)} />
 
+      <Route path="/minha-conta" element={P(null, <Account />)} />
       <Route path="/usuarios" element={P(['LIDER'], <Users />)} />
       <Route path="/configuracoes" element={P(['LIDER'], <Settings />)} />
 

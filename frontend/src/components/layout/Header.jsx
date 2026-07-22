@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, LogOut, Sun, Moon } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext.jsx';
 
@@ -27,9 +28,9 @@ export default function Header({ title, subtitle, onMenu }) {
         </div>
       </div>
       <div className="topbar-actions">
-        <span className="text-sm muted">
+        <Link to="/minha-conta" className="text-sm muted" title="Minha conta">
           Olá, <strong>{user?.name?.split(' ')[0]}</strong>
-        </span>
+        </Link>
         <button
           className="icon-btn"
           onClick={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))}

@@ -123,6 +123,38 @@ export const resetPassword = asyncHandler(async (req, res) => {
   res.json({ message: 'Senha redefinida com sucesso.' });
 });
 
+// Exclusão da própria conta (App Store Guideline 5.1.1(v) / LGPD art. 18).
+// Exige a senha atual para provar que é o dono da conta — sem etapa manual,
+// sem e-mail de suporte: o usuário inicia e conclui tudo dentro do app.
+export const deleteAccount = asyncHandler(async (req, res) => {
+  const { password } = z
+    .object({ password: z.string().min(1, 'Confirme sua senha para excluir a conta') })
+    .parse(req.body);
+
+  const user = await prisma.user.findUnique({ where: { id: req.user.id } });
+  if (!user) throw new AppError('Conta não encontrada', 404);
+  if (!(await comparePassword(password, user.password))) {
+    throw new AppError('Senha incorreta', 400);
+  }
+
+  // Auditoria ANTES do delete: o log sobrevive com userId nulo (onDelete: SetNull),
+  // então guardamos em `changes` quem era, para rastreabilidade da exclusão.
+  await audit({
+    userId: user.id,
+    action: 'DELETE_ACCOUNT',
+    entity: 'User',
+    entityId: user.id,
+    changes: { name: user.name, email: user.email, role: user.role },
+    ip: req.ip,
+  });
+
+  // Todas as relações de User são SetNull ou Cascade no schema, então o delete
+  // remove os dados pessoais e apenas desvincula os registros da campanha.
+  await prisma.user.delete({ where: { id: user.id } });
+
+  res.json({ message: 'Sua conta e seus dados pessoais foram excluídos permanentemente.' });
+});
+
 export const changePassword = asyncHandler(async (req, res) => {
   const { currentPassword, newPassword } = z
     .object({ currentPassword: z.string(), newPassword: z.string().min(6) })
