@@ -126,3 +126,13 @@ Resolvido SEM novo build (server mode):
 - App Review Information → "Sign-In required" marcado, conta demo **app@review.com / teste123** (login no vai-sistema, papel LIDER).
 - Review Notes atualizadas explicando que o login é da equipe e o app é público.
 - Resposta enviada no Resolution Center + "Reenviar para Revisão". App voltou para a fila (Waiting for Review).
+
+
+## Revisão Apple — 2ª rodada: Guideline 5.1.1(v) Account Deletion (2026-07-22)
+Rejeição: app suporta criação de conta mas não expunha exclusão de conta.
+Resolvido (Elison implementou no sistema; sem novo build):
+- Fluxo: login (app@review.com/teste123) -> menu lateral "Minha conta" -> "Excluir minha conta" -> confirmar senha + digitar EXCLUIR (exclusão permanente). Endpoint DELETE /api/auth/me confirmado (401 sem token) em coracaogaucho.vai-sistema.com E app.vai-sistema.com.
+- Screen recording (Loom) fornecido: https://www.loom.com/share/87619323095d43cfa90bb8b2f83ea9ad
+- Caminho + link adicionados nas App Review Notes; resposta enviada no Resolution Center; reenviado para revisão.
+- Cadastro público de apoiador (sem login) tem exclusão via https://coracaogaucho.vercel.app/excluir-conta.
+- OBS domínio: Elison migrou o sistema para app.vai-sistema.com; o antigo coracaogaucho.vai-sistema.com ainda responde 200 e tem login+exclusão. O app aponta o link "Entrar" para o antigo — pendente atualizar para app.vai-sistema.com (não bloqueante, ambos funcionam).
