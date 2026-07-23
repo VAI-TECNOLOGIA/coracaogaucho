@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LegalShell, CONTATO } from "@/components/legal/LegalShell";
+import { LegalShell, CONTATO, EMPRESA } from "@/components/legal/LegalShell";
 
 export const metadata: Metadata = {
   title: "Termos de Uso",
@@ -15,10 +15,17 @@ export default function TermosDeUso() {
       <h2>1. Aceitação dos Termos</h2>
       <p>
         Ao acessar o site <strong>coracaogaucho.com.br</strong>, criar uma conta ou utilizar o
-        aplicativo <strong>Coração Gaúcho</strong> (&ldquo;plataforma&rdquo;), você
-        (&ldquo;Usuário&rdquo;) concorda integralmente com estes Termos de Uso e com a{" "}
+        aplicativo <strong>{EMPRESA.app}</strong> ({EMPRESA.appIos} na App Store) &mdash;
+        &ldquo;plataforma&rdquo; &mdash;, você (&ldquo;Usuário&rdquo;) concorda integralmente com
+        estes Termos de Uso e com a{" "}
         <a href="/politica-de-privacidade">Política de Privacidade</a>. Se você não concorda com
         qualquer disposição, não utilize a plataforma.
+      </p>
+      <p>
+        A plataforma é desenvolvida e mantida pela <strong>{EMPRESA.razaoSocial}</strong>, inscrita
+        no CNPJ <strong>{EMPRESA.cnpj}</strong>, com sede em {EMPRESA.endereco} (&ldquo;Vai
+        Tecnologia&rdquo;), em apoio ao movimento <strong>Coração Gaúcho</strong> de Juliana Brizola
+        e Edegar Pretto.
       </p>
 
       <h2>2. Descrição do serviço</h2>

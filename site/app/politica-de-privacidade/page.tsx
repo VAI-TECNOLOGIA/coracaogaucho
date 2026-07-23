@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LegalShell, CONTATO } from "@/components/legal/LegalShell";
+import { LegalShell, CONTATO, EMPRESA } from "@/components/legal/LegalShell";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade",
@@ -24,10 +24,11 @@ export default function PoliticaDePrivacidade() {
         <strong>Juliana Brizola e Edegar Pretto</strong> no Rio Grande do Sul.
       </p>
       <p>
-        O aplicativo <strong>Confia+</strong> é desenvolvido e mantido pela{" "}
-        <strong>Vai Tecnologia LTDA</strong> (desenvolvedora responsável pela plataforma na Google
-        Play e na Apple App Store), que atua como operadora dos dados em nome do movimento Coração
-        Gaúcho. Contato do desenvolvedor:{" "}
+        O aplicativo <strong>{EMPRESA.app}</strong> é desenvolvido e mantido pela{" "}
+        <strong>{EMPRESA.razaoSocial}</strong>, inscrita no CNPJ{" "}
+        <strong>{EMPRESA.cnpj}</strong>, com sede em {EMPRESA.endereco} — desenvolvedora responsável
+        pela plataforma na Google Play e na Apple App Store, que atua como operadora dos dados em
+        nome do movimento Coração Gaúcho. Contato do desenvolvedor:{" "}
         <a href={`mailto:${CONTATO.suporte}`}>{CONTATO.suporte}</a>.
       </p>
       <p>
@@ -308,10 +309,13 @@ export default function PoliticaDePrivacidade() {
       <h2>13. Contato</h2>
       <ul>
         <li>
-          <strong>Aplicativo:</strong> Confia+ (Confia+ RS na App Store)
+          <strong>Aplicativo:</strong> {EMPRESA.app} ({EMPRESA.appIos} na App Store)
         </li>
         <li>
-          <strong>Desenvolvedor:</strong> Vai Tecnologia LTDA
+          <strong>Desenvolvedor:</strong> {EMPRESA.razaoSocial} — CNPJ {EMPRESA.cnpj}
+        </li>
+        <li>
+          <strong>Endereço:</strong> {EMPRESA.endereco}
         </li>
         <li>
           <strong>DPO/Privacidade:</strong>{" "}

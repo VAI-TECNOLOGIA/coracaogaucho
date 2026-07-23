@@ -8,6 +8,15 @@ export const CONTATO = {
   suporte: "contato@coracaogaucho.com.br",
 };
 
+// Desenvolvedora responsável pelo app Confia+ nas lojas (Google Play / App Store).
+export const EMPRESA = {
+  razaoSocial: "Vai Tecnologia LTDA",
+  cnpj: "52.165.389/0001-29",
+  endereco: "R. 246, 426 - Lj 02 - Andorinha, Itapema - SC, 88220-000",
+  app: "Confia+",
+  appIos: "Confia+ RS",
+};
+
 export function LegalShell({
   eyebrow,
   title,
@@ -39,6 +48,11 @@ export function LegalShell({
           <h1 className="font-display text-3xl font-bold text-ink sm:text-4xl">{title}</h1>
           <p className="mt-3 text-sm text-ink-soft/70">Última atualização: {updatedAt}</p>
           <div className="legal-prose mt-8">{children}</div>
+
+          <p className="mt-12 border-t border-ink/10 pt-6 text-xs text-ink-soft/70">
+            Aplicativo <strong>{EMPRESA.app}</strong> ({EMPRESA.appIos} na App Store), desenvolvido e
+            mantido por <strong>{EMPRESA.razaoSocial}</strong> — CNPJ {EMPRESA.cnpj}, {EMPRESA.endereco}.
+          </p>
         </section>
       </main>
 
