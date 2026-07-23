@@ -88,3 +88,9 @@ Resolvido (Elison implementou no sistema; sem novo build):
 - Caminho + link adicionados nas App Review Notes; resposta enviada no Resolution Center; reenviado para revisão.
 - Cadastro público de apoiador (sem login) tem exclusão via https://coracaogaucho.vercel.app/excluir-conta.
 - OBS domínio: Elison migrou o sistema para app.vai-sistema.com; o antigo coracaogaucho.vai-sistema.com ainda responde 200 e tem login+exclusão. O app aponta o link "Entrar" para o antigo — pendente atualizar para app.vai-sistema.com (não bloqueante, ambos funcionam).
+
+
+## Identificação legal (desenvolvedora) — 2026-07-23
+Vai Tecnologia LTDA — CNPJ 52.165.389/0001-29 — R. 246, 426 - Lj 02 - Andorinha, Itapema - SC, 88220-000.
+Centralizada em site/components/legal/LegalShell.tsx (export EMPRESA). Usada nas páginas /politica-de-privacidade, /termos-de-uso e rodapé de todas as páginas legais.
+Motivo: Play Store rejeitou a Política de Privacidade por não identificar app (Confia+) nem desenvolvedor (Vai Tecnologia LTDA). Corrigido e reenviado.
