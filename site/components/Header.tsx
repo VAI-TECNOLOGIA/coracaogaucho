@@ -54,7 +54,7 @@ export function Header() {
           aria-label="Coração Gaúcho — início"
           className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow"
         >
-          <Logo variant="chapa" tone="escuro" size="sm" priority />
+          <Logo variant="confia" tone="escuro" size="sm" priority />
         </a>
 
         <nav aria-label="Principal" className="hidden items-center gap-7 lg:flex">
