@@ -40,12 +40,6 @@ export default function Login() {
       <div className="auth-visual">
         <div className="auth-duo" />
         <div className="auth-grain" />
-        <div className="auth-flag">
-          <i className="g" />
-          <i className="y" />
-          <i className="r" />
-        </div>
-        <div className="auth-slash" />
         <div className="auth-content">
           <div className="auth-top">
             <div className="auth-name">CONFIA+ RS</div>
