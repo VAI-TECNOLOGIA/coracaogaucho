@@ -84,6 +84,11 @@ export default function Login() {
             {submitting ? 'Entrando...' : 'Entrar'}
           </button>
 
+          <div className="auth-signup">
+            <span>Não tem conta?</span>
+            <Link to="/lp" className="auth-signup-btn">Fazer meu cadastro</Link>
+          </div>
+
           <div className="auth-links">
             <Link to="/esqueci-senha" className="auth-back">Esqueci minha senha</Link>
             <Link to="/lp" className="auth-back">

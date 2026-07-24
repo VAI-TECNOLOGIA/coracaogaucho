@@ -732,6 +732,35 @@ table.table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
   display: grid; place-items: center;
   margin-bottom: 16px;
 }
+/* "Não tem conta?" → cadastro (/lp) */
+.auth-signup {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line, rgba(20,17,12,0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--muted, #5A616B);
+}
+.auth-signup-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 2px solid var(--brand);
+  color: var(--brand);
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: background 0.15s, color 0.15s;
+}
+.auth-signup-btn:hover { background: var(--brand); color: #fff; }
+
 .auth-links {
   margin-top: 16px;
   display: flex;
