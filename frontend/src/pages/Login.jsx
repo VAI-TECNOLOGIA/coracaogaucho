@@ -6,14 +6,6 @@ import { useToast } from '../context/ToastContext.jsx';
 import { apiError } from '../api/client.js';
 import PasswordInput from '../components/ui/PasswordInput.jsx';
 
-// Acessos de demonstração — clicar entra direto no sistema com o papel escolhido.
-const DEMO_ACCOUNTS = [
-  { role: 'Líder da campanha', desc: 'Gestão total: apoiadores, mapa, metas, disparos e IA', email: 'admin@demo.com', password: 'Admin@123' },
-  { role: 'Coordenador', desc: 'Membro de equipe — região, agenda e ações de rua', email: 'norte@demo.com', password: 'Admin@123' },
-  { role: 'Parceiro', desc: 'Acesso parceiro — visão de apoio, sem gestão', email: 'parceiro@demo.com', password: 'Admin@123' },
-  { role: 'Super Admin', desc: 'Dono da plataforma — gerencia todos os candidatos', email: 'super@plataforma.com', password: 'Super@123' },
-];
-
 export default function Login() {
   const { login, user, loading } = useAuth();
   const nav = useNavigate();
@@ -42,15 +34,9 @@ export default function Login() {
     doLogin(email, password);
   }
 
-  function quickLogin(acc) {
-    setEmail(acc.email);
-    setPassword(acc.password);
-    doLogin(acc.email, acc.password);
-  }
-
   return (
     <div className="auth">
-      {/* Painel visual — trabalhismo gaúcho: rosto do candidato + tricolor do RS */}
+      {/* Painel visual */}
       <div className="auth-visual">
         <div className="auth-photo" />
         <div className="auth-duo" />
@@ -65,7 +51,6 @@ export default function Login() {
         <div className="auth-content">
           <div className="auth-top">
             <div className="auth-name">CONFIA+ RS</div>
-            <span className="auth-demo-badge">DEMO</span>
           </div>
           <div>
             <h1 className="auth-headline">
@@ -98,25 +83,6 @@ export default function Login() {
           <button className="btn btn-primary btn-block btn-xl" disabled={submitting} type="submit">
             {submitting ? 'Entrando...' : 'Entrar'}
           </button>
-
-          <div className="auth-demo-access">
-            <div className="auth-demo-head">Acessos de demonstração <span>clique para entrar</span></div>
-            <div className="auth-demo-grid">
-              {DEMO_ACCOUNTS.map((a) => (
-                <button
-                  key={a.email}
-                  type="button"
-                  className="auth-demo-acc"
-                  onClick={() => quickLogin(a)}
-                  disabled={submitting}
-                >
-                  <b>{a.role}</b>
-                  <small>{a.desc}</small>
-                  <span className="mail">{a.email}</span>
-                </button>
-              ))}
-            </div>
-          </div>
 
           <div className="auth-links">
             <Link to="/esqueci-senha" className="auth-back">Esqueci minha senha</Link>
