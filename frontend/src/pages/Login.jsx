@@ -41,11 +41,8 @@ export default function Login() {
         <div className="auth-duo" />
         <div className="auth-grain" />
         <div className="auth-content">
-          <div className="auth-top">
-            <div className="auth-name">CONFIA+ RS</div>
-          </div>
-          <img className="auth-brand-logo" src="/brand/confia-mais.png" alt="Confia+ RS" />
-          <div>
+          <div className="auth-lockup">
+            <img className="auth-brand-logo" src="/brand/confia-mais.png" alt="Confia+ RS" />
             <h1 className="auth-headline">
               A central de <em>comando</em>
               <br />
