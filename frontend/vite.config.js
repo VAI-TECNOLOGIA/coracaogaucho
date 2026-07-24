@@ -9,16 +9,16 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'apple-touch-icon.png', 'perfil.jpg', 'vai-logo.png'],
+      includeAssets: ['favicon.png', 'apple-touch-icon.png', 'perfil.jpg', 'vai-logo.png'],
       manifest: {
-        name: 'Márcio Binsely Digital',
-        short_name: 'MB Digital',
-        description: 'Central de comando da campanha — mobilização, dados, atendimento e território.',
+        name: 'Coração Gaúcho',
+        short_name: 'Coração Gaúcho',
+        description: 'Central de comando da campanha Coração Gaúcho — Juliana Brizola e Edegar Pretto. Mobilização, dados, atendimento e território.',
         lang: 'pt-BR',
         start_url: '/',
         display: 'standalone',
-        theme_color: '#C8102E',
-        background_color: '#f5f6f8',
+        theme_color: '#004CA9',
+        background_color: '#004CA9',
         icons: [
           { src: '/pwa-192.png', sizes: '192x192', type: 'image/png' },
           { src: '/pwa-512.png', sizes: '512x512', type: 'image/png' },
