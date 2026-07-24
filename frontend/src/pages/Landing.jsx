@@ -132,7 +132,7 @@ export default function Landing() {
         </section>
 
         <p className="cg-acesso">
-          É da equipe da campanha? <Link to="/login">Entrar no sistema</Link>
+          É da equipe da pré-campanha? <Link to="/login">Entrar no sistema</Link>
         </p>
       </main>
     </div>

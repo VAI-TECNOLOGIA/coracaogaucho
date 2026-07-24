@@ -20,7 +20,7 @@ export default function Login() {
     setSubmitting(true);
     try {
       await login(em, pw);
-      toast.success('Bem-vindo à central da campanha!');
+      toast.success('Bem-vindo à central de comando!');
       nav('/');
     } catch (err) {
       toast.error(apiError(err, 'Não foi possível entrar. Verifique suas credenciais.'));
@@ -44,7 +44,7 @@ export default function Login() {
           <span className="auth2-cardbar" aria-hidden="true" />
           <img className="auth2-logo" src="/brand/confia-mais.png" alt="Confia+ RS" />
           <h1 className="auth2-title">Acessar plataforma</h1>
-          <p className="auth2-sub">Entre com suas credenciais da campanha.</p>
+          <p className="auth2-sub">Entre com suas credenciais de acesso.</p>
 
           <div className="field">
             <label>E-mail</label>
@@ -72,7 +72,7 @@ export default function Login() {
               rel="noopener noreferrer"
               className="auth-back"
             >
-              <ArrowLeft size={14} /> Conhecer a campanha
+              <ArrowLeft size={14} /> Conhecer a pré-campanha
             </a>
           </div>
         </form>
