@@ -39,10 +39,14 @@ const jwtSecret = rawSecret || INSECURE_DEFAULT;
 // 'local' em Vercel/Lambda escreve em /tmp (efêmero) — arquivos somem entre
 // invocações. Fotos de faixa, mídia kit, etc. seriam perdidos silenciosamente.
 const uploadDriver = process.env.UPLOAD_DRIVER || 'local';
-if (isProd && uploadDriver === 'local') {
+// Em serverless (Vercel/Lambda) 'local' escreve em /tmp efêmero e perde arquivos.
+// Em VPS/servidor dedicado o disco é persistente, então liberamos via opt-in
+// explícito ALLOW_LOCAL_UPLOAD=true (mantém a trava por padrão).
+const allowLocalUpload = process.env.ALLOW_LOCAL_UPLOAD === 'true';
+if (isProd && uploadDriver === 'local' && !allowLocalUpload) {
   abortProd(
     "UPLOAD_DRIVER='local' não persiste em produção serverless.",
-    "Configure UPLOAD_DRIVER='s3' com credenciais S3 (S3_ENDPOINT/S3_BUCKET/S3_ACCESS_KEY/S3_SECRET_KEY). Alternativa: Vercel Blob (S3-compatível)."
+    "Configure UPLOAD_DRIVER='s3' com credenciais S3 (S3_ENDPOINT/S3_BUCKET/S3_ACCESS_KEY/S3_SECRET_KEY). Alternativa: Vercel Blob (S3-compatível). Em VPS com disco persistente, defina ALLOW_LOCAL_UPLOAD=true."
   );
 }
 
