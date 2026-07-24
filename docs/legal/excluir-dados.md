@@ -1,4 +1,4 @@
-# Excluir dados específicos no Coração Gaúcho
+# Excluir dados específicos no Confia+ RS
 
 > **Complementa a página de "excluir conta" — permite que o usuário remova categorias específicas de dados sem apagar o cadastro inteiro. URL pública: https://coracaogaucho.com.br/excluir-dados.**
 
@@ -30,7 +30,7 @@ Acesse **https://coracaogaucho.com.br/excluir-dados**, descreva o que deseja exc
 ### Por e-mail
 Se preferir, envie um e-mail para **privacidade@coracaogaucho.com.br** com:
 
-- Assunto: **"Exclusão de dados específicos — Coração Gaúcho"**
+- Assunto: **"Exclusão de dados específicos — Confia+ RS"**
 - E-mail e/ou telefone usados no cadastro
 - Lista do que deseja excluir
 

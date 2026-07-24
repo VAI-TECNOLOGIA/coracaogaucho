@@ -39,23 +39,23 @@ export const SEGMENTOS: Segmento[] = [
   {
     slug: "jovens",
     publico: "Jovens",
-    eyebrow: "Coração Gaúcho com a juventude",
+    eyebrow: "Confia+ RS com a juventude",
     headline: "A juventude **faz o Rio Grande** falar mais alto",
     subheadline:
-      "O Coração Gaúcho é um chamado para colocar o povo no centro das decisões. A juventude gaúcha tem o que dizer sobre o futuro do Estado — e esse é o lugar de dizer.",
+      "O Confia+ RS é um chamado para colocar o povo no centro das decisões. A juventude gaúcha tem o que dizer sobre o futuro do Estado — e esse é o lugar de dizer.",
     accent: AMARELO,
     ctaLabel: "Quero participar",
     formTitle: "Some-se à juventude do movimento",
     seo: {
       title: "Jovens",
       description:
-        "A juventude gaúcha no centro das decisões. Some-se ao movimento Coração Gaúcho.",
+        "A juventude gaúcha no centro das decisões. Some-se ao movimento Confia+ RS.",
     },
   },
   {
     slug: "mulheres",
     publico: "Mulheres",
-    eyebrow: "Coração Gaúcho com as mulheres",
+    eyebrow: "Confia+ RS com as mulheres",
     headline: "As mulheres **no centro das decisões**",
     subheadline:
       "Um chamado às gaúchas para retomar o protagonismo do Rio Grande do Sul. Quando o povo fala mais alto, o Estado encontra seu caminho — e a voz das mulheres é parte disso.",
@@ -65,13 +65,13 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Mulheres",
       description:
-        "As mulheres gaúchas no centro das decisões. Some-se ao movimento Coração Gaúcho.",
+        "As mulheres gaúchas no centro das decisões. Some-se ao movimento Confia+ RS.",
     },
   },
   {
     slug: "saude",
     publico: "Saúde",
-    eyebrow: "Coração Gaúcho com quem cuida",
+    eyebrow: "Confia+ RS com quem cuida",
     headline: "Quem cuida da vida **também precisa ser ouvido**",
     subheadline:
       "Profissionais, pacientes e famílias conhecem de perto a realidade da saúde no Rio Grande. O movimento existe para escutar quem vive essa realidade todos os dias.",
@@ -81,13 +81,13 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Saúde",
       description:
-        "Quem vive a saúde no Rio Grande tem voz no movimento Coração Gaúcho.",
+        "Quem vive a saúde no Rio Grande tem voz no movimento Confia+ RS.",
     },
   },
   {
     slug: "educacao",
     publico: "Educação",
-    eyebrow: "Coração Gaúcho com quem educa",
+    eyebrow: "Confia+ RS com quem educa",
     headline: "Quem educa o Rio Grande **tem voz aqui**",
     subheadline:
       "Professores, estudantes e famílias sabem o que a escola gaúcha vive. Some-se a um movimento que coloca quem conhece a realidade no centro das decisões.",
@@ -97,13 +97,13 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Educação",
       description:
-        "Quem vive a educação gaúcha tem voz no movimento Coração Gaúcho.",
+        "Quem vive a educação gaúcha tem voz no movimento Confia+ RS.",
     },
   },
   {
     slug: "agricultores",
     publico: "Agricultores",
-    eyebrow: "Coração Gaúcho no campo",
+    eyebrow: "Confia+ RS no campo",
     headline: "O campo **também fala mais alto**",
     subheadline:
       "O coração do Rio Grande pulsa no campo e na cidade. Quem planta, cria e enfrenta a seca conhece o Estado por dentro — e essa voz precisa estar no centro das decisões.",
@@ -113,13 +113,13 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Agricultores",
       description:
-        "O campo gaúcho no centro das decisões. Some-se ao movimento Coração Gaúcho.",
+        "O campo gaúcho no centro das decisões. Some-se ao movimento Confia+ RS.",
     },
   },
   {
     slug: "empresarios",
     publico: "Empresários",
-    eyebrow: "Coração Gaúcho com quem gera trabalho",
+    eyebrow: "Confia+ RS com quem gera trabalho",
     headline: "Quem gera trabalho **conhece o Rio Grande**",
     subheadline:
       "Um chamado a quem investe, produz e emprega no Estado. O movimento nasce para escutar quem constrói o Rio Grande no dia a dia.",
@@ -129,13 +129,13 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Empresários",
       description:
-        "Quem investe e emprega no Rio Grande tem voz no movimento Coração Gaúcho.",
+        "Quem investe e emprega no Rio Grande tem voz no movimento Confia+ RS.",
     },
   },
   {
     slug: "seguranca",
     publico: "Segurança",
-    eyebrow: "Coração Gaúcho com quem protege",
+    eyebrow: "Confia+ RS com quem protege",
     headline: "Quem protege o Rio Grande **precisa ser escutado**",
     subheadline:
       "A segurança das famílias gaúchas é assunto de quem vive a realidade das ruas e dos bairros. Some sua voz a um movimento que escuta antes de decidir.",
@@ -145,13 +145,13 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Segurança",
       description:
-        "Quem vive a realidade da segurança no RS tem voz no movimento Coração Gaúcho.",
+        "Quem vive a realidade da segurança no RS tem voz no movimento Confia+ RS.",
     },
   },
   {
     slug: "turismo",
     publico: "Turismo",
-    eyebrow: "Coração Gaúcho pelo turismo",
+    eyebrow: "Confia+ RS pelo turismo",
     headline: "O Rio Grande que **recebe o mundo**",
     subheadline:
       "Serra, pampa, litoral e missões: quem vive do turismo conhece o potencial e os desafios de cada região. Esse conhecimento precisa estar no centro das decisões.",
@@ -161,13 +161,13 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Turismo",
       description:
-        "Quem vive do turismo no Rio Grande tem voz no movimento Coração Gaúcho.",
+        "Quem vive do turismo no Rio Grande tem voz no movimento Confia+ RS.",
     },
   },
   {
     slug: "familia",
     publico: "Família",
-    eyebrow: "Coração Gaúcho com a família",
+    eyebrow: "Confia+ RS com a família",
     headline: "A família gaúcha **no centro das decisões**",
     subheadline:
       "Na mãe que luta pelos filhos, no trabalhador que acorda cedo, em quem reconstruiu a própria vida sem desistir. É esse coração que o movimento quer escutar.",
@@ -177,13 +177,13 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Família",
       description:
-        "A família gaúcha no centro das decisões. Some-se ao movimento Coração Gaúcho.",
+        "A família gaúcha no centro das decisões. Some-se ao movimento Confia+ RS.",
     },
   },
   {
     slug: "servidores",
     publico: "Servidores Públicos",
-    eyebrow: "Coração Gaúcho com o servidor",
+    eyebrow: "Confia+ RS com o servidor",
     headline: "Quem faz o Estado funcionar **tem o que dizer**",
     subheadline:
       "Servidoras e servidores conhecem a máquina pública por dentro. Um movimento que quer colocar o povo no centro das decisões precisa começar escutando quem atende esse povo.",
@@ -193,13 +193,13 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Servidores Públicos",
       description:
-        "O servidor público gaúcho tem voz no movimento Coração Gaúcho.",
+        "O servidor público gaúcho tem voz no movimento Confia+ RS.",
     },
   },
   {
     slug: "empreendedores",
     publico: "Empreendedores",
-    eyebrow: "Coração Gaúcho com quem empreende",
+    eyebrow: "Confia+ RS com quem empreende",
     headline: "Quem empreende **faz o Rio Grande girar**",
     subheadline:
       "Do MEI ao pequeno comércio, empreender no Rio Grande exige coragem — a mesma coragem que sempre manteve o Estado de pé. Some sua voz ao movimento.",
@@ -209,13 +209,13 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Empreendedores",
       description:
-        "Quem empreende no Rio Grande tem voz no movimento Coração Gaúcho.",
+        "Quem empreende no Rio Grande tem voz no movimento Confia+ RS.",
     },
   },
   {
     slug: "liderancas",
     publico: "Lideranças",
-    eyebrow: "Coração Gaúcho com as lideranças",
+    eyebrow: "Confia+ RS com as lideranças",
     headline: "Quem lidera **conhece a realidade**",
     subheadline:
       "Lideranças comunitárias, sindicais, religiosas e de bairro sabem o que a sua região vive. Colocar o povo no centro das decisões começa por escutar quem já escuta.",
@@ -225,29 +225,29 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Lideranças",
       description:
-        "As lideranças gaúchas no centro das decisões. Some-se ao Coração Gaúcho.",
+        "As lideranças gaúchas no centro das decisões. Some-se ao Confia+ RS.",
     },
   },
   {
     slug: "voluntarios",
     publico: "Voluntários",
-    eyebrow: "Coração Gaúcho precisa de você",
+    eyebrow: "Confia+ RS precisa de você",
     headline: "Faça parte do **movimento na rua**",
     subheadline:
       "Chegou a hora de participar. Chegou a hora de construir. Cada gaúcho e gaúcha que se soma faz o Rio Grande falar mais alto.",
     accent: VERDE,
     ctaLabel: "Quero participar",
-    formTitle: "Some-se ao Coração Gaúcho",
+    formTitle: "Some-se ao Confia+ RS",
     seo: {
       title: "Voluntários",
       description:
-        "Chegou a hora de participar. Some-se ao movimento Coração Gaúcho.",
+        "Chegou a hora de participar. Some-se ao movimento Confia+ RS.",
     },
   },
   {
     slug: "filiados",
     publico: "Filiados",
-    eyebrow: "Coração Gaúcho com a base",
+    eyebrow: "Confia+ RS com a base",
     headline: "A base que **organiza o movimento**",
     subheadline:
       "Um chamado aos gaúchos e gaúchas para retomar o protagonismo do Rio Grande do Sul. A base organizada é o que leva esse chamado a cada canto do Estado.",
@@ -257,7 +257,7 @@ export const SEGMENTOS: Segmento[] = [
     seo: {
       title: "Filiados",
       description:
-        "A base do movimento Coração Gaúcho, organizada em todo o Rio Grande do Sul.",
+        "A base do movimento Confia+ RS, organizada em todo o Rio Grande do Sul.",
     },
   },
 ];

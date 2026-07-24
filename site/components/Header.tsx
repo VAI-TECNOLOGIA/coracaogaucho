@@ -6,13 +6,13 @@ import { cn } from "@/lib/utils";
 import { SITE_OFICIAL } from "@/lib/oficial";
 
 /**
- * Menu espelhado no site oficial (julianabrizola.com.br): Coração Gaúcho,
+ * Menu espelhado no site oficial (julianabrizola.com.br): Confia+ RS,
  * Juliana Brizola, Trajetória, Notícias, Participe.
  * Trajetória e Notícias não são hospedadas aqui — apontam para o site oficial,
  * que é a fonte da verdade desse conteúdo.
  */
 const LINKS = [
-  { href: "#movimento", label: "Coração Gaúcho", externo: false },
+  { href: "#movimento", label: "Confia+ RS", externo: false },
   { href: "#juliana", label: "Juliana Brizola", externo: false },
   { href: `${SITE_OFICIAL}/trajetoria/`, label: "Trajetória", externo: true },
   { href: `${SITE_OFICIAL}/noticias/`, label: "Notícias", externo: true },
@@ -51,7 +51,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3 sm:px-8">
         <a
           href="#top"
-          aria-label="Coração Gaúcho — início"
+          aria-label="Confia+ RS — início"
           className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow"
         >
           <Logo variant="confia" tone="escuro" size="sm" priority />

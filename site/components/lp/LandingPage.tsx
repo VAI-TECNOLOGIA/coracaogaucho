@@ -34,7 +34,7 @@ export function LandingPage({ seg }: { seg: Segmento }) {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
           <Link
             href="/"
-            aria-label="Coração Gaúcho — início"
+            aria-label="Confia+ RS — início"
             className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow"
           >
             <Logo variant="confia" tone="escuro" size="sm" priority />
@@ -91,7 +91,7 @@ export function LandingPage({ seg }: { seg: Segmento }) {
           </div>
 
           <div className="hidden lg:flex lg:justify-center">
-            <Logo variant="coracao" tone="escuro" size="lg" priority className="w-full max-w-sm" />
+            <Logo variant="confia" priority sizes="240px" className="h-56 w-56" />
           </div>
         </div>
       </section>

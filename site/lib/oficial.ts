@@ -18,7 +18,7 @@ export const SITE_OFICIAL = "https://julianabrizola.com.br";
 export const TAGLINE = "Servindo às pessoas";
 
 /** Marca do movimento. */
-export const MOVIMENTO = "Coração Gaúcho";
+export const MOVIMENTO = "Confia+ RS";
 
 /** Manifesto de abertura — texto oficial, transcrito na íntegra. */
 export const MANIFESTO = {
@@ -34,7 +34,7 @@ export const MANIFESTO = {
 
 /** Chamada do movimento — texto oficial. */
 export const CHAMADO = {
-  titulo: "Nasce o movimento Coração Gaúcho:",
+  titulo: "Nasce o movimento Confia+ RS:",
   texto:
     "Um chamado aos gaúchos e gaúchas para colocar o povo no centro das decisões e retomar o protagonismo do Rio Grande do Sul.",
 } as const;

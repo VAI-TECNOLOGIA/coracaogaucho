@@ -19,7 +19,7 @@ const COLUNAS = [
   {
     t: "Movimento",
     l: [
-      { nome: "Coração Gaúcho", href: "/#movimento" },
+      { nome: "Confia+ RS", href: "/#movimento" },
       { nome: "Juliana Brizola", href: "/#juliana" },
       { nome: "Trajetória", href: `${SITE_OFICIAL}/trajetoria/`, externo: true },
       { nome: "Notícias", href: `${SITE_OFICIAL}/noticias/`, externo: true },
@@ -96,7 +96,7 @@ export function Footer() {
 
       <div className="border-t border-cream-soft/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-6 text-xs text-cream-soft/50 sm:flex-row sm:px-8">
-          <p>© {new Date().getFullYear()} Coração Gaúcho. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Confia+ RS. Todos os direitos reservados.</p>
           <p>Juliana Brizola e Edegar Pretto</p>
         </div>
       </div>

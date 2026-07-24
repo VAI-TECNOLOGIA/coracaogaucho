@@ -5,7 +5,7 @@ import { FormExclusao } from "@/components/legal/FormExclusao";
 export const metadata: Metadata = {
   title: "Excluir dados específicos",
   description:
-    "Como remover categorias específicas de dados pessoais sem excluir seu cadastro no Coração Gaúcho.",
+    "Como remover categorias específicas de dados pessoais sem excluir seu cadastro no Confia+ RS.",
   alternates: { canonical: "/excluir-dados" },
 };
 
@@ -93,7 +93,7 @@ export default function ExcluirDados() {
         Se preferir, envie um e-mail para{" "}
         <a
           href={`mailto:${CONTATO.privacidade}?subject=${encodeURIComponent(
-            "Exclusão de dados específicos — Coração Gaúcho"
+            "Exclusão de dados específicos — Confia+ RS"
           )}`}
         >
           {CONTATO.privacidade}
@@ -102,7 +102,7 @@ export default function ExcluirDados() {
       </p>
       <ul>
         <li>
-          Assunto: <strong>&ldquo;Exclusão de dados específicos — Coração Gaúcho&rdquo;</strong>
+          Assunto: <strong>&ldquo;Exclusão de dados específicos — Confia+ RS&rdquo;</strong>
         </li>
         <li>E-mail e/ou telefone usados no cadastro</li>
         <li>Lista do que deseja excluir</li>

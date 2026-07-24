@@ -33,7 +33,7 @@ export function LegalShell({
       <header className="border-b border-ink/10 bg-cream/85 backdrop-blur-xl">
         <div className="rs-bar h-1 w-full" />
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
-          <Link href="/" aria-label="Coração Gaúcho — início">
+          <Link href="/" aria-label="Confia+ RS — início">
             <Logo variant="confia" tone="claro" size="sm" />
           </Link>
           <Link href="/" className="text-sm font-medium text-ink-soft hover:text-red">

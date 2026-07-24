@@ -1,6 +1,6 @@
-# 🟢🔴🟡 Plataforma Coração Gaúcho
+# 🟢🔴🟡 Plataforma Confia+ RS
 
-Ecossistema digital da campanha **Coração Gaúcho** — **Juliana Brizola** e **Edegar Pretto** (Rio Grande do Sul).
+Ecossistema digital da campanha **Confia+ RS** — **Juliana Brizola** e **Edegar Pretto** (Rio Grande do Sul).
 Slogan: **"O povo fala mais alto."**
 
 > Projeto **novo, do zero**. Reaproveita apenas a *lógica funcional* do sistema anterior

@@ -3,7 +3,7 @@ import { LegalShell, CONTATO, EMPRESA } from "@/components/legal/LegalShell";
 
 export const metadata: Metadata = {
   title: "Termos de Uso",
-  description: "Termos de Uso da plataforma e do aplicativo Coração Gaúcho.",
+  description: "Termos de Uso da plataforma e do aplicativo Confia+ RS.",
   alternates: { canonical: "/termos-de-uso" },
 };
 
@@ -24,17 +24,17 @@ export default function TermosDeUso() {
       <p>
         A plataforma é desenvolvida e mantida pela <strong>{EMPRESA.razaoSocial}</strong>, inscrita
         no CNPJ <strong>{EMPRESA.cnpj}</strong>, com sede em {EMPRESA.endereco} (&ldquo;Vai
-        Tecnologia&rdquo;), em apoio ao movimento <strong>Coração Gaúcho</strong> de Juliana Brizola
+        Tecnologia&rdquo;), em apoio ao movimento <strong>Confia+ RS</strong> de Juliana Brizola
         e Edegar Pretto.
       </p>
 
       <h2>2. Descrição do serviço</h2>
       <p>
-        O <strong>Coração Gaúcho</strong> é a plataforma digital do movimento de{" "}
+        O <strong>Confia+ RS</strong> é a plataforma digital do movimento de{" "}
         <strong>Juliana Brizola e Edegar Pretto</strong> no Rio Grande do Sul. Ela permite:
       </p>
       <ul>
-        <li>Conhecer o movimento Coração Gaúcho e a trajetória de Juliana Brizola;</li>
+        <li>Conhecer o movimento Confia+ RS e a trajetória de Juliana Brizola;</li>
         <li>Cadastrar-se como apoiador do movimento (&ldquo;Participe&rdquo;);</li>
         <li>Receber comunicações e convocações da campanha (e-mail, notificações push);</li>
         <li>
@@ -117,7 +117,7 @@ export default function TermosDeUso() {
       <h2>6. Propriedade intelectual</h2>
       <ul>
         <li>
-          A plataforma, a marca <strong>Coração Gaúcho</strong>, os logotipos, textos, artes e
+          A plataforma, a marca <strong>Confia+ RS</strong>, os logotipos, textos, artes e
           códigos pertencem à organização da campanha ou são por ela licenciados.
         </li>
         <li>

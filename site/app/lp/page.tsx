@@ -8,7 +8,7 @@ import { SEGMENTOS } from "@/lib/segmentos";
 export const metadata: Metadata = {
   title: "Participe",
   description:
-    "O Coração Gaúcho fala com cada gaúcho e gaúcha. Escolha a página do seu público e some-se ao movimento.",
+    "O Confia+ RS fala com cada gaúcho e gaúcha. Escolha a página do seu público e some-se ao movimento.",
   robots: { index: false, follow: true },
 };
 
@@ -20,7 +20,7 @@ export default function LPIndex() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
           <Link
             href="/"
-            aria-label="Coração Gaúcho — início"
+            aria-label="Confia+ RS — início"
             className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow"
           >
             <Logo variant="confia" tone="escuro" size="sm" priority />
@@ -41,7 +41,7 @@ export default function LPIndex() {
             Uma mensagem para <span className="rs-text-gradient">cada gaúcho</span>
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-            O Coração Gaúcho fala com todo mundo — do jovem ao servidor, do campo à cidade. Escolha a
+            O Confia+ RS fala com todo mundo — do jovem ao servidor, do campo à cidade. Escolha a
             página do seu público.
           </p>
 

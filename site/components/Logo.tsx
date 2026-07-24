@@ -49,7 +49,7 @@ export function Logo({
     return (
       <Image
         src={src}
-        alt="Coração Gaúcho — o povo fala mais alto"
+        alt="Confia+ RS — o povo fala mais alto"
         priority={priority}
         loading={priority ? undefined : "lazy"}
         sizes={sizes ?? "(max-width: 640px) 60vw, 320px"}
@@ -62,7 +62,7 @@ export function Logo({
   return (
     <Image
       src={iconeConfia}
-      alt="Confia+ · Coração Gaúcho"
+      alt="Confia+ RS"
       priority={priority}
       loading={priority ? undefined : "lazy"}
       sizes={sizes ?? "48px"}

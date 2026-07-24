@@ -29,14 +29,14 @@ Histórico de tudo que barrou a publicação do app **Confia+** (App Store: **Co
 
 ### 4. Rejeição — Política de Privacidade inválida (não identificava app/desenvolvedor)
 - **Mensagem:** *"Os detalhes do app ou do desenvolvedor não correspondem. A Política de Privacidade não identifica claramente o app, o nome do desenvolvedor ou a pessoa jurídica..."*
-- **Causa:** a página de política falava só em "Coração Gaúcho" e tinha placeholders; não citava o **nome do app (Confia+)** nem a **desenvolvedora (Vai Tecnologia LTDA)** que aparecem na ficha da Play.
+- **Causa:** a página de política falava só em "Confia+ RS" e tinha placeholders; não citava o **nome do app (Confia+)** nem a **desenvolvedora (Vai Tecnologia LTDA)** que aparecem na ficha da Play.
 - **Correção:** editamos `/politica-de-privacidade` (e demais páginas legais) para identificar claramente: app **Confia+**, desenvolvedora **Vai Tecnologia LTDA**, **CNPJ 52.165.389/0001-29** e endereço. Deploy + reenvio. A URL cadastrada já era a correta (`coracaogaucho.vercel.app/politica-de-privacidade`); bastou corrigir o conteúdo.
 - **Lição:** a política precisa citar, com as mesmas palavras da ficha, o nome do app **e** o nome do desenvolvedor/pessoa jurídica.
 
 ### 5. Rejeição — Violação de política de metadados (descrição imprecisa / screenshots)
 - **Mensagem:** *"Descrição imprecisa: os metadados do app não descrevem com precisão a funcionalidade principal..."* (com os 4 screenshots anexados como evidência).
-- **Causa:** os screenshots da ficha eram **mockups promocionais** (texto centralizado sobre fundo azul), não capturas reais do app. A descrição também começava com "O Coração Gaúcho é o aplicativo" (nome divergente do app Confia+).
-- **Correção:** substituímos por **4 capturas reais** do app (home/hero, propostas, campanhas por público, cadastro), em proporção válida (≤ 2:1); e alinhamos a descrição para "O Confia+ é o aplicativo oficial do movimento Coração Gaúcho...". Reenvio.
+- **Causa:** os screenshots da ficha eram **mockups promocionais** (texto centralizado sobre fundo azul), não capturas reais do app. A descrição também começava com "O Confia+ RS é o aplicativo" (nome divergente do app Confia+).
+- **Correção:** substituímos por **4 capturas reais** do app (home/hero, propostas, campanhas por público, cadastro), em proporção válida (≤ 2:1); e alinhamos a descrição para "O Confia+ é o aplicativo oficial do movimento Confia+ RS...". Reenvio.
 - **Lição:** screenshots devem ser telas reais do app funcionando; nome do app deve ser consistente entre ficha, descrição e política.
 
 ---

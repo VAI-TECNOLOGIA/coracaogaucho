@@ -4,7 +4,7 @@ import { LegalShell, CONTATO, EMPRESA } from "@/components/legal/LegalShell";
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description:
-    "Política de Privacidade do aplicativo Confia+, desenvolvido pela Vai Tecnologia LTDA para o movimento Coração Gaúcho, em conformidade com a LGPD.",
+    "Política de Privacidade do aplicativo Confia+, desenvolvido pela Vai Tecnologia LTDA para o movimento Confia+ RS, em conformidade com a LGPD.",
   alternates: { canonical: "/politica-de-privacidade" },
 };
 
@@ -20,7 +20,7 @@ export default function PoliticaDePrivacidade() {
         App Store pela <strong>Vai Tecnologia LTDA</strong>, e ao site{" "}
         <strong>coracaogaucho.com.br</strong>. O app <strong>Confia+</strong> e o site (referidos em
         conjunto como &ldquo;plataforma&rdquo; ou &ldquo;aplicativo&rdquo;) são a plataforma digital
-        do movimento <strong>Coração Gaúcho</strong>, da campanha de{" "}
+        do movimento <strong>Confia+ RS</strong>, da campanha de{" "}
         <strong>Juliana Brizola e Edegar Pretto</strong> no Rio Grande do Sul.
       </p>
       <p>
@@ -28,7 +28,7 @@ export default function PoliticaDePrivacidade() {
         <strong>{EMPRESA.razaoSocial}</strong>, inscrita no CNPJ{" "}
         <strong>{EMPRESA.cnpj}</strong>, com sede em {EMPRESA.endereco} — desenvolvedora responsável
         pela plataforma na Google Play e na Apple App Store, que atua como operadora dos dados em
-        nome do movimento Coração Gaúcho. Contato do desenvolvedor:{" "}
+        nome do movimento Confia+ RS. Contato do desenvolvedor:{" "}
         <a href={`mailto:${CONTATO.suporte}`}>{CONTATO.suporte}</a>.
       </p>
       <p>

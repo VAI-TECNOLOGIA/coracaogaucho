@@ -5,7 +5,7 @@ import { FormExclusao } from "@/components/legal/FormExclusao";
 export const metadata: Metadata = {
   title: "Excluir conta",
   description:
-    "Como excluir permanentemente sua conta e seus dados na plataforma Coração Gaúcho.",
+    "Como excluir permanentemente sua conta e seus dados na plataforma Confia+ RS.",
   alternates: { canonical: "/excluir-conta" },
 };
 
@@ -16,7 +16,7 @@ export default function ExcluirConta() {
     <LegalShell eyebrow="Privacidade" title="Como excluir sua conta">
       <p>
         Esta página descreve como excluir permanentemente sua conta e os dados associados na
-        plataforma <strong>Coração Gaúcho</strong> — tanto o <strong>cadastro de apoiador</strong>{" "}
+        plataforma <strong>Confia+ RS</strong> — tanto o <strong>cadastro de apoiador</strong>{" "}
         (feito pelo site ou pelo app) quanto a <strong>conta de acesso ao painel</strong> (equipe e
         voluntários).
       </p>
@@ -25,7 +25,7 @@ export default function ExcluirConta() {
 
       <h3>Opção 1 — Dentro do aplicativo (recomendado)</h3>
       <ol>
-        <li>Abra o aplicativo Coração Gaúcho</li>
+        <li>Abra o aplicativo Confia+ RS</li>
         <li>
           Acesse <strong>Configurações → Privacidade → Excluir conta</strong>
         </li>
@@ -49,12 +49,12 @@ export default function ExcluirConta() {
         Envie um e-mail para{" "}
         <a
           href={`mailto:${CONTATO.privacidade}?subject=${encodeURIComponent(
-            "Exclusão de conta — Coração Gaúcho"
+            "Exclusão de conta — Confia+ RS"
           )}`}
         >
           {CONTATO.privacidade}
         </a>{" "}
-        com o assunto <strong>&ldquo;Exclusão de conta — Coração Gaúcho&rdquo;</strong>, contendo:
+        com o assunto <strong>&ldquo;Exclusão de conta — Confia+ RS&rdquo;</strong>, contendo:
       </p>
       <ul>
         <li>Nome completo</li>

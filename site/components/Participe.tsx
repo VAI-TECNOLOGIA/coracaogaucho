@@ -91,7 +91,7 @@ export function Participe() {
               </span>
               <h3 className="font-display mt-5 text-2xl text-ink">Cadastro recebido!</h3>
               <p className="mt-2 text-ink-soft">
-                Obrigado por se somar ao Coração Gaúcho. Em breve entraremos em contato.
+                Obrigado por se somar ao Confia+ RS. Em breve entraremos em contato.
               </p>
             </div>
           ) : (
