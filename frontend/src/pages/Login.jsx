@@ -36,11 +36,9 @@ export default function Login() {
 
   return (
     <div className="auth">
-      {/* Painel visual */}
+      {/* Painel visual — logo Confia+ no lugar do mosaico de rostos */}
       <div className="auth-visual">
-        <div className="auth-photo" />
         <div className="auth-duo" />
-        <div className="auth-shade" />
         <div className="auth-grain" />
         <div className="auth-flag">
           <i className="g" />
@@ -52,6 +50,7 @@ export default function Login() {
           <div className="auth-top">
             <div className="auth-name">CONFIA+ RS</div>
           </div>
+          <img className="auth-brand-logo" src="/brand/confia-mais.png" alt="Confia+ RS" />
           <div>
             <h1 className="auth-headline">
               A central de <em>comando</em>
