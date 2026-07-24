@@ -81,9 +81,14 @@ export default function Login() {
 
           <div className="auth-links">
             <Link to="/esqueci-senha" className="auth-back">Esqueci minha senha</Link>
-            <Link to="/lp" className="auth-back">
+            <a
+              href="https://julianabrizola.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="auth-back"
+            >
               <ArrowLeft size={14} /> Conhecer a campanha
-            </Link>
+            </a>
           </div>
         </form>
       </div>
