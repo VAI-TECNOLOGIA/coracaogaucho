@@ -415,6 +415,22 @@ table.table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 .toast-info { background: var(--ink); }
 
 /* ---------------- Login (capa Confia+ RS — mosaico do povo) ---------------- */
+/* ---------------- Login v2 — entrada centralizada, logo em destaque ---------------- */
+.auth2 { position: relative; min-height: 100vh; display: grid; place-items: center; padding: 48px 20px; overflow: hidden; background: var(--brand-900); }
+.auth2-bg { position: absolute; inset: 0; background: radial-gradient(125% 105% at 50% -12%, #0a56b5 0%, var(--brand) 40%, var(--brand-900) 78%, #0d2550 100%); }
+.auth2-bg::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 2px, transparent 2px 9px); }
+.auth2-bg::after { content: ""; position: absolute; width: 620px; height: 620px; left: 50%; top: 44%; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(250,178,36,0.10) 0%, transparent 62%); }
+.auth2-topbar { position: absolute; top: 0; left: 0; right: 0; height: 6px; z-index: 2; background: linear-gradient(90deg, var(--green-rs) 0 33.33%, var(--red) 33.33% 66.66%, var(--accent) 66.66% 100%); }
+.auth2-stage { position: relative; z-index: 1; width: 100%; max-width: 452px; display: flex; flex-direction: column; align-items: center; }
+.auth2-card { position: relative; width: 100%; background: var(--surface); border-radius: 26px; padding: 44px 44px 34px; box-shadow: 0 44px 100px rgba(6,18,44,0.5); overflow: hidden; }
+.auth2-cardbar { position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--green-rs) 0 33.33%, var(--red) 33.33% 66.66%, var(--accent) 66.66% 100%); }
+.auth2-logo { display: block; width: 128px; height: auto; margin: 8px auto 22px; border-radius: 26px; box-shadow: 0 18px 40px rgba(0,76,169,0.30); }
+.auth2-title { font-family: var(--font-display); font-weight: 800; font-size: 29px; text-align: center; color: var(--ink); }
+.auth2-sub { text-align: center; color: var(--muted); margin: 7px 0 28px; font-size: 14.5px; }
+.auth2-foot { text-align: center; color: rgba(255,255,255,0.72); font-size: 13px; max-width: 400px; margin: 26px auto 0; line-height: 1.55; }
+.auth2-foot strong { color: #fff; font-weight: 700; }
+@media (max-width: 480px) { .auth2-card { padding: 34px 26px 28px; } .auth2-logo { width: 108px; } }
+
 .auth { min-height: 100vh; display: grid; grid-template-columns: 1.15fr 0.85fr; background: var(--brand-900); }
 .auth-visual { position: relative; overflow: hidden; background: var(--brand-900); }
 .auth-duo { position: absolute; inset: 0; background: radial-gradient(120% 115% at 22% 30%, #0a56b5 0%, var(--brand) 42%, var(--brand-900) 78%, #0d2550 100%); }

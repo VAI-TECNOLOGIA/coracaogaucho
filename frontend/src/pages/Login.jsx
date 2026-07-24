@@ -35,31 +35,16 @@ export default function Login() {
   }
 
   return (
-    <div className="auth">
-      {/* Painel visual — logo Confia+ no lugar do mosaico de rostos */}
-      <div className="auth-visual">
-        <div className="auth-duo" />
-        <div className="auth-grain" />
-        <div className="auth-content">
-          <div className="auth-lockup">
-            <h1 className="auth-headline">
-              A central de <em>comando</em>
-              <br />
-              do movimento
-            </h1>
-            <p className="auth-tagline">
-              Mobilização, dados, atendimento e território numa só plataforma.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="auth2">
+      <div className="auth2-bg" aria-hidden="true" />
+      <span className="auth2-topbar" aria-hidden="true" />
 
-      {/* Formulário */}
-      <div className="auth-form-side">
-        <form className="auth-card" onSubmit={submit}>
-          <img className="auth-form-logo" src="/brand/confia-mais.png" alt="Confia+ RS" />
-          <h3>Acessar plataforma</h3>
-          <p className="muted">Entre com suas credenciais da campanha.</p>
+      <div className="auth2-stage">
+        <form className="auth2-card" onSubmit={submit}>
+          <span className="auth2-cardbar" aria-hidden="true" />
+          <img className="auth2-logo" src="/brand/confia-mais.png" alt="Confia+ RS" />
+          <h1 className="auth2-title">Acessar plataforma</h1>
+          <p className="auth2-sub">Entre com suas credenciais da campanha.</p>
 
           <div className="field">
             <label>E-mail</label>
@@ -91,6 +76,11 @@ export default function Login() {
             </a>
           </div>
         </form>
+
+        <p className="auth2-foot">
+          <strong>A central de comando do movimento.</strong> Mobilização, dados, atendimento e
+          território numa só plataforma.
+        </p>
       </div>
     </div>
   );
