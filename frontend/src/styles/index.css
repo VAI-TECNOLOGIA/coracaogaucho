@@ -436,6 +436,7 @@ table.table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 .auth-slash { position: absolute; left: 0; bottom: 130px; height: 9px; width: 170px; background: var(--accent); transform: skewX(-20deg); }
 .auth-form-side { display: grid; place-items: center; padding: 40px; background: var(--surface); }
 .auth-card { width: 100%; max-width: 380px; }
+.auth-form-logo { display: block; width: 104px; height: auto; border-radius: 22px; margin: 0 0 22px; box-shadow: 0 14px 32px rgba(0,76,169,0.22); }
 .auth-card h3 { font-family: var(--font-display); font-weight: 800; font-size: 26px; margin-bottom: 6px; color: var(--ink); }
 .auth-card .muted { color: var(--muted); margin-bottom: 26px; }
 .auth-hint { margin-top: 20px; padding: 12px 14px; background: var(--surface-2); border: 1px dashed var(--border); border-radius: 10px; font-size: 12.5px; color: var(--muted); }

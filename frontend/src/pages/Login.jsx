@@ -42,7 +42,6 @@ export default function Login() {
         <div className="auth-grain" />
         <div className="auth-content">
           <div className="auth-lockup">
-            <img className="auth-brand-logo" src="/brand/confia-mais.png" alt="Confia+ RS" />
             <h1 className="auth-headline">
               A central de <em>comando</em>
               <br />
@@ -58,6 +57,7 @@ export default function Login() {
       {/* Formulário */}
       <div className="auth-form-side">
         <form className="auth-card" onSubmit={submit}>
+          <img className="auth-form-logo" src="/brand/confia-mais.png" alt="Confia+ RS" />
           <h3>Acessar plataforma</h3>
           <p className="muted">Entre com suas credenciais da campanha.</p>
 
