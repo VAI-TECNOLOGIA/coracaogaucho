@@ -39,7 +39,7 @@ export default function Sidebar({ open, onClose }) {
       <div className="sidebar-brand">
         <div className="brand-mark"><img src="/brand/mosaico-faces.jpg" alt="O povo do Rio Grande" /></div>
         <div className="brand-text">
-          <strong>Coração Gaúcho</strong>
+          <strong>Confia+ RS</strong>
           <span>Juliana e Edegar</span>
         </div>
       </div>

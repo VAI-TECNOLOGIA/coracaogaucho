@@ -109,7 +109,7 @@ export default function TVPanel() {
         <div className="flex items-center gap-12">
           <RSFlag size={64} />
           <div>
-            <h1>{campaign.name || 'Coração Gaúcho'}</h1>
+            <h1>{campaign.name || 'Confia+ RS'}</h1>
             <div style={{ color: '#FEC330', fontWeight: 600 }}>{campaign.slogan || 'Juntos por você, pela sua cidade'}</div>
           </div>
         </div>

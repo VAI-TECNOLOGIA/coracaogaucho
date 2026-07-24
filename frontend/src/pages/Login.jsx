@@ -64,7 +64,7 @@ export default function Login() {
         <div className="auth-slash" />
         <div className="auth-content">
           <div className="auth-top">
-            <div className="auth-name">CORAÇÃO GAÚCHO · JULIANA E EDEGAR</div>
+            <div className="auth-name">CONFIA+ RS</div>
             <span className="auth-demo-badge">DEMO</span>
           </div>
           <div>
@@ -74,8 +74,7 @@ export default function Login() {
               do movimento
             </h1>
             <p className="auth-tagline">
-              Mobilização, dados, atendimento e território numa só plataforma. Porque o povo fala mais
-              alto.
+              Mobilização, dados, atendimento e território numa só plataforma.
             </p>
           </div>
         </div>

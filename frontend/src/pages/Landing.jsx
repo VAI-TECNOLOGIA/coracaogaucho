@@ -61,7 +61,7 @@ export default function Landing() {
           <img
             className="cg-logo"
             src="/brand/confia-mais.png"
-            alt="Confia+ RS · Coração Gaúcho"
+            alt="Confia+ RS"
             width="160"
             height="160"
           />
@@ -73,7 +73,7 @@ export default function Landing() {
               </span>
               <h1 className="cg-ok-titulo">Cadastro recebido!</h1>
               <p className="cg-ok-texto">
-                Obrigado por se somar ao movimento. Em breve entraremos em contato.
+                Obrigado por participar. Em breve entraremos em contato.
               </p>
               <button type="button" className="cg-link" onClick={() => { setSent(false); setForm({ name: '', phone: '', email: '', cityName: '' }); }}>
                 Fazer outro cadastro
@@ -81,7 +81,7 @@ export default function Landing() {
             </div>
           ) : (
             <>
-              <h1 className="cg-titulo">Faça parte do movimento</h1>
+              <h1 className="cg-titulo">Faça parte</h1>
               <p className="cg-sub">
                 Preencha seus dados para se cadastrar. Leva menos de um minuto.
               </p>

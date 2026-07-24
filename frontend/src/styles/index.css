@@ -1,5 +1,5 @@
 /* ============================================================
-   Coração Gaúcho — Design System
+   Confia+ RS — Design System
    Juliana Brizola e Edegar Pretto · "O povo fala mais alto"
    Tricolor da bandeira do RS: azul + verde + vermelho + amarelo
    ============================================================ */
@@ -45,7 +45,7 @@
 :root {
   color-scheme: light;
 
-  /* Marca / acento — CORAÇÃO GAÚCHO (azul RS + amarelo-ouro) */
+  /* Marca / acento — CONFIA+ RS (azul RS + amarelo-ouro) */
   --brand: #004CA9;
   --brand-600: #003F8E;
   --brand-700: #172D57;
@@ -200,7 +200,7 @@ input, select, textarea { font-family: inherit; }
   padding: 20px 20px 18px;
   border-bottom: 1px solid var(--sidebar-border);
 }
-/* Faixa tricolor RS no topo da marca (identidade Coração Gaúcho) */
+/* Faixa tricolor RS no topo da marca (identidade Confia+ RS) */
 .sidebar-brand::before {
   content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
   background: linear-gradient(90deg, var(--green-rs) 0 33.33%, var(--red) 33.33% 66.66%, var(--accent) 66.66% 100%);
@@ -414,7 +414,7 @@ table.table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 .toast-error { background: #991b1b; }
 .toast-info { background: var(--ink); }
 
-/* ---------------- Login (capa Coração Gaúcho — mosaico do povo) ---------------- */
+/* ---------------- Login (capa Confia+ RS — mosaico do povo) ---------------- */
 .auth { min-height: 100vh; display: grid; grid-template-columns: 1.15fr 0.85fr; background: var(--brand-900); }
 .auth-visual { position: relative; overflow: hidden; background: var(--brand-900); }
 .auth-photo { position: absolute; inset: 0; background-image: url('/brand/mosaico-faces.jpg'); background-size: cover; background-position: center; filter: saturate(1.05); transform: scale(1.04); }

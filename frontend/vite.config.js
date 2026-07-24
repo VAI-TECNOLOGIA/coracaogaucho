@@ -11,9 +11,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.png', 'apple-touch-icon.png', 'perfil.jpg', 'vai-logo.png'],
       manifest: {
-        name: 'Coração Gaúcho',
-        short_name: 'Coração Gaúcho',
-        description: 'Central de comando da campanha Coração Gaúcho — Juliana Brizola e Edegar Pretto. Mobilização, dados, atendimento e território.',
+        name: 'Confia+ RS',
+        short_name: 'Confia+ RS',
+        description: 'Central de comando da campanha Confia+ RS — Juliana Brizola e Edegar Pretto. Mobilização, dados, atendimento e território.',
         lang: 'pt-BR',
         start_url: '/',
         display: 'standalone',
