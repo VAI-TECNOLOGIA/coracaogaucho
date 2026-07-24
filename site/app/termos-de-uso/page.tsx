@@ -34,8 +34,8 @@ export default function TermosDeUso() {
         <strong>Juliana Brizola e Edegar Pretto</strong> no Rio Grande do Sul. Ela permite:
       </p>
       <ul>
-        <li>Conhecer as propostas, a agenda e as notícias da campanha;</li>
-        <li>Cadastrar-se como apoiador, voluntário ou liderança (&ldquo;Some-se&rdquo;);</li>
+        <li>Conhecer o movimento Coração Gaúcho e a trajetória de Juliana Brizola;</li>
+        <li>Cadastrar-se como apoiador do movimento (&ldquo;Participe&rdquo;);</li>
         <li>Receber comunicações e convocações da campanha (e-mail, notificações push);</li>
         <li>
           Para membros autorizados da equipe: acessar o painel interno de organização (gestão de

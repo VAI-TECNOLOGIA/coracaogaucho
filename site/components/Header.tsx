@@ -1,18 +1,23 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Wordmark } from "./Wordmark";
+import { Logo } from "./Logo";
 import { cn } from "@/lib/utils";
+import { SITE_OFICIAL } from "@/lib/oficial";
 
+/**
+ * Menu espelhado no site oficial (julianabrizola.com.br): Coração Gaúcho,
+ * Juliana Brizola, Trajetória, Notícias, Participe.
+ * Trajetória e Notícias não são hospedadas aqui — apontam para o site oficial,
+ * que é a fonte da verdade desse conteúdo.
+ */
 const LINKS = [
-  { href: "#movimento", label: "O Movimento" },
-  { href: "#propostas", label: "Propostas" },
-  { href: "#candidatos", label: "Quem Somos" },
-  { href: "#regioes", label: "Pelo RS" },
+  { href: "#movimento", label: "Coração Gaúcho", externo: false },
+  { href: "#juliana", label: "Juliana Brizola", externo: false },
+  { href: `${SITE_OFICIAL}/trajetoria/`, label: "Trajetória", externo: true },
+  { href: `${SITE_OFICIAL}/noticias/`, label: "Notícias", externo: true },
+  { href: "#participe", label: "Participe", externo: false },
 ];
-
-// Login do Sistema da campanha (back-office da equipe)
-const SISTEMA_URL = process.env.NEXT_PUBLIC_SISTEMA_URL ?? "https://coracaogaucho.vai-sistema.com";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,100 +30,96 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Trava o scroll do corpo com o menu mobile aberto (evita o "scroll fantasma").
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  const externo = { target: "_blank", rel: "noopener noreferrer" } as const;
+
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled
-          ? "bg-cream/85 backdrop-blur-xl shadow-[0_1px_0_rgba(20,17,12,0.08)]"
-          : "bg-transparent",
+        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
+        scrolled ? "bg-blue shadow-lg shadow-blue-900/15" : "bg-blue/95 backdrop-blur-md",
       )}
     >
       <div className="rs-bar h-1 w-full" />
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
-        <a href="#top" aria-label="Coração Gaúcho — início" className="shrink-0">
-          <Wordmark size="sm" tone={scrolled ? "green" : "cream"} />
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3 sm:px-8">
+        <a
+          href="#top"
+          aria-label="Coração Gaúcho — início"
+          className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow"
+        >
+          <Logo variant="chapa" tone="escuro" size="sm" priority />
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Principal" className="hidden items-center gap-7 lg:flex">
           {LINKS.map((l) => (
             <a
-              key={l.href}
+              key={l.label}
               href={l.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-red",
-                scrolled ? "text-ink-soft" : "text-cream-soft/90",
-              )}
+              {...(l.externo ? externo : {})}
+              className="rounded-sm text-sm font-medium text-cream-soft/90 transition-colors hover:text-yellow focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow"
             >
               {l.label}
             </a>
           ))}
           <a
-            href={SISTEMA_URL}
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-red",
-              scrolled ? "text-ink-soft" : "text-cream-soft/90",
-            )}
+            href="#participe"
+            className="font-label rounded-full bg-yellow px-5 py-2.5 text-sm uppercase tracking-wide text-blue-900 shadow-md transition-transform hover:scale-[1.04] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cream-soft active:scale-95"
           >
-            Entrar
-          </a>
-          <a
-            href="#some-se"
-            className="font-label rounded-full bg-red px-5 py-2.5 text-sm uppercase tracking-wide text-cream-soft shadow-lg shadow-red/25 transition-transform hover:scale-[1.04] active:scale-95"
-          >
-            Some-se
+            Participe
           </a>
         </nav>
 
         <button
+          type="button"
           onClick={() => setOpen((v) => !v)}
-          aria-label="Menu"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
-          className={cn(
-            "flex h-10 w-10 items-center justify-center rounded-lg md:hidden",
-            scrolled ? "text-ink" : "text-cream-soft",
-          )}
+          aria-controls="menu-mobile"
+          className="flex h-11 w-11 items-center justify-center rounded-lg text-cream-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow lg:hidden"
         >
-          <div className="space-y-1.5">
+          <span className="sr-only">{open ? "Fechar menu" : "Abrir menu"}</span>
+          <span aria-hidden className="space-y-1.5">
             <span className={cn("block h-0.5 w-6 bg-current transition", open && "translate-y-2 rotate-45")} />
             <span className={cn("block h-0.5 w-6 bg-current transition", open && "opacity-0")} />
             <span className={cn("block h-0.5 w-6 bg-current transition", open && "-translate-y-2 -rotate-45")} />
-          </div>
+          </span>
         </button>
       </div>
 
       {/* Menu mobile */}
       <div
+        id="menu-mobile"
         className={cn(
-          "grid overflow-hidden bg-cream/95 backdrop-blur-xl transition-all duration-400 md:hidden",
+          "grid overflow-hidden bg-blue transition-[grid-template-rows] duration-300 lg:hidden",
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
         )}
       >
-        <nav className="min-h-0 overflow-hidden">
-          <div className="flex flex-col gap-1 px-6 py-4">
+        <nav aria-label="Principal (mobile)" className="min-h-0 overflow-hidden">
+          <div className="flex flex-col gap-1 px-5 pb-5 pt-2">
             {LINKS.map((l) => (
               <a
-                key={l.href}
+                key={l.label}
                 href={l.href}
+                {...(l.externo ? externo : {})}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-2 py-3 text-base font-medium text-ink-soft hover:bg-blue/5 hover:text-blue"
+                className="rounded-lg px-2 py-3 text-base font-medium text-cream-soft/90 transition-colors hover:bg-cream-soft/10 hover:text-yellow"
               >
                 {l.label}
               </a>
             ))}
             <a
-              href={SISTEMA_URL}
+              href="#participe"
               onClick={() => setOpen(false)}
-              className="rounded-lg px-2 py-3 text-base font-medium text-ink-soft hover:bg-blue/5 hover:text-blue"
+              className="font-label mt-2 rounded-full bg-yellow px-5 py-3.5 text-center text-base uppercase tracking-wide text-blue-900"
             >
-              Entrar no sistema
-            </a>
-            <a
-              href="#some-se"
-              onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-red px-5 py-3 text-center text-base font-semibold text-cream-soft"
-            >
-              Some-se ao movimento
+              Participe
             </a>
           </div>
         </nav>

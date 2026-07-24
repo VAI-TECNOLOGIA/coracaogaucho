@@ -2,24 +2,26 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { Movimento } from "@/components/Movimento";
-import { Propostas } from "@/components/Propostas";
-import { Candidatos } from "@/components/Candidatos";
-import { Numeros } from "@/components/Numeros";
-import { SomeSe } from "@/components/SomeSe";
+import { Juliana } from "@/components/Juliana";
+import { Participe } from "@/components/Participe";
 import { Footer } from "@/components/Footer";
 
+/**
+ * Estrutura espelhada no site oficial: manifesto → movimento → Juliana Brizola
+ * → participe. Os blocos "Propostas" (seis compromissos), "Números" e os
+ * cartões de "jeito de governar" foram removidos — pré-campanha não apresenta
+ * plano de governo.
+ */
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main id="conteudo">
         <Hero />
         <Marquee />
         <Movimento />
-        <Propostas />
-        <Candidatos />
-        <Numeros />
-        <SomeSe />
+        <Juliana />
+        <Participe />
       </main>
       <Footer />
     </>

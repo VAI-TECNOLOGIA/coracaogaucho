@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { Wordmark } from "@/components/Wordmark";
+import { Logo } from "@/components/Logo";
 import { Footer } from "@/components/Footer";
 
 export const CONTATO = {
@@ -34,7 +34,7 @@ export function LegalShell({
         <div className="rs-bar h-1 w-full" />
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
           <Link href="/" aria-label="Coração Gaúcho — início">
-            <Wordmark size="sm" tone="green" />
+            <Logo variant="chapa" tone="claro" size="sm" />
           </Link>
           <Link href="/" className="text-sm font-medium text-ink-soft hover:text-red">
             Voltar ao site

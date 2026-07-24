@@ -57,9 +57,8 @@ export default function PoliticaDePrivacidade() {
       <ul>
         <li>Nome</li>
         <li>E-mail</li>
-        <li>Telefone (opcional)</li>
+        <li>Telefone (WhatsApp)</li>
         <li>Cidade</li>
-        <li>Forma de participação escolhida (apoiador, voluntário, liderança ou doador)</li>
         <li>Público/tema de interesse (ex.: juventude, saúde, educação, campo)</li>
         <li>Origem do cadastro (qual página ou campanha levou você até nós)</li>
       </ul>

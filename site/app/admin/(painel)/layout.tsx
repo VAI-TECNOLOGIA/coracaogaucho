@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getSessao } from "@/lib/auth";
-import { Wordmark } from "@/components/Wordmark";
+import { Logo } from "@/components/Logo";
 import { AdminNav } from "@/components/admin/AdminNav";
 import { LogoutButton } from "@/components/admin/LogoutButton";
 
@@ -22,7 +22,7 @@ export default async function PainelLayout({ children }: { children: React.React
       <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col justify-between bg-blue-900 p-5 lg:flex">
         <div>
           <Link href="/admin" className="mb-8 block">
-            <Wordmark size="sm" tone="cream" />
+            <Logo variant="chapa" tone="escuro" size="sm" />
           </Link>
           <AdminNav />
         </div>
@@ -47,7 +47,7 @@ export default async function PainelLayout({ children }: { children: React.React
       <div className="flex min-w-0 flex-1 flex-col">
         {/* Topbar mobile */}
         <header className="flex items-center justify-between border-b border-ink/10 bg-cream/90 px-5 py-3 backdrop-blur lg:hidden">
-          <Wordmark size="sm" tone="green" />
+          <Logo variant="chapa" tone="claro" size="sm" />
           <LogoutButtonMobile />
         </header>
         <main className="flex-1 p-5 sm:p-8">{children}</main>

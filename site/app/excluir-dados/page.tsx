@@ -29,42 +29,42 @@ export default function ExcluirDados() {
         <tbody>
           <tr>
             <td>Telefone</td>
-            <td>✅ Sim</td>
+            <td>Sim</td>
             <td>App → Perfil → Editar → apagar o campo, ou por e-mail</td>
           </tr>
           <tr>
             <td>Cidade</td>
-            <td>✅ Sim</td>
+            <td>Sim</td>
             <td>App → Perfil → Editar → apagar o campo, ou por e-mail</td>
           </tr>
           <tr>
             <td>Público/tema de interesse</td>
-            <td>✅ Sim</td>
+            <td>Sim</td>
             <td>Por e-mail — seu cadastro deixa de ser segmentado</td>
           </tr>
           <tr>
             <td>Token de notificações push</td>
-            <td>✅ Sim</td>
+            <td>Sim</td>
             <td>App → Configurações → Notificações → Desabilitar</td>
           </tr>
           <tr>
             <td>Cookies e cache do navegador (site)</td>
-            <td>✅ Sim</td>
+            <td>Sim</td>
             <td>Navegador → Configurações de privacidade</td>
           </tr>
           <tr>
             <td>Histórico de contato/observações do seu cadastro</td>
-            <td>✅ Por e-mail</td>
+            <td>Sim, por e-mail</td>
             <td>{CONTATO.privacidade}</td>
           </tr>
           <tr>
             <td>Logs de acesso (IP, datas)</td>
-            <td>❌ Não (obrigação legal de 6 meses)</td>
+            <td>Não — obrigação legal de 6 meses</td>
             <td>Marco Civil da Internet, art. 15</td>
           </tr>
           <tr>
             <td>Registros exigidos para prestação de contas eleitoral</td>
-            <td>❌ Não (prazo legal)</td>
+            <td>Não — prazo legal</td>
             <td>Lei nº 9.504/1997 e resoluções do TSE</td>
           </tr>
         </tbody>
@@ -77,7 +77,7 @@ export default function ExcluirDados() {
       <h2>Como solicitar a exclusão de dados específicos</h2>
       <h3>Pelo aplicativo (autoatendimento)</h3>
       <p>
-        Para os campos marcados com ✅ na tabela acima, você consegue excluir diretamente pelas
+        Para os campos marcados como “Sim” na tabela acima, você consegue excluir diretamente pelas
         configurações do seu perfil, sem precisar solicitar nada.
       </p>
       <h3>Pelo formulário abaixo</h3>

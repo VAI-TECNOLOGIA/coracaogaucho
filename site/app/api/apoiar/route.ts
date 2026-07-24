@@ -9,17 +9,26 @@ type Payload = {
   email?: string;
   telefone?: string;
   cidade?: string;
-  tipo?: string;
   segmento?: string;
   origem?: string;
 };
 
 const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-const TIPOS = new Set(["voluntario", "apoiador", "lideranca", "doador"]);
 
 /**
- * Captação de apoiadores/voluntários — grava direto no CRM (tabela Lead).
- * Alimentado pelo site institucional e pelas 15 landing pages (tagueado por segmento/origem).
+ * Todo cadastro vindo do público entra como APOIADOR — e só.
+ *
+ * O formulário não oferece mais Voluntário/Liderança/Doador, e o endpoint
+ * ignora qualquer `tipo` que venha no corpo da requisição: aceitar o campo
+ * deixaria a classificação aberta a quem chamasse a API direto. A distinção de
+ * perfil passou a ser atribuída pela equipe dentro do /admin.
+ */
+const TIPO_PUBLICO = "apoiador";
+
+/**
+ * Captação de apoiadores — grava direto no CRM (tabela Lead).
+ * Alimentado pelo site institucional e pelas landing pages segmentadas
+ * (tagueado por segmento/origem).
  */
 export async function POST(req: Request) {
   let body: Payload;
@@ -33,7 +42,6 @@ export async function POST(req: Request) {
   const email = body.email?.trim().toLowerCase() ?? "";
   const telefone = body.telefone?.trim() ?? "";
   const cidade = body.cidade?.trim() ?? "";
-  const tipo = body.tipo?.trim() ?? "apoiador";
 
   const erros: Record<string, string> = {};
   if (nome.length < 2) erros.nome = "Informe seu nome completo.";
@@ -46,20 +54,19 @@ export async function POST(req: Request) {
   }
 
   try {
-    const tipoFinal = TIPOS.has(tipo) ? tipo : "apoiador";
     await prisma.lead.create({
       data: {
         nome,
         email,
         telefone,
         cidade,
-        tipo: tipoFinal,
+        tipo: TIPO_PUBLICO,
         segmento: body.segmento?.trim() || null,
         origem: body.origem?.trim() || "site-institucional",
       },
     });
     // Espelha no Sistema da campanha (vai-sistema) após responder — best-effort
-    after(() => enviarLeadAoSistema({ nome, telefone, email, cidade, tipo: tipoFinal }));
+    after(() => enviarLeadAoSistema({ nome, telefone, email, cidade, tipo: TIPO_PUBLICO }));
   } catch {
     return NextResponse.json(
       { ok: false, error: "Não foi possível registrar agora. Tente novamente." },
