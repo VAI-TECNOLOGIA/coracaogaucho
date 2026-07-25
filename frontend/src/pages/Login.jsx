@@ -42,8 +42,8 @@ export default function Login() {
       <div className="auth2-stage">
         <img
           className="auth2-hero"
-          src="/brand/coracao-gaucho-branco.png"
-          alt="Coração Gaúcho — o povo fala mais alto"
+          src="/brand/coracao-gaucho-marca.png"
+          alt="Coração Gaúcho"
         />
         <form className="auth2-card" onSubmit={submit}>
           <span className="auth2-cardbar" aria-hidden="true" />
