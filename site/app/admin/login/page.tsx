@@ -74,7 +74,7 @@ export default function LoginPage() {
             Painel do <span className="rs-text-gradient">Movimento</span>
           </h1>
           <p className="mt-3 max-w-sm text-cream-soft/70">
-            Central de gestão da campanha. Leads, funil, equipe e inteligência — tudo em um só lugar.
+            Central de gestão do movimento. Leads, funil, equipe e inteligência — tudo em um só lugar.
           </p>
         </div>
         <p className="relative font-script text-2xl text-yellow">O povo fala mais alto.</p>
@@ -87,7 +87,7 @@ export default function LoginPage() {
         </div>
         <div className="w-full max-w-sm">
           <h2 className="font-display text-3xl font-bold text-ink">Bem-vindo(a) de volta</h2>
-          <p className="mt-2 text-ink-soft">Acesse o painel da campanha Coração Gaúcho.</p>
+          <p className="mt-2 text-ink-soft">Acesse o painel do movimento Coração Gaúcho.</p>
         </div>
         <div className="mt-8 flex w-full max-w-sm justify-center">
           <Suspense fallback={<div className="h-64" />}>

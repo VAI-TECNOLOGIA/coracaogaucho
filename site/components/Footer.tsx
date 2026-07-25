@@ -40,7 +40,7 @@ const COLUNAS = [
       { nome: "Termos de Uso", href: "/termos-de-uso" },
       { nome: "Excluir conta", href: "/excluir-conta" },
       { nome: "Excluir dados", href: "/excluir-dados" },
-      { nome: "Sistema da campanha", href: SISTEMA_URL, externo: true },
+      { nome: "Sistema do movimento", href: SISTEMA_URL, externo: true },
     ],
   },
 ] as const;
