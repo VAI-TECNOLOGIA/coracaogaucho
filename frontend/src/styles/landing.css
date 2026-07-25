@@ -56,15 +56,12 @@
   text-align: center;
 }
 
-/* Ícone CONFIA+ — é uma arte quadrada com fundo azul próprio; apresentamos
-   como um selo arredondado para a borda quadrada parecer intencional. */
+/* Lockup Coração Gaúcho (versão clara) sobre o azul da marca. */
 .cg-logo {
-  width: clamp(112px, 26vw, 148px);
+  width: min(78vw, 300px);
   height: auto;
-  aspect-ratio: 1;
-  border-radius: 26px;
-  margin-bottom: 26px;
-  box-shadow: 0 18px 44px rgba(13, 37, 80, 0.45);
+  margin-bottom: 28px;
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.35));
 }
 
 .cg-titulo {

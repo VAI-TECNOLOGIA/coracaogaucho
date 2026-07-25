@@ -60,10 +60,10 @@ export default function Landing() {
         <section className="cg-card">
           <img
             className="cg-logo"
-            src="/brand/confia-mais.png"
-            alt="Confia+ RS"
-            width="160"
-            height="160"
+            src="/brand/coracao-gaucho-marca.png"
+            alt="Coração Gaúcho"
+            width="300"
+            height="177"
           />
 
           {sent ? (
