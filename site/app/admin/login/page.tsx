@@ -87,7 +87,7 @@ export default function LoginPage() {
         </div>
         <div className="w-full max-w-sm">
           <h2 className="font-display text-3xl font-bold text-ink">Bem-vindo(a) de volta</h2>
-          <p className="mt-2 text-ink-soft">Acesse o painel da campanha Confia+ RS.</p>
+          <p className="mt-2 text-ink-soft">Acesse o painel da campanha Coração Gaúcho.</p>
         </div>
         <div className="mt-8 flex w-full max-w-sm justify-center">
           <Suspense fallback={<div className="h-64" />}>

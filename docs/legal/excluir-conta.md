@@ -1,16 +1,16 @@
-# Como excluir sua conta no Confia+ RS
+# Como excluir sua conta no Coração Gaúcho
 
 > **Esta página é OBRIGATÓRIA por política da Google Play Store (desde 2024). A URL pública https://coracaogaucho.com.br/excluir-conta precisa estar acessível para o review do app.**
 > **Pendência:** criar a caixa de e-mail `privacidade@coracaogaucho.com.br`.
 
-Esta página descreve como excluir permanentemente sua conta e os dados associados na plataforma **Confia+ RS** — tanto o **cadastro de apoiador** (feito pelo site ou pelo app) quanto a **conta de acesso ao painel** (equipe e voluntários).
+Esta página descreve como excluir permanentemente sua conta e os dados associados na plataforma **Coração Gaúcho** — tanto o **cadastro de apoiador** (feito pelo site ou pelo app) quanto a **conta de acesso ao painel** (equipe e voluntários).
 
 ## Como solicitar a exclusão
 
 Você pode excluir sua conta de três formas:
 
 ### Opção 1 — Dentro do aplicativo (recomendado)
-1. Abra o aplicativo Confia+ RS
+1. Abra o aplicativo Coração Gaúcho
 2. Acesse **Configurações → Privacidade → Excluir conta**
 3. Confirme a operação
 4. Confirme novamente lendo o aviso de irreversibilidade
@@ -23,7 +23,7 @@ A exclusão é processada **imediatamente** após a confirmação.
 3. Você recebe um **número de protocolo** na hora; a equipe de privacidade processa a exclusão em até **5 dias úteis**
 
 ### Opção 3 — Por e-mail (quando não consegue acessar a conta)
-Envie um e-mail para **privacidade@coracaogaucho.com.br** com o assunto **"Exclusão de conta — Confia+ RS"**, contendo:
+Envie um e-mail para **privacidade@coracaogaucho.com.br** com o assunto **"Exclusão de conta — Coração Gaúcho"**, contendo:
 - Nome completo
 - E-mail e/ou telefone usados no cadastro
 

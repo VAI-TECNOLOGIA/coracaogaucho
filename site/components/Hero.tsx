@@ -2,8 +2,8 @@ import { Logo } from "./Logo";
 import { MANIFESTO } from "@/lib/oficial";
 
 /**
- * Abertura fiel à arte oficial da campanha (BRI_Tela_Confia+ RS): gradiente
- * azul da marca + lockup "Confia+ RS". O texto é o manifesto oficial,
+ * Abertura fiel à arte oficial da campanha (BRI_Tela_Coração Gaúcho): gradiente
+ * azul da marca + lockup "Coração Gaúcho". O texto é o manifesto oficial,
  * transcrito — sem promessa de governo (pré-campanha).
  *
  * Server Component de propósito: nada acima da dobra depende de JS. A entrada é
@@ -26,10 +26,11 @@ export function Hero() {
       <div className="relative mx-auto w-full max-w-4xl px-5 pb-20 pt-32 text-center sm:px-8 sm:pt-36">
         <div className="cg-enter flex justify-center">
           <Logo
-            variant="confia"
+            variant="coracao"
+            tone="escuro"
             priority
-            sizes="(max-width: 640px) 40vw, 200px"
-            className="h-40 w-40 sm:h-48 sm:w-48"
+            sizes="(max-width: 640px) 82vw, 544px"
+            className="h-auto w-full max-w-[min(82vw,34rem)]"
           />
         </div>
 

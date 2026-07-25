@@ -13,7 +13,7 @@ export const inter = Inter({
 });
 
 /**
- * Tipografia oficial da marca Confia+ RS.
+ * Tipografia oficial da marca Coração Gaúcho.
  * Fonte única de verdade — nenhuma fonte fora deste conjunto pode ser usada.
  */
 

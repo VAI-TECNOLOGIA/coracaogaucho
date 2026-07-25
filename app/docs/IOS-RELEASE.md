@@ -1,6 +1,6 @@
 # Confia+ — Publicação iOS (App Store)
 
-App oficial do movimento **Confia+ RS** (Juliana Brizola e Edegar Pretto), empacotado
+App oficial do movimento **Coração Gaúcho** (Juliana Brizola e Edegar Pretto), empacotado
 com Capacitor 8 carregando o site remoto `https://coracaogaucho.vercel.app`.
 
 ## Identificadores
@@ -8,7 +8,7 @@ com Capacitor 8 carregando o site remoto `https://coracaogaucho.vercel.app`.
 | Item | Valor |
 |---|---|
 | Nome na App Store | Confia+ RS |
-| Subtítulo | O movimento Confia+ RS |
+| Subtítulo | O movimento Coração Gaúcho |
 | Bundle ID | `com.vaitecnologia.coracaogaucho` |
 | SKU | `coracaogaucho` |
 | Apple ID (app) | `6791753009` |

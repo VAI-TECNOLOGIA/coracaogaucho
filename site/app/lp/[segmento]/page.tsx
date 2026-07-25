@@ -22,7 +22,7 @@ export async function generateMetadata({
     description: seg.seo.description,
     alternates: { canonical: `/lp/${seg.slug}` },
     openGraph: {
-      title: `${seg.seo.title} · Confia+ RS`,
+      title: `${seg.seo.title} · Coração Gaúcho`,
       description: seg.seo.description,
       url: `/lp/${seg.slug}`,
     },

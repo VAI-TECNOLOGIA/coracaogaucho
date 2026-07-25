@@ -6,8 +6,8 @@ import type { MetadataRoute } from "next";
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Confia+ RS · Juliana Brizola e Edegar Pretto",
-    short_name: "Confia+ RS",
+    name: "Coração Gaúcho · Juliana Brizola e Edegar Pretto",
+    short_name: "Coração Gaúcho",
     description:
       "Um chamado aos gaúchos e gaúchas para colocar o povo no centro das decisões e retomar o protagonismo do Rio Grande do Sul.",
     lang: "pt-BR",

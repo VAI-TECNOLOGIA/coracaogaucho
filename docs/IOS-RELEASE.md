@@ -9,7 +9,7 @@ Segue o playbook `~/Documents/Claudinho/MOBILE_README.md` seção 15. **Sem segr
 | Item | Valor |
 |---|---|
 | Nome na loja | **Confia+** |
-| Subtítulo | O movimento Confia+ RS |
+| Subtítulo | O movimento Coração Gaúcho |
 | Bundle ID | `com.vaitecnologia.coracaogaucho` (mesmo do Android/Firebase) |
 | Modo | Capacitor **server mode** → carrega `https://coracaogaucho.vercel.app` (www/ é fallback offline) |
 | MARKETING_VERSION | `1.0` |
@@ -60,7 +60,7 @@ Segue o playbook `~/Documents/Claudinho/MOBILE_README.md` seção 15. **Sem segr
 - Exclusão de conta: https://coracaogaucho.vercel.app/excluir-conta (server-mode alcança a página).
 - Suporte: https://coracaogaucho.vercel.app | vaitecnologialp@gmail.com
 - Classificação etária: responder questionário (temática política → provável 12+/17+).
-- Notes for Review: app público oficial do movimento Confia+ RS (Juliana Brizola / Edegar Pretto),
+- Notes for Review: app público oficial do movimento Coração Gaúcho (Juliana Brizola / Edegar Pretto),
   sem login obrigatório, push de avisos/agenda como recurso nativo central (Guideline 4.2).
 
 ## Próximo build number a usar

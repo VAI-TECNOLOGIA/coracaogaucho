@@ -21,7 +21,7 @@ export default async function NotificacoesPage() {
         <p className="font-label text-xs uppercase tracking-[0.2em] text-red">Mobilização</p>
         <h1 className="mt-1 font-display text-3xl font-bold text-ink sm:text-4xl">Notificações push</h1>
         <p className="mt-1 text-ink-soft">
-          Envie um aviso direto para o celular de quem tem o app Confia+ RS instalado.
+          Envie um aviso direto para o celular de quem tem o app Coração Gaúcho instalado.
         </p>
       </header>
 

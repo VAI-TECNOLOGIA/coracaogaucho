@@ -1,4 +1,4 @@
-# Firebase — Confia+ RS
+# Firebase — Coração Gaúcho
 
 Registro das informações do projeto Firebase (push notifications do app).
 

@@ -1,4 +1,4 @@
-# Termos de Uso — Confia+ RS
+# Termos de Uso — Coração Gaúcho
 
 > **Pendências antes de publicar (revisar com o jurídico da campanha):** razão social, CNPJ e endereço da entidade responsável — marcados como `[DEFINIR]`.
 
@@ -6,13 +6,13 @@
 
 ## 1. Aceitação dos Termos
 
-Ao acessar o site **coracaogaucho.com.br**, criar uma conta ou utilizar o aplicativo **Confia+ RS** ("plataforma"), operados por **[DEFINIR: razão social]** (CNPJ **[DEFINIR]**, doravante "Organização"), você ("Usuário") concorda integralmente com estes Termos de Uso e com a Política de Privacidade (https://coracaogaucho.com.br/politica-de-privacidade).
+Ao acessar o site **coracaogaucho.com.br**, criar uma conta ou utilizar o aplicativo **Coração Gaúcho** ("plataforma"), operados por **[DEFINIR: razão social]** (CNPJ **[DEFINIR]**, doravante "Organização"), você ("Usuário") concorda integralmente com estes Termos de Uso e com a Política de Privacidade (https://coracaogaucho.com.br/politica-de-privacidade).
 
 Se você não concorda com qualquer disposição, não utilize a plataforma.
 
 ## 2. Descrição do serviço
 
-O **Confia+ RS** é a plataforma digital do movimento de **Juliana Brizola e Edegar Pretto** no Rio Grande do Sul. Ela permite:
+O **Coração Gaúcho** é a plataforma digital do movimento de **Juliana Brizola e Edegar Pretto** no Rio Grande do Sul. Ela permite:
 
 - Conhecer as propostas, a agenda e as notícias da campanha;
 - Cadastrar-se como apoiador, voluntário ou liderança ("Some-se");
@@ -57,7 +57,7 @@ O descumprimento sujeita o membro à revogação imediata do acesso, sem prejuí
 
 ## 6. Propriedade intelectual
 
-- A plataforma, a marca **Confia+ RS**, os logotipos, textos, artes e códigos pertencem à Organização ou são por ela licenciados.
+- A plataforma, a marca **Coração Gaúcho**, os logotipos, textos, artes e códigos pertencem à Organização ou são por ela licenciados.
 - É permitido compartilhar os conteúdos públicos da campanha (artes, textos, links) para fins de divulgação do movimento, sem alteração que deturpe seu sentido.
 - É vedado o uso da marca e dos materiais para fins comerciais ou para associação a outras candidaturas sem autorização.
 

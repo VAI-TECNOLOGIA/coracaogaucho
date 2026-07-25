@@ -1,4 +1,4 @@
-# Política de Privacidade — Confia+ RS
+# Política de Privacidade — Coração Gaúcho
 
 > **Pendências antes de publicar (revisar com o jurídico da campanha):**
 > 1. Razão social, CNPJ e endereço da entidade responsável (partido/coligação/comitê financeiro) — marcados como `[DEFINIR]`.
@@ -8,7 +8,7 @@
 
 ## 1. Quem somos
 
-O **Confia+ RS** é o movimento e a plataforma digital da campanha de **Juliana Brizola e Edegar Pretto** no Rio Grande do Sul, composto pelo site **coracaogaucho.com.br** e pelo aplicativo **Confia+ RS** (referidos como "plataforma" ou "aplicativo" nesta política).
+O **Coração Gaúcho** é o movimento e a plataforma digital da campanha de **Juliana Brizola e Edegar Pretto** no Rio Grande do Sul, composto pelo site **coracaogaucho.com.br** e pelo aplicativo **Coração Gaúcho** (referidos como "plataforma" ou "aplicativo" nesta política).
 
 A entidade responsável pelo tratamento dos dados é **[DEFINIR: razão social]** (CNPJ **[DEFINIR]**), com sede em **[DEFINIR: endereço]**.
 

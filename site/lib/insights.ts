@@ -111,7 +111,7 @@ export async function resumoIA(a: Analise): Promise<string | null> {
       thinking: { type: "adaptive" },
       output_config: { effort: "medium" },
       system:
-        "Você é o estrategista de dados da campanha eleitoral Confia+ RS (Juliana Brizola e Edegar Pretto, RS). Escreva um resumo executivo curto (máx. 4 frases) e 2 recomendações práticas a partir dos dados de captação de apoiadores. Tom direto, profissional, em português do Brasil. Não invente números além dos fornecidos.",
+        "Você é o estrategista de dados da campanha eleitoral Coração Gaúcho (Juliana Brizola e Edegar Pretto, RS). Escreva um resumo executivo curto (máx. 4 frases) e 2 recomendações práticas a partir dos dados de captação de apoiadores. Tom direto, profissional, em português do Brasil. Não invente números além dos fornecidos.",
       messages: [{ role: "user", content: `Dados de captação (JSON):\n${JSON.stringify(dados, null, 2)}` }],
     });
     const texto = res.content.filter((b) => b.type === "text").map((b) => (b as { text: string }).text).join("\n").trim();
