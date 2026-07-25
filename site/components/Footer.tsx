@@ -51,7 +51,7 @@ export function Footer() {
       <div className="rs-bar h-1.5 w-full" />
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <Logo variant="confia" tone="escuro" size="md" />
+          <Logo variant="chapa" tone="escuro" size="md" />
           <p className="mt-6 max-w-xs text-sm leading-relaxed text-cream-soft/60">{CHAMADO.texto}</p>
 
           <div className="mt-7 flex gap-3">

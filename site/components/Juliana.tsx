@@ -63,7 +63,7 @@ export function Juliana() {
 
             <Reveal delay={480}>
               <div className="mt-8 flex justify-center rounded-2xl border border-cream-soft/12 bg-cream-soft/[0.04] px-6 py-7">
-                <Logo variant="confia" tone="escuro" size="md" />
+                <Logo variant="chapa" tone="escuro" size="md" />
               </div>
             </Reveal>
           </div>

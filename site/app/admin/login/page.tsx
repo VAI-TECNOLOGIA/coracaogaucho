@@ -68,7 +68,7 @@ export default function LoginPage() {
       <div className="relative hidden overflow-hidden bg-blue-900 lg:flex lg:flex-col lg:justify-between lg:p-12">
         <div className="rs-bar absolute inset-x-0 top-0 h-1.5" />
         <div className="rs-stripe pointer-events-none absolute -right-24 -bottom-24 h-96 w-96 rotate-45 rounded-[40%] opacity-10" />
-        <Logo variant="confia" tone="escuro" size="md" />
+        <Logo variant="chapa" tone="escuro" size="md" />
         <div className="relative">
           <h1 className="font-display text-4xl font-bold leading-tight text-cream-soft">
             Painel do <span className="rs-text-gradient">Movimento</span>
@@ -83,7 +83,7 @@ export default function LoginPage() {
       {/* Formulário */}
       <div className="flex flex-col items-center justify-center bg-cream px-6 py-12">
         <div className="mb-8 lg:hidden">
-          <Logo variant="confia" tone="claro" size="sm" />
+          <Logo variant="chapa" tone="claro" size="sm" />
         </div>
         <div className="w-full max-w-sm">
           <h2 className="font-display text-3xl font-bold text-ink">Bem-vindo(a) de volta</h2>

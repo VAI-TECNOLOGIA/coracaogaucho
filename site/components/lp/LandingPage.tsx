@@ -37,7 +37,7 @@ export function LandingPage({ seg }: { seg: Segmento }) {
             aria-label="Coração Gaúcho — início"
             className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow"
           >
-            <Logo variant="confia" tone="escuro" size="sm" priority />
+            <Logo variant="chapa" tone="escuro" size="sm" priority />
           </Link>
           <a
             href="#form"
