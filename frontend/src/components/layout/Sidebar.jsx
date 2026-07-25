@@ -37,11 +37,7 @@ export default function Sidebar({ open, onClose }) {
   return (
     <aside className={`sidebar ${open ? 'open' : ''}`}>
       <div className="sidebar-brand">
-        <div className="brand-mark"><img src="/brand/mosaico-faces.jpg" alt="O povo do Rio Grande" /></div>
-        <div className="brand-text">
-          <strong>Confia+ RS</strong>
-          <span>Juliana e Edegar</span>
-        </div>
+        <img className="sidebar-logo" src="/brand/coracao-gaucho-branco.png" alt="Coração Gaúcho — o povo fala mais alto" />
       </div>
 
       <nav className="nav">

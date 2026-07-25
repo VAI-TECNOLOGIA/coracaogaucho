@@ -238,7 +238,7 @@ async function main() {
     data: [
       { title: 'Card — Saúde nos bairros', description: 'Arte para feed.', type: 'ARTE', network: 'INSTAGRAM', priority: 'ALTA', captionText: 'Saúde de qualidade perto de você! 💚 #CoraçãoGaúcho #RioGrandeDoSul #OPovoFalaMaisAlto', hashtags: '#CoraçãoGaúcho #RioGrandeDoSul #Saúde #OPovoFalaMaisAlto', guidance: 'Postar entre 18h e 20h.', authorId: admin.id },
       { title: 'Reels — Reconstrução do RS', description: 'Vídeo curto de 30s.', type: 'REELS', network: 'INSTAGRAM', priority: 'MEDIA', captionText: 'Reconstruir e fortalecer cada canto do estado. 🚧', hashtags: '#Reconstrução #RS #CoraçãoGaúcho', authorId: admin.id },
-      { title: 'Jingle oficial', description: 'Áudio para grupos de WhatsApp.', type: 'JINGLE', network: 'WHATSAPP', priority: 'ALTA', captionText: 'É Confia+ RS — o povo fala mais alto!', authorId: admin.id },
+      { title: 'Jingle oficial', description: 'Áudio para grupos de WhatsApp.', type: 'JINGLE', network: 'WHATSAPP', priority: 'ALTA', captionText: 'É Coração Gaúcho — o povo fala mais alto!', authorId: admin.id },
     ],
   });
 
@@ -340,7 +340,7 @@ async function main() {
   console.log('🤖 Automações...');
   await prisma.automation.createMany({
     data: [
-      { name: 'Feliz Aniversário', type: 'ANIVERSARIO', message: 'Olá {{nome}}, o movimento Confia+ RS deseja um feliz aniversário! 🎂', status: 'ATIVA' },
+      { name: 'Feliz Aniversário', type: 'ANIVERSARIO', message: 'Olá {{nome}}, o movimento Coração Gaúcho deseja um feliz aniversário! 🎂', status: 'ATIVA' },
       { name: 'Boas-vindas Voluntário', type: 'AGRADECIMENTO_VOLUNTARIO', message: 'Obrigado por se juntar a nós, {{nome}}! Juntos somos mais fortes. 💪', status: 'ATIVA' },
       { name: 'Feliz Natal', type: 'NATAL', message: 'Feliz Natal, {{nome}}! 🎄', triggerDate: new Date(new Date().getFullYear(), 11, 25), status: 'RASCUNHO' },
     ],
@@ -371,7 +371,7 @@ async function main() {
   console.log('⚙️  Configurações...');
   const settings = [
     // TODO: preencher office (cargo), party (partido) e number (número) com os dados oficiais
-    { key: 'campaign', value: { name: 'Confia+ RS', candidate: 'Juliana Brizola e Edegar Pretto', office: '', party: '', number: '', city: 'Porto Alegre', uf: 'RS', slogan: 'O povo fala mais alto' } },
+    { key: 'campaign', value: { name: 'Coração Gaúcho', candidate: 'Juliana Brizola e Edegar Pretto', office: '', party: '', number: '', city: 'Porto Alegre', uf: 'RS', slogan: 'O povo fala mais alto' } },
     { key: 'theme', value: { brand: '#004CA9', green: '#0E6C38', accent: '#FAB224' } },
     { key: 'goals', value: { volunteers: 150, supporters: 800, banners: 120, actions: 60 } },
   ];
