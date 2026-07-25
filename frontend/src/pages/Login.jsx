@@ -40,9 +40,13 @@ export default function Login() {
       <span className="auth2-topbar" aria-hidden="true" />
 
       <div className="auth2-stage">
+        <img
+          className="auth2-hero"
+          src="/brand/coracao-gaucho-branco.png"
+          alt="Coração Gaúcho — o povo fala mais alto"
+        />
         <form className="auth2-card" onSubmit={submit}>
           <span className="auth2-cardbar" aria-hidden="true" />
-          <img className="auth2-logo" src="/brand/confia-mais.png" alt="Confia+ RS" />
           <h1 className="auth2-title">Acessar plataforma</h1>
           <p className="auth2-sub">Entre com suas credenciais de acesso.</p>
 
