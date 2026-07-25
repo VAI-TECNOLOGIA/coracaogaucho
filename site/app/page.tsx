@@ -1,29 +1,9 @@
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { Marquee } from "@/components/Marquee";
-import { Movimento } from "@/components/Movimento";
-import { Juliana } from "@/components/Juliana";
-import { Participe } from "@/components/Participe";
-import { Footer } from "@/components/Footer";
+import { AppEntry } from "@/components/AppEntry";
 
 /**
- * Estrutura espelhada no site oficial: manifesto → movimento → Juliana Brizola
- * → participe. Os blocos "Propostas" (seis compromissos), "Números" e os
- * cartões de "jeito de governar" foram removidos — pré-campanha não apresenta
- * plano de governo.
+ * Home = tela de entrada do app: cadastro + acesso ao sistema (Coração Gaúcho).
+ * É o que o aplicativo carrega. O site institucional completo vive em /movimento.
  */
 export default function Home() {
-  return (
-    <>
-      <Header />
-      <main id="conteudo">
-        <Hero />
-        <Marquee />
-        <Movimento />
-        <Juliana />
-        <Participe />
-      </main>
-      <Footer />
-    </>
-  );
+  return <AppEntry />;
 }
