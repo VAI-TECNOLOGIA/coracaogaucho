@@ -26,13 +26,31 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // App shell offline; API e uploads sempre na rede (dados ao vivo).
         navigateFallbackDenylist: [/^\/api/, /^\/uploads/],
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
-        // Fotos grandes da landing ficam fora do precache (carregam da rede).
+        // Precache SÓ dos arquivos com hash no nome (imutáveis). O HTML fica
+        // FORA do precache de propósito — senão o SW serviria a "casca" antiga
+        // depois de um deploy. O HTML vai por NetworkFirst (sempre da rede).
+        globPatterns: ['**/*.{js,css,svg,png,woff2}'],
         globIgnores: ['**/foto.png', '**/logo.png'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
+        navigateFallback: null,
+        // SW novo assume na hora e limpa caches antigos — sem versão presa.
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        skipWaiting: true,
         runtimeCaching: [
+          {
+            // Navegações (o HTML): sempre busca a versão nova na rede;
+            // só cai no cache se estiver offline.
+            urlPattern: ({ request }) => request.mode === 'navigate',
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'app-html',
+              networkTimeoutSeconds: 3,
+              expiration: { maxEntries: 20 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/,
             handler: 'StaleWhileRevalidate',
