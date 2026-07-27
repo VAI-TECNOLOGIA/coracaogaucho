@@ -42,6 +42,11 @@ export default function Landing() {
         email: form.email.trim() || undefined,
         cityName: form.cityName.trim() || undefined,
       });
+      // Conversão: dispara Lead (Meta) e generate_lead (GA4) no cadastro concluído
+      if (typeof window !== 'undefined') {
+        if (window.fbq) window.fbq('track', 'Lead');
+        if (window.gtag) window.gtag('event', 'generate_lead', { method: 'lp' });
+      }
       setSent(true);
     } catch (err) {
       const msg = apiError(err);
