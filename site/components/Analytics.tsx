@@ -9,9 +9,10 @@ import Script from "next/script";
  *   NEXT_PUBLIC_META_PIXEL_ID=000000000000000
  */
 export function Analytics() {
-  const ga = process.env.NEXT_PUBLIC_GA_ID;
+  // IDs padrão da campanha (env var tem prioridade, se definida no deploy).
+  const ga = process.env.NEXT_PUBLIC_GA_ID || "G-6YH1NM2SPC";
   const gtm = process.env.NEXT_PUBLIC_GTM_ID;
-  const pixel = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+  const pixel = process.env.NEXT_PUBLIC_META_PIXEL_ID || "695001983643651";
 
   return (
     <>
