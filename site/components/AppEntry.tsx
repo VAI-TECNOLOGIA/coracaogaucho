@@ -158,6 +158,31 @@ export function AppEntry() {
             Entrar no sistema
           </a>
         </p>
+
+        {/* Transparência e fontes oficiais — exigência das lojas para conteúdo eleitoral/governamental */}
+        <p className="mt-10 text-center text-xs leading-relaxed text-cream-soft/50">
+          Iniciativa da campanha Coração Gaúcho (Juliana Brizola e Edegar Pretto), mantida pela Vai
+          Tecnologia LTDA. Não é um serviço oficial do governo nem afiliado a órgãos públicos.
+          Informações eleitorais oficiais no{" "}
+          <a
+            href="https://www.tse.jus.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-cream-soft"
+          >
+            TSE (tse.jus.br)
+          </a>{" "}
+          e{" "}
+          <a
+            href="https://divulgacandcontas.tse.jus.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-cream-soft"
+          >
+            DivulgaCandContas
+          </a>
+          .
+        </p>
       </div>
     </main>
   );
