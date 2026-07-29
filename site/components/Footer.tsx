@@ -94,8 +94,40 @@ export function Footer() {
         ))}
       </div>
 
+      {/* Transparência e fontes oficiais — exigência das lojas para conteúdo eleitoral/governamental */}
       <div className="border-t border-cream-soft/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-6 text-xs text-cream-soft/50 sm:flex-row sm:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-6 text-xs leading-relaxed text-cream-soft/55 sm:px-8">
+          <p>
+            Este aplicativo é uma iniciativa da campanha <strong>Coração Gaúcho</strong>, de Juliana
+            Brizola e Edegar Pretto, mantida pela <strong>Vai Tecnologia LTDA</strong>.{" "}
+            <strong>Não é um serviço oficial do governo</strong> nem afiliado a órgãos públicos, ao
+            Tribunal Superior Eleitoral ou a qualquer entidade governamental. O conteúdo tem caráter
+            político-eleitoral e reflete propostas da candidatura.
+          </p>
+          <p className="mt-3">
+            Informações eleitorais oficiais (registro de candidaturas, prestação de contas) estão
+            disponíveis nas fontes originais do Poder Judiciário:{" "}
+            <a
+              href="https://www.tse.jus.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-cream-soft"
+            >
+              Tribunal Superior Eleitoral (tse.jus.br)
+            </a>{" "}
+            e{" "}
+            <a
+              href="https://divulgacandcontas.tse.jus.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-cream-soft"
+            >
+              DivulgaCandContas (divulgacandcontas.tse.jus.br)
+            </a>
+            .
+          </p>
+        </div>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 border-t border-cream-soft/10 px-5 py-6 text-xs text-cream-soft/50 sm:flex-row sm:px-8">
           <p>© {new Date().getFullYear()} Coração Gaúcho. Todos os direitos reservados.</p>
           <p>Juliana Brizola e Edegar Pretto</p>
         </div>
