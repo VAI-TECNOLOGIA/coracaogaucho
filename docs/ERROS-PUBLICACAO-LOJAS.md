@@ -95,3 +95,19 @@ Histórico de tudo que barrou a publicação do app **Confia+** (App Store: **Co
 - [ ] Bump de versionCode/build a cada novo binário.
 - [ ] iOS: conferir limite de chaves APNs; subir a key correta no Firebase (prod + dev).
 - [ ] Confirmar envio na faixa **Produção** e país-alvo.
+
+---
+
+## Google Play — 3ª rodada (2026-07-29/30)
+
+### 6. Rejeição — Falta de credenciais de login (Play separada da Apple)
+- **Causa:** a conta demo foi informada só na Apple; na Play, "Detalhes do login" estava marcado como "app sem restrição de acesso". O revisor achou o login "Entrar" e não conseguiu acessar.
+- **Correção:** Play Console → Conteúdo do app → Detalhes do login → "Sim" (exige login) + conta `app@review.com` / `teste123` + instruções (caminho do login e da exclusão de conta) + "acesso total a todos os recursos".
+- **Furo grave descoberto na validação:** a tela de entrada do app manda "Entrar no sistema" para o NOSSO `/admin/login` (coracaogaucho.vercel.app), mas a credencial `app@review.com` só existia no vai-sistema (Elison) — dava 401 no nosso admin. Corrigido criando a mesma conta demo (senha teste123, papel ADMIN) no nosso banco Railway. Agora funciona nos dois destinos (nosso /admin e vai-sistema).
+- **Lição:** validar a credencial demo EXATAMENTE no destino que o app expõe (testar o login de verdade), não só assumir. Atualizar a credencial a cada envio.
+
+### 7. Rejeição — Declarações enganosas / falta link para fonte governamental
+- **Mensagem:** *"O app tem informações governamentais, mas não listou URLs/links claros para as fontes originais (por exemplo, domínios .gov)."*
+- **Causa:** conteúdo eleitoral (candidatos, propostas de governo) sem link para as fontes oficiais nem disclaimer de não-afiliação.
+- **Correção:** disclaimer "Não é um serviço oficial do governo..." + links para **TSE (tse.jus.br)** e **DivulgaCandContas** no rodapé (todas as páginas) E na tela de entrada do app (primeira tela vista pelo revisor — a home foi reestruturada para AppEntry, que não usa o Footer).
+- **Lição:** para apps eleitorais/políticos, incluir disclaimer + links .gov/.jus.br visíveis na tela inicial. Conferir onde o app realmente "entra" (a home pode não usar o Footer).
