@@ -111,3 +111,11 @@ Histórico de tudo que barrou a publicação do app **Confia+** (App Store: **Co
 - **Causa:** conteúdo eleitoral (candidatos, propostas de governo) sem link para as fontes oficiais nem disclaimer de não-afiliação.
 - **Correção:** disclaimer "Não é um serviço oficial do governo..." + links para **TSE (tse.jus.br)** e **DivulgaCandContas** no rodapé (todas as páginas) E na tela de entrada do app (primeira tela vista pelo revisor — a home foi reestruturada para AppEntry, que não usa o Footer).
 - **Lição:** para apps eleitorais/políticos, incluir disclaimer + links .gov/.jus.br visíveis na tela inicial. Conferir onde o app realmente "entra" (a home pode não usar o Footer).
+
+## Google Play — 4ª rodada (2026-08-14/15)
+
+### 8. Rejeição (de novo) — Declarações enganosas: falta link governamental NA DESCRIÇÃO da loja
+- **Mensagem:** *"O app tem informações governamentais, mas não listou um ou mais URLs/links claros e acessíveis para as fontes originais (por exemplo, domínios .gov)."*
+- **Diferença crucial vs. rodada 3 (erro #7):** na rodada 3 colocamos o disclaimer + links TSE **no app/site** (Footer + AppEntry). Desta vez a **Evidência** apontada pelo Google foi a **"Descrição completa (pt-BR)" da ficha da Play Store**, e o "Como corrigir" pede explicitamente os dois itens **dentro da descrição da loja**: (1) fontes oficiais/válidas para toda informação governamental e (2) disclaimer fácil de achar de que o app não representa entidade governamental.
+- **Correção:** anexado ao fim da Descrição completa (pt-BR) na Play Console um bloco **"TRANSPARÊNCIA E FONTES OFICIAIS"** com o disclaimer de não-afiliação + links do **TSE**: `https://divulgacandcontas.tse.jus.br/divulga/#/home` (fonte principal, indicada pelo Elison) e `https://www.tse.jus.br`. Salvo e reenviado para revisão.
+- **Lição:** o disclaimer + links .jus.br/.gov precisam estar **também na descrição da ficha da loja**, não só dentro do app. O Google avalia o texto da listagem como "conteúdo do app".
