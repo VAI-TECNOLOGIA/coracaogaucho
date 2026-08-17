@@ -3,8 +3,10 @@
   "appName": "Confia+",
   "webDir": "www",
   "server": {
-    "url": "https://coracaogaucho.vercel.app",
+    "url": "https://app.julianabrizola.com.br",
     "allowNavigation": [
+      "app.julianabrizola.com.br",
+      "*.julianabrizola.com.br",
       "coracaogaucho.vercel.app",
       "coracaogaucho.com.br",
       "*.coracaogaucho.com.br",
