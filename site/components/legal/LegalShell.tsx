@@ -8,19 +8,20 @@ export const CONTATO = {
   suporte: "contato@coracaogaucho.com.br",
 };
 
-// Desenvolvedora responsável pelo app Confia+ nas lojas (Google Play / App Store).
+// Desenvolvedora responsável pelo app Juliana Brizola nas lojas (Google Play / App Store).
 export const EMPRESA = {
   razaoSocial: "Vai Tecnologia LTDA",
   cnpj: "52.165.389/0001-29",
   endereco: "R. 246, 426 - Lj 02 - Andorinha, Itapema - SC, 88220-000",
-  app: "Confia+",
-  appIos: "Confia+ RS",
+  app: "Juliana Brizola",
+  appIos: "Juliana Brizola",
+  appAnterior: "Confia+ (Google Play) / Confia+ RS (App Store)",
 };
 
 export function LegalShell({
   eyebrow,
   title,
-  updatedAt = "15 de julho de 2026",
+  updatedAt = "17 de agosto de 2026",
   children,
 }: {
   eyebrow: string;

@@ -4,7 +4,7 @@ import { LegalShell, CONTATO, EMPRESA } from "@/components/legal/LegalShell";
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description:
-    "Política de Privacidade do aplicativo Confia+, desenvolvido pela Vai Tecnologia LTDA para o movimento Coração Gaúcho, em conformidade com a LGPD.",
+    "Política de Privacidade do aplicativo Juliana Brizola, desenvolvido pela Vai Tecnologia LTDA para o movimento Coração Gaúcho, em conformidade com a LGPD.",
   alternates: { canonical: "/politica-de-privacidade" },
 };
 
@@ -15,12 +15,13 @@ export default function PoliticaDePrivacidade() {
     <LegalShell eyebrow="Institucional" title="Política de Privacidade">
       <h2>1. Quem somos</h2>
       <p>
-        Esta Política de Privacidade se aplica ao aplicativo <strong>Confia+</strong> (também
-        distribuído como &ldquo;Confia+ RS&rdquo; na App Store), publicado na Google Play e na Apple
-        App Store pela <strong>Vai Tecnologia LTDA</strong>, e ao site{" "}
-        <strong>coracaogaucho.com.br</strong>. O app <strong>Confia+</strong> e o site (referidos em
-        conjunto como &ldquo;plataforma&rdquo; ou &ldquo;aplicativo&rdquo;) são a plataforma digital
-        do movimento <strong>Coração Gaúcho</strong>, da campanha de{" "}
+        Esta Política de Privacidade se aplica ao aplicativo <strong>Juliana Brizola</strong>{" "}
+        (anteriormente distribuído como &ldquo;Confia+&rdquo; na Google Play e &ldquo;Confia+
+        RS&rdquo; na App Store), publicado na Google Play e na Apple App Store pela{" "}
+        <strong>Vai Tecnologia LTDA</strong>, e aos sites <strong>julianabrizola.com.br</strong> e{" "}
+        <strong>coracaogaucho.com.br</strong>. O app <strong>Juliana Brizola</strong> e o site
+        (referidos em conjunto como &ldquo;plataforma&rdquo; ou &ldquo;aplicativo&rdquo;) são a
+        plataforma digital do movimento <strong>Coração Gaúcho</strong>, da campanha de{" "}
         <strong>Juliana Brizola e Edegar Pretto</strong> no Rio Grande do Sul.
       </p>
       <p>
