@@ -1,14 +1,14 @@
-# Confia+ — Publicação iOS (App Store)
+# Juliana Brizola — Publicação iOS (App Store)
 
-App oficial do movimento **Coração Gaúcho** (Juliana Brizola e Edegar Pretto), empacotado
-com Capacitor 8 carregando o site remoto `https://coracaogaucho.vercel.app`.
+App oficial da campanha **Juliana Brizola Governadora 12** (vice Edegar Pretto), empacotado
+com Capacitor 8 carregando o sistema remoto `https://app.julianabrizola.com.br`.
 
 ## Identificadores
 
 | Item | Valor |
 |---|---|
-| Nome na App Store | Confia+ RS |
-| Subtítulo | O movimento Coração Gaúcho |
+| Nome na App Store | Juliana Brizola (renomeado 17/08/2026; antes "Confia+ RS") |
+| Subtítulo | Candidata a Governadora do RS |
 | Bundle ID | `com.vaitecnologia.coracaogaucho` |
 | SKU | `coracaogaucho` |
 | Apple ID (app) | `6791753009` |
@@ -114,6 +114,26 @@ Incrementar `CURRENT_PROJECT_VERSION` (build number) a cada upload:
 ```bash
 cd app/ios/App && xcrun agvtool new-version -all 2
 ```
+
+## Rebrand Juliana Brizola — reenvio da 1.0.1 (2026-08-17)
+
+Contexto: identidade nativa trocada para a marca eleitoral **Juliana Brizola 12** (ícone,
+splash, `CFBundleDisplayName`) no commit 815a340. O envio anterior da 1.0.1 (build 2, ícone
+Confia+) foi **cancelado** no ASC em 17/08 antes da revisão; a versão voltou a
+"Rejeitado pelo desenvolvedor" (editável).
+
+Já feito no App Store Connect (17/08, via sessão Elison):
+- Nome do app: "Confia+ RS" → **Juliana Brizola**; subtítulo → **Candidata a Governadora do RS**
+  (entram no ar junto com a próxima versão aprovada).
+- Build number local incrementado para **3** (`CURRENT_PROJECT_VERSION = 3`).
+
+Pendente (exige a máquina com Xcode + certificado — este Mac NÃO tem Xcode, nem o cert
+`Apple Distribution: Vai Tecnologia LTDA` no Keychain, nem o `.mobileprovision`, nem o
+`GoogleService-Info.plist`, nem `~/.config/coracaogaucho/apple-app-specific-password.txt`):
+1. `git pull` neste repo (traz assets rebrandados + build 3).
+2. Fluxo de build/upload padrão acima (cap:sync → archive → export → altool).
+3. No ASC: selecionar build 3 na versão 1.0.1, revisar "O que há de novo", conferir
+   screenshots novos e "Adicionar para revisão" + enviar.
 
 
 ## APNs — resolvido (2026-07-16)
