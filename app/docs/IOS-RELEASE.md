@@ -58,6 +58,23 @@ Criar uma 3ª chave revogaria uma delas e quebraria push em produção de GrupoP
 
 Sem esse upload, `POST push` retorna sucesso mas a notificação não chega no iPhone.
 
+## Upload via chave de API (método atual desde 18/08/2026 — dispensa senha específica de app)
+
+Chave de API do App Store Connect criada em Usuários e acesso → Integrações (Team Key,
+acesso Administrador, nome "VAI Upload"):
+
+| Item | Valor |
+|---|---|
+| Key ID | `253RWA3746` |
+| Issuer ID | `8d847329-09d0-4422-b907-5ca69ab5372f` |
+| Arquivo `.p8` | `~/.appstoreconnect/private_keys/AuthKey_253RWA3746.p8` (+ backup em `~/Documents/keystores/`) — NÃO commitar |
+
+```bash
+xcrun altool --upload-app -f App.ipa -t ios --apiKey 253RWA3746 --apiIssuer 8d847329-09d0-4422-b907-5ca69ab5372f
+```
+
+Vantagem: não depende do 2FA/telefone da conta vaitecnologialp (o número confiável não é do Elison).
+
 ## Fluxo de build / upload
 
 ```bash
