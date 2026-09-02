@@ -8,14 +8,17 @@ export const CONTATO = {
   suporte: "contato@coracaogaucho.com.br",
 };
 
-// Desenvolvedora responsável pelo app Juliana Brizola nas lojas (Google Play / App Store).
+// Entidade responsável (controladora) pelo app Juliana Brizola nas lojas (Google Play / App
+// Store): a própria campanha. Precisa bater EXATAMENTE com o desenvolvedor exibido na loja —
+// divergência aqui já reprovou o app uma vez (rejeição #4).
 export const EMPRESA = {
-  razaoSocial: "Vai Tecnologia LTDA",
-  cnpj: "52.165.389/0001-29",
-  endereco: "R. 246, 426 - Lj 02 - Andorinha, Itapema - SC, 88220-000",
+  razaoSocial: "Eleição 2026 Juliana Brizola Governador",
+  cnpj: "68.581.903/0001-47",
+  endereco: "Rua Félix da Cunha, 311 - Moinhos de Vento, Porto Alegre - RS, 90570-001",
   app: "Juliana Brizola",
   appIos: "Juliana Brizola",
-  appAnterior: "Confia+ (Google Play) / Confia+ RS (App Store)",
+  // Fornecedor técnico (desenvolvimento/manutenção) — assina só no rodapé.
+  desenvolvimento: "Vai Tecnologia",
 };
 
 export function LegalShell({
@@ -51,8 +54,9 @@ export function LegalShell({
           <div className="legal-prose mt-8">{children}</div>
 
           <p className="mt-12 border-t border-ink/10 pt-6 text-xs text-ink-soft/70">
-            Aplicativo <strong>{EMPRESA.app}</strong> ({EMPRESA.appIos} na App Store), desenvolvido e
-            mantido por <strong>{EMPRESA.razaoSocial}</strong> — CNPJ {EMPRESA.cnpj}, {EMPRESA.endereco}.
+            Aplicativo <strong>{EMPRESA.app}</strong> ({EMPRESA.appIos} na App Store), publicado por{" "}
+            <strong>{EMPRESA.razaoSocial}</strong> — CNPJ {EMPRESA.cnpj}, {EMPRESA.endereco}.
+            Desenvolvimento técnico: {EMPRESA.desenvolvimento}.
           </p>
         </section>
       </main>

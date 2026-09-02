@@ -99,7 +99,9 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-5 py-6 text-xs leading-relaxed text-cream-soft/55 sm:px-8">
           <p>
             Este aplicativo é uma iniciativa da campanha <strong>Coração Gaúcho</strong>, de Juliana
-            Brizola e Edegar Pretto, mantida pela <strong>Vai Tecnologia LTDA</strong>.{" "}
+            Brizola ao Governo do Rio Grande do Sul, publicada por{" "}
+            <strong>Eleição 2026 Juliana Brizola Governador</strong> (CNPJ 68.581.903/0001-47).
+            Desenvolvimento técnico: Vai Tecnologia.{" "}
             <strong>Não é um serviço oficial do governo</strong> nem afiliado a órgãos públicos, ao
             Tribunal Superior Eleitoral ou a qualquer entidade governamental. O conteúdo tem caráter
             político-eleitoral e reflete propostas da candidatura.

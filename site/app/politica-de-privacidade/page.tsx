@@ -4,33 +4,30 @@ import { LegalShell, CONTATO, EMPRESA } from "@/components/legal/LegalShell";
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description:
-    "Política de Privacidade do aplicativo Juliana Brizola, desenvolvido pela Vai Tecnologia LTDA para o movimento Coração Gaúcho, em conformidade com a LGPD.",
+    "Política de Privacidade do aplicativo Juliana Brizola, publicado pela campanha Eleição 2026 Juliana Brizola Governador, em conformidade com a LGPD.",
   alternates: { canonical: "/politica-de-privacidade" },
 };
-
-// TODO(jurídico): incluir CNPJ e endereço da Vai Tecnologia LTDA quando disponíveis.
 
 export default function PoliticaDePrivacidade() {
   return (
     <LegalShell eyebrow="Institucional" title="Política de Privacidade">
       <h2>1. Quem somos</h2>
       <p>
-        Esta Política de Privacidade se aplica ao aplicativo <strong>Juliana Brizola</strong>{" "}
-        (anteriormente distribuído como &ldquo;Confia+&rdquo; na Google Play e &ldquo;Confia+
-        RS&rdquo; na App Store), publicado na Google Play e na Apple App Store pela{" "}
-        <strong>Vai Tecnologia LTDA</strong>, e aos sites <strong>julianabrizola.com.br</strong> e{" "}
-        <strong>coracaogaucho.com.br</strong>. O app <strong>Juliana Brizola</strong> e o site
-        (referidos em conjunto como &ldquo;plataforma&rdquo; ou &ldquo;aplicativo&rdquo;) são a
-        plataforma digital do movimento <strong>Coração Gaúcho</strong>, da campanha de{" "}
-        <strong>Juliana Brizola e Edegar Pretto</strong> no Rio Grande do Sul.
+        Esta Política de Privacidade se aplica ao aplicativo <strong>Juliana Brizola</strong>,
+        publicado na Google Play e na Apple App Store, e aos sites{" "}
+        <strong>julianabrizola.com.br</strong> e <strong>coracaogaucho.com.br</strong>. O app{" "}
+        <strong>Juliana Brizola</strong> e o site (referidos em conjunto como
+        &ldquo;plataforma&rdquo; ou &ldquo;aplicativo&rdquo;) são a plataforma digital do movimento{" "}
+        <strong>Coração Gaúcho</strong>, da campanha de <strong>Juliana Brizola</strong> ao Governo
+        do Rio Grande do Sul.
       </p>
       <p>
-        O aplicativo <strong>{EMPRESA.app}</strong> é desenvolvido e mantido pela{" "}
-        <strong>{EMPRESA.razaoSocial}</strong>, inscrita no CNPJ{" "}
-        <strong>{EMPRESA.cnpj}</strong>, com sede em {EMPRESA.endereco} — desenvolvedora responsável
-        pela plataforma na Google Play e na Apple App Store, que atua como operadora dos dados em
-        nome do movimento Coração Gaúcho. Contato do desenvolvedor:{" "}
-        <a href={`mailto:${CONTATO.suporte}`}>{CONTATO.suporte}</a>.
+        A entidade responsável pelo aplicativo <strong>{EMPRESA.app}</strong> e pelo tratamento dos
+        dados (controladora) é <strong>{EMPRESA.razaoSocial}</strong>, inscrita no CNPJ{" "}
+        <strong>{EMPRESA.cnpj}</strong>, com sede em {EMPRESA.endereco} — a mesma entidade que
+        publica o aplicativo na Google Play e na Apple App Store. O desenvolvimento e a manutenção
+        técnica são prestados pela {EMPRESA.desenvolvimento}, que atua como operadora dos dados em
+        nome da campanha. Contato: <a href={`mailto:${CONTATO.suporte}`}>{CONTATO.suporte}</a>.
       </p>
       <p>
         Esta Política de Privacidade descreve como coletamos, usamos, compartilhamos e protegemos
@@ -312,7 +309,7 @@ export default function PoliticaDePrivacidade() {
           <strong>Aplicativo:</strong> {EMPRESA.app} ({EMPRESA.appIos} na App Store)
         </li>
         <li>
-          <strong>Desenvolvedor:</strong> {EMPRESA.razaoSocial} — CNPJ {EMPRESA.cnpj}
+          <strong>Responsável (controladora):</strong> {EMPRESA.razaoSocial} — CNPJ {EMPRESA.cnpj}
         </li>
         <li>
           <strong>Endereço:</strong> {EMPRESA.endereco}
