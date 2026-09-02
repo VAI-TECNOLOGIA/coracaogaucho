@@ -18,8 +18,8 @@ export default function PoliticaDePrivacidade() {
         <strong>julianabrizola.com.br</strong> e <strong>coracaogaucho.com.br</strong>. O app{" "}
         <strong>Juliana Brizola</strong> e o site (referidos em conjunto como
         &ldquo;plataforma&rdquo; ou &ldquo;aplicativo&rdquo;) são a plataforma digital do movimento{" "}
-        <strong>Coração Gaúcho</strong>, da campanha de <strong>Juliana Brizola</strong> ao Governo
-        do Rio Grande do Sul.
+        <strong>Coração Gaúcho</strong>, da campanha de <strong>Juliana Brizola</strong> (vice:
+        Edegar Pretto) ao Governo do Rio Grande do Sul.
       </p>
       <p>
         A entidade responsável pelo aplicativo <strong>{EMPRESA.app}</strong> e pelo tratamento dos
